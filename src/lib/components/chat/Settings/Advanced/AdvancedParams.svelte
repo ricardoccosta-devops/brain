@@ -58,7 +58,7 @@
 			<div class="flex mt-0.5 space-x-2">
 				<div class=" flex-1">
 					<input
-						class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 						type="number"
 						placeholder="Enter Seed"
 						bind:value={params.seed}
@@ -93,7 +93,7 @@
 			<div class="flex mt-0.5 space-x-2">
 				<div class=" flex-1">
 					<input
-						class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 						type="text"
 						placeholder={$i18n.t('Enter stop sequence')}
 						bind:value={params.stop}
@@ -133,7 +133,7 @@
 						max="1"
 						step="0.05"
 						bind:value={params.temperature}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -179,7 +179,7 @@
 						max="2"
 						step="1"
 						bind:value={params.mirostat}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -225,7 +225,7 @@
 						max="1"
 						step="0.05"
 						bind:value={params.mirostat_eta}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -271,7 +271,7 @@
 						max="10"
 						step="0.5"
 						bind:value={params.mirostat_tau}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -317,7 +317,7 @@
 						max="100"
 						step="0.5"
 						bind:value={params.top_k}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -363,7 +363,7 @@
 						max="1"
 						step="0.05"
 						bind:value={params.top_p}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -409,7 +409,7 @@
 						max="2"
 						step="0.05"
 						bind:value={params.frequency_penalty}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -455,7 +455,7 @@
 						max="128"
 						step="1"
 						bind:value={params.repeat_last_n}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -501,7 +501,7 @@
 						max="2"
 						step="0.05"
 						bind:value={params.tfs_z}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div>
@@ -547,7 +547,7 @@
 						max="10240000"
 						step="1"
 						bind:value={params.num_ctx}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div class="">
@@ -592,7 +592,7 @@
 						max="16000"
 						step="1"
 						bind:value={params.max_tokens}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div class="">
@@ -678,7 +678,7 @@
 						max="256"
 						step="1"
 						bind:value={params.num_thread}
-						class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+						class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 					/>
 				</div>
 				<div class="">
@@ -718,7 +718,7 @@
 			<div class="flex mt-0.5 space-x-2">
 				<div class=" flex-1">
 					<textarea
-						class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg -mb-1"
+						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded -mb-1"
 						placeholder="Write your model template content here"
 						rows="4"
 						bind:value={params.template}

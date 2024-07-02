@@ -354,7 +354,7 @@
 
 				{#if atSelectedModel !== undefined}
 					<div
-						class="px-3 py-2.5 text-left w-full flex justify-between items-center absolute bottom-0 left-0 right-0 bg-gradient-to-t from-50% from-white dark:from-gray-900"
+						class="px-3 py-2.5 text-left w-full flex justify-between items-center absolute bottom-0 left-0 right-0 bg-gradient-to-t from-50% from-white dark:from-primary-lightdarkest"
 					>
 						<div class="flex items-center gap-2 text-sm dark:text-gray-500">
 							<img
@@ -365,7 +365,7 @@
 									?.profile_image_url ??
 									($i18n.language === 'dg-DG'
 										? `/doge.png`
-										: `${WEBUI_BASE_URL}/static/favicon.png`)}
+										: `${WEBUI_BASE_URL}/favicon.png`)}
 							/>
 							<div>
 								Talking to <span class=" font-medium">{atSelectedModel.name}</span>
@@ -387,7 +387,7 @@
 		</div>
 	</div>
 
-	<div class="bg-white dark:bg-gray-900">
+	<div class="bg-white dark:bg-darktheme-dark">
 		<div class="max-w-6xl px-2.5 md:px-6 mx-auto inset-x-0">
 			<div class=" pb-2">
 				<input
@@ -475,7 +475,7 @@
 						}}
 					>
 						<div
-							class="flex-1 flex flex-col relative w-full rounded-3xl px-1.5 bg-gray-50 dark:bg-gray-850 dark:text-gray-100"
+							class="flex-1 flex flex-col relative border border-solid border-gray-250 w-full rounded px-1.5 dark:bg-gray-850 dark:text-gray-100"
 							dir={$settings?.chatDirection ?? 'LTR'}
 						>
 							{#if files.length > 0}
@@ -487,7 +487,7 @@
 													<img
 														src={file.url}
 														alt="input"
-														class=" h-16 w-16 rounded-xl object-cover"
+														class=" h-16 w-16 rounded object-cover"
 													/>
 													{#if atSelectedModel ? visionCapableModels.length === 0 : selectedModels.length !== visionCapableModels.length}
 														<Tooltip
@@ -515,9 +515,9 @@
 												</div>
 											{:else if file.type === 'doc'}
 												<div
-													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded-xl border border-gray-200 dark:border-none"
+													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded border bg-white border-gray-200 dark:border-none"
 												>
-													<div class="p-2.5 bg-red-400 text-white rounded-lg">
+													<div class="p-2.5 bg-red-400 text-white rounded">
 														{#if file.upload_status}
 															<svg
 																xmlns="http://www.w3.org/2000/svg"
@@ -594,9 +594,9 @@
 												</div>
 											{:else if file.type === 'collection'}
 												<div
-													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded-xl border border-gray-200 dark:border-none"
+													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded bg-white border border-gray-200 dark:border-none"
 												>
-													<div class="p-2.5 bg-red-400 text-white rounded-lg">
+													<div class="p-2.5 bg-red-400 text-white rounded">
 														<svg
 															xmlns="http://www.w3.org/2000/svg"
 															viewBox="0 0 24 24"
@@ -661,7 +661,7 @@
 										}}
 									>
 										<button
-											class="bg-gray-50 hover:bg-gray-100 text-gray-800 dark:bg-gray-850 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-2 outline-none focus:outline-none"
+											class="text-primary-dark dark:bg-gray-850 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-2 outline-none focus:outline-none"
 											type="button"
 										>
 											<svg
@@ -681,7 +681,7 @@
 								<textarea
 									id="chat-textarea"
 									bind:this={chatTextAreaElement}
-									class="scrollbar-hidden bg-gray-50 dark:bg-gray-850 dark:text-gray-100 outline-none w-full py-3 px-1 rounded-xl resize-none h-[48px]"
+									class="scrollbar-hidden dark:bg-gray-850 dark:text-gray-100 outline-none bg-white w-full py-3 px-1 rounded resize-none h-[48px]"
 									placeholder={chatInputPlaceholder !== ''
 										? chatInputPlaceholder
 										: $i18n.t('Send a Message')}
@@ -939,8 +939,8 @@
 											<button
 												id="send-message-button"
 												class="{prompt !== ''
-													? 'bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100 '
-													: 'text-white bg-gray-200 dark:text-gray-900 dark:bg-gray-700 disabled'} transition rounded-full p-1.5 m-0.5 self-center"
+													? 'bg-primary-med hover:bg-primary-light text-white dark:bg-white dark:text-black dark:hover:bg-gray-100 '
+													: 'text-white bg-gray-200 dark:text-primary-lightdarkest dark:bg-gray-700 disabled'} transition rounded-full p-1.5 m-0.5 self-center"
 												type="submit"
 												disabled={prompt === ''}
 											>
@@ -963,7 +963,7 @@
 							{:else}
 								<div class=" flex items-center mb-1.5">
 									<button
-										class="bg-white hover:bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-1.5"
+										class="bg-white hover:bg-gray-100 text-primary-dark dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-1.5"
 										on:click={() => {
 											stopResponse();
 										}}

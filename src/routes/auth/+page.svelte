@@ -80,15 +80,15 @@
 			<div class=" self-center">
 				<img
 					crossorigin="anonymous"
-					src="{WEBUI_BASE_URL}/static/favicon.png"
-					class=" w-8 rounded-full"
+					src="{WEBUI_BASE_URL}/favicon.png"
+					class=" w-8 rounded-full bg-white"
 					alt="logo"
 				/>
 			</div>
 		</div>
 	</div>
 
-	<div class=" bg-white dark:bg-gray-950 min-h-screen w-full flex justify-center font-mona">
+	<div class=" bg-white dark:bg-darktheme-darkest min-h-screen w-full flex justify-center font-mona">
 		<!-- <div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full bg-yellow-50 justify-center">
 			<div class=" my-auto pb-16 text-left">
 				<div>
@@ -152,14 +152,14 @@
 									<input
 										bind:value={name}
 										type="text"
-										class=" px-5 py-3 rounded-2xl w-full text-sm outline-none border dark:border-none dark:bg-gray-900"
+										class=" px-5 py-3 rounded w-full text-sm outline-none border dark:border-none dark:bg-darktheme-dark"
 										autocomplete="name"
 										placeholder={$i18n.t('Enter Your Full Name')}
 										required
 									/>
 								</div>
 
-								<hr class=" my-3 dark:border-gray-900" />
+								<hr class=" my-3 dark:border-primary-lightdarkest" />
 							{/if}
 
 							<div class="mb-2">
@@ -167,7 +167,7 @@
 								<input
 									bind:value={email}
 									type="email"
-									class=" px-5 py-3 rounded-2xl w-full text-sm outline-none border dark:border-none dark:bg-gray-900"
+									class=" px-5 py-3 rounded w-full text-sm outline-none border dark:border-none dark:bg-darktheme-dark"
 									autocomplete="email"
 									placeholder={$i18n.t('Enter Your Email')}
 									required
@@ -180,7 +180,7 @@
 								<input
 									bind:value={password}
 									type="password"
-									class=" px-5 py-3 rounded-2xl w-full text-sm outline-none border dark:border-none dark:bg-gray-900"
+									class=" px-5 py-3 rounded w-full text-sm outline-none border dark:border-none dark:bg-darktheme-dark"
 									placeholder={$i18n.t('Enter Your Password')}
 									autocomplete="current-password"
 									required
@@ -190,7 +190,7 @@
 
 						<div class="mt-5">
 							<button
-								class=" bg-gray-900 hover:bg-gray-800 w-full rounded-2xl text-white font-medium text-sm py-3 transition"
+								class=" bg-primary-lightdarkest hover:bg-gray-800 w-full rounded text-white font-medium text-sm py-3 transition"
 								type="submit"
 							>
 								{mode === 'signin' ? $i18n.t('Sign in') : $i18n.t('Create Account')}

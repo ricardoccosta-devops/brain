@@ -122,7 +122,7 @@
 					<div class=" self-center text-xs font-medium">{$i18n.t('Speech-to-Text Engine')}</div>
 					<div class="flex items-center relative">
 						<select
-							class="dark:bg-gray-900 w-fit pr-8 rounded px-2 p-1 text-xs bg-transparent outline-none text-right"
+							class="dark:bg-darktheme-dark w-fit pr-8 rounded px-2 p-1 text-xs bg-transparent outline-none text-right"
 							bind:value={STT_ENGINE}
 							placeholder="Select an engine"
 						>
@@ -137,14 +137,14 @@
 					<div>
 						<div class="mt-1 flex gap-2 mb-1">
 							<input
-								class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								placeholder={$i18n.t('API Base URL')}
 								bind:value={STT_OPENAI_API_BASE_URL}
 								required
 							/>
 
 							<input
-								class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								placeholder={$i18n.t('API Key')}
 								bind:value={STT_OPENAI_API_KEY}
 								required
@@ -160,7 +160,7 @@
 							<div class="flex-1">
 								<input
 									list="model-list"
-									class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 									bind:value={STT_MODEL}
 									placeholder="Select a model"
 								/>
@@ -183,7 +183,7 @@
 					<div class=" self-center text-xs font-medium">{$i18n.t('Text-to-Speech Engine')}</div>
 					<div class="flex items-center relative">
 						<select
-							class=" dark:bg-gray-900 w-fit pr-8 rounded px-2 p-1 text-xs bg-transparent outline-none text-right"
+							class=" dark:bg-darktheme-dark w-fit pr-8 rounded px-2 p-1 text-xs bg-transparent outline-none text-right"
 							bind:value={TTS_ENGINE}
 							placeholder="Select a mode"
 							on:change={(e) => {
@@ -207,14 +207,14 @@
 					<div>
 						<div class="mt-1 flex gap-2 mb-1">
 							<input
-								class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								placeholder={$i18n.t('API Base URL')}
 								bind:value={TTS_OPENAI_API_BASE_URL}
 								required
 							/>
 
 							<input
-								class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								placeholder={$i18n.t('API Key')}
 								bind:value={TTS_OPENAI_API_KEY}
 								required
@@ -231,7 +231,7 @@
 						<div class="flex w-full">
 							<div class="flex-1">
 								<select
-									class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 									bind:value={TTS_VOICE}
 								>
 									<option value="" selected={TTS_VOICE !== ''}>{$i18n.t('Default')}</option>
@@ -254,7 +254,7 @@
 								<div class="flex-1">
 									<input
 										list="voice-list"
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 										bind:value={TTS_VOICE}
 										placeholder="Select a voice"
 									/>
@@ -273,7 +273,7 @@
 								<div class="flex-1">
 									<input
 										list="model-list"
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 										bind:value={TTS_MODEL}
 										placeholder="Select a model"
 									/>
@@ -293,7 +293,7 @@
 	</div>
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

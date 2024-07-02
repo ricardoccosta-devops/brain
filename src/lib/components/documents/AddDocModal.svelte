@@ -135,7 +135,7 @@
 						/>
 
 						<button
-							class="w-full text-sm font-medium py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-850 dark:hover:bg-gray-800 text-center rounded-xl"
+							class="w-full text-sm font-medium py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-850 dark:hover:bg-gray-800 text-center rounded"
 							type="button"
 							on:click={() => {
 								uploadDocInputElement.click();
@@ -159,7 +159,7 @@
 
 					<div class="flex justify-end pt-5 text-sm font-medium">
 						<button
-							class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+							class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 							type="submit"
 						>
 							{$i18n.t('Save')}

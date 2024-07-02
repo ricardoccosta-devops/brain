@@ -143,7 +143,7 @@
 					<div class="m-1 overflow-y-auto p-1 rounded-r-xl space-y-0.5">
 						{#each filteredModels as model, modelIdx}
 							<button
-								class=" px-3 py-1.5 rounded-xl w-full text-left {modelIdx === selectedIdx
+								class=" px-3 py-1.5 rounded w-full text-left {modelIdx === selectedIdx
 									? ' bg-gray-100 selected-command-option-button'
 									: ''}"
 								type="button"

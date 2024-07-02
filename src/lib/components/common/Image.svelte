@@ -19,5 +19,5 @@
 		showImagePreview = true;
 	}}
 >
-	<img src={_src} {alt} class=" max-h-96 rounded-lg" draggable="false" data-cy="image" />
+	<img src={_src} {alt} class=" max-h-96 rounded" draggable="false" data-cy="image" />
 </button>

@@ -47,7 +47,7 @@
 		{#each prompts as prompt, promptIdx}
 			<div class="snap-center shrink-0">
 				<button
-					class="flex flex-col flex-1 shrink-0 w-64 justify-between h-36 p-5 px-6 bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 rounded-3xl transition group"
+					class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-36 p-5 px-6 bg-white hover:bg-support-lightblue dark:bg-gray-850 dark:hover:bg-gray-800 rounded transition group"
 					on:click={() => {
 						submitPrompt(prompt.content);
 					}}
@@ -71,13 +71,13 @@
 
 					<div class="w-full flex justify-between">
 						<div
-							class="text-xs text-gray-400 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-500 transition self-center"
+							class="text-xs text-primary-lightmedium group-hover:text-primary-med dark:text-gray-600 dark:group-hover:text-gray-500 transition self-center"
 						>
 							{$i18n.t('Prompt')}
 						</div>
 
 						<div
-							class="self-end p-1 rounded-lg text-gray-300 group-hover:text-gray-800 dark:text-gray-700 dark:group-hover:text-gray-100 transition"
+							class="self-end p-1 rounded text-primary-med group-hover:text-primary-lightdark dark:text-gray-700 dark:group-hover:text-gray-100 transition"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@
 
 		<!-- <div class="snap-center shrink-0">
 		<img
-			class="shrink-0 w-80 h-40 rounded-lg shadow-xl bg-white"
+			class="shrink-0 w-80 h-40 rounded shadow-xl bg-white"
 			src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=320&amp;h=160&amp;q=80"
 		/>
 	</div> -->

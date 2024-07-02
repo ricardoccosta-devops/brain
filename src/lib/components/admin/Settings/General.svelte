@@ -71,7 +71,7 @@
 					<div class=" self-center text-xs font-medium">{$i18n.t('Default User Role')}</div>
 					<div class="flex items-center relative">
 						<select
-							class="dark:bg-gray-900 w-fit pr-8 rounded px-2 text-xs bg-transparent outline-none text-right"
+							class="dark:bg-darktheme-dark w-fit pr-8 rounded px-2 text-xs bg-transparent outline-none text-right"
 							bind:value={adminConfig.DEFAULT_USER_ROLE}
 							placeholder="Select a role"
 						>
@@ -107,7 +107,7 @@
 
 					<div class="flex mt-2 space-x-2">
 						<input
-							class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="text"
 							placeholder={`e.g.) "30m","1h", "10d". `}
 							bind:value={adminConfig.JWT_EXPIRES_IN}
@@ -131,7 +131,7 @@
 
 					<div class="flex mt-2 space-x-2">
 						<input
-							class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="text"
 							placeholder={`https://example.com/webhook`}
 							bind:value={webhookUrl}
@@ -144,7 +144,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

@@ -147,9 +147,9 @@
 						submitHandler();
 					}}
 				>
-					<div class="flex text-center text-sm font-medium rounded-xl bg-transparent/10 p-1 mb-2">
+					<div class="flex text-center text-sm font-medium rounded bg-transparent/10 p-1 mb-2">
 						<button
-							class="w-full rounded-lg p-1.5 {tab === '' ? 'bg-gray-50 dark:bg-gray-850' : ''}"
+							class="w-full rounded p-1.5 {tab === '' ? 'bg-gray-50 dark:bg-gray-850' : ''}"
 							type="button"
 							on:click={() => {
 								tab = '';
@@ -157,7 +157,7 @@
 						>
 
 						<button
-							class="w-full rounded-lg p-1 {tab === 'import' ? 'bg-gray-50 dark:bg-gray-850' : ''}"
+							class="w-full rounded p-1 {tab === 'import' ? 'bg-gray-50 dark:bg-gray-850' : ''}"
 							type="button"
 							on:click={() => {
 								tab = 'import';
@@ -171,7 +171,7 @@
 
 								<div class="flex-1">
 									<select
-										class="w-full capitalize rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
+										class="w-full capitalize rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
 										bind:value={_user.role}
 										placeholder={$i18n.t('Enter Your Role')}
 										required
@@ -188,7 +188,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
 										type="text"
 										bind:value={_user.name}
 										placeholder={$i18n.t('Enter Your Full Name')}
@@ -205,7 +205,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
 										type="email"
 										bind:value={_user.email}
 										placeholder={$i18n.t('Enter Your Email')}
@@ -220,7 +220,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
 										type="password"
 										bind:value={_user.password}
 										placeholder={$i18n.t('Enter Your Password')}
@@ -240,7 +240,7 @@
 									/>
 
 									<button
-										class="w-full text-sm font-medium py-3 bg-transparent hover:bg-gray-100 border border-dashed dark:border-gray-800 dark:hover:bg-gray-850 text-center rounded-xl"
+										class="w-full text-sm font-medium py-3 bg-transparent hover:bg-gray-100 border border-dashed dark:border-gray-800 dark:hover:bg-gray-850 text-center rounded"
 										type="button"
 										on:click={() => {
 											document.getElementById('upload-user-csv-input')?.click();
@@ -271,7 +271,7 @@
 
 					<div class="flex justify-end pt-3 text-sm font-medium">
 						<button
-							class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg flex flex-row space-x-1 items-center {loading
+							class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-white transition rounded flex flex-row space-x-1 items-center {loading
 								? ' cursor-not-allowed'
 								: ''}"
 							type="submit"

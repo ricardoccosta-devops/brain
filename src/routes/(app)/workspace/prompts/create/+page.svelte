@@ -124,7 +124,7 @@
 
 			<div>
 				<input
-					class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 					placeholder={$i18n.t('Add a short title for this prompt')}
 					bind:value={title}
 					required
@@ -142,7 +142,7 @@
 					/
 				</div>
 				<input
-					class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-r-lg"
+					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded-r-lg"
 					placeholder={$i18n.t('short-summary')}
 					bind:value={command}
 					required
@@ -171,7 +171,7 @@
 			<div class="mt-2">
 				<div>
 					<textarea
-						class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 						placeholder={$i18n.t('Write a summary in 50 words that summarizes [topic or keyword].')}
 						rows="6"
 						bind:value={content}
@@ -200,7 +200,7 @@
 
 		<div class="my-2 flex justify-end">
 			<button
-				class=" text-sm px-3 py-2 transition rounded-xl {loading
+				class=" text-sm px-3 py-2 transition rounded {loading
 					? ' cursor-not-allowed bg-gray-100 dark:bg-gray-800'
 					: ' bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-800'} flex"
 				type="submit"

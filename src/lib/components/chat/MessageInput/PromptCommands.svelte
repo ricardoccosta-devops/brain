@@ -98,7 +98,7 @@
 				<div class="m-1 overflow-y-auto p-1 rounded-r-xl space-y-0.5">
 					{#each filteredPromptCommands as command, commandIdx}
 						<button
-							class=" px-3 py-1.5 rounded-xl w-full text-left {commandIdx === selectedCommandIdx
+							class=" px-3 py-1.5 rounded w-full text-left {commandIdx === selectedCommandIdx
 								? ' bg-gray-100 selected-command-option-button'
 								: ''}"
 							type="button"

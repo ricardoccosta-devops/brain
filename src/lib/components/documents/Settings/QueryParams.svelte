@@ -56,7 +56,7 @@
 
 					<div class="self-center p-3">
 						<input
-							class=" w-full rounded-lg py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class=" w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Top K')}
 							bind:value={querySettings.k}
@@ -74,7 +74,7 @@
 
 						<div class="self-center p-3">
 							<input
-								class=" w-full rounded-lg py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class=" w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								type="number"
 								step="0.01"
 								placeholder={$i18n.t('Enter Score')}
@@ -102,7 +102,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('RAG Template')}</div>
 				<textarea
 					bind:value={querySettings.template}
-					class="w-full rounded-lg px-4 py-3 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded px-4 py-3 text-sm bg-white border border-solid border-gray-250 dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
 					rows="4"
 				/>
 			</div>
@@ -110,7 +110,7 @@
 	</div>
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

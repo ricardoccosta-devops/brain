@@ -41,8 +41,8 @@
 						<img
 							crossorigin="anonymous"
 							src={model?.info?.meta?.profile_image_url ??
-								($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/static/favicon.png`)}
-							class=" size-[2.7rem] rounded-full border-[1px] border-gray-200 dark:border-none"
+								($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/favicon.png`)}
+							class=" size-[2.7rem] rounded-full border-[1px] bg-white border-gray-200 dark:border-none"
 							alt="logo"
 							draggable="false"
 						/>
@@ -52,7 +52,7 @@
 		</div>
 
 		<div
-			class=" mt-2 mb-4 text-3xl text-gray-800 dark:text-gray-100 font-semibold text-left flex items-center gap-4"
+			class=" mt-2 mb-4 text-3xl text-primary-dark dark:text-gray-100 font-semibold text-left flex items-center gap-4"
 		>
 			<div>
 				<div class=" capitalize line-clamp-1" in:fade={{ duration: 200 }}>

@@ -44,10 +44,10 @@
 				class="tabs flex flex-row overflow-x-auto space-x-1 md:space-x-0 md:space-y-1 md:flex-col flex-1 md:flex-none md:w-40 dark:text-gray-200 text-xs text-left mb-3 md:mb-0"
 			>
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'general'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary'
+						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
 					on:click={() => {
 						selectedTab = 'general';
 					}}
@@ -70,10 +70,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'chunk'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary'
+						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
 					on:click={() => {
 						selectedTab = 'chunk';
 					}}
@@ -99,10 +99,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'query'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary'
+						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
 					on:click={() => {
 						selectedTab = 'query';
 					}}
@@ -129,10 +129,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'web'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary'
+						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
 					on:click={() => {
 						selectedTab = 'web';
 					}}

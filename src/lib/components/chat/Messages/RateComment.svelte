@@ -65,7 +65,7 @@
 </script>
 
 <div
-	class=" my-2.5 rounded-xl px-4 py-3 border dark:border-gray-850"
+	class=" my-2.5 rounded px-4 py-3 border dark:border-gray-850"
 	id="message-feedback-{messageId}"
 >
 	<div class="flex justify-between items-center">
@@ -96,7 +96,7 @@
 					class="px-3.5 py-1 border dark:border-gray-850 hover:bg-gray-100 dark:hover:bg-gray-850 {selectedReason ===
 					reason
 						? 'bg-gray-200 dark:bg-gray-800'
-						: ''} transition rounded-lg"
+						: ''} transition rounded"
 					on:click={() => {
 						selectedReason = reason;
 					}}
@@ -110,7 +110,7 @@
 	<div class="mt-2">
 		<textarea
 			bind:value={comment}
-			class="w-full text-sm px-1 py-2 bg-transparent outline-none resize-none rounded-xl"
+			class="w-full text-sm px-1 py-2 bg-white border border-solid border-gray-250 outline-none resize-none rounded"
 			placeholder={$i18n.t('Feel free to add specific details')}
 			rows="2"
 		/>
@@ -118,7 +118,7 @@
 
 	<div class="mt-2 flex justify-end">
 		<button
-			class=" bg-emerald-700 text-white text-sm font-medium rounded-lg px-3.5 py-1.5"
+			class=" bg-primary-med hover:bg-primary-light dark:bg-secondary-medium text-white text-sm font-medium rounded px-3.5 py-1.5"
 			on:click={() => {
 				submitHandler();
 			}}

@@ -100,13 +100,13 @@
 	<div class="mt-0.5 mb-3 gap-1 flex flex-col md:flex-row justify-between">
 		<div class="flex md:self-center text-lg font-medium px-0.5">
 			{$i18n.t('All Users')}
-			<div class="flex self-center w-[1px] h-6 mx-2.5 bg-gray-200 dark:bg-gray-700" />
+			<div class="flex self-center w-[1px] h-6 mx-2.5 bg-primary-dark dark:bg-darktheme-tertiary" />
 			<span class="text-lg font-medium text-gray-500 dark:text-gray-300">{users.length}</span>
 		</div>
 
 		<div class="flex gap-1">
 			<input
-				class="w-full md:w-60 rounded-xl py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+				class="w-full md:w-60 rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 				placeholder={$i18n.t('Search')}
 				bind:value={search}
 			/>
@@ -114,7 +114,7 @@
 			<div class="flex gap-0.5">
 				<Tooltip content={$i18n.t('Add User')}>
 					<button
-						class=" px-2 py-2 rounded-xl border border-gray-200 dark:border-gray-600 dark:border-0 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition font-medium text-sm flex items-center space-x-1"
+						class=" px-2 py-2 rounded border border-gray-200 dark:border-gray-600 dark:border-0 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition font-medium text-sm flex items-center space-x-1"
 						on:click={() => {
 							showAddUserModal = !showAddUserModal;
 						}}
@@ -161,10 +161,10 @@
 						}
 					})
 					.slice((page - 1) * 20, page * 20) as user}
-					<tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-850 text-xs">
+					<tr class="bg-white border-b dark:bg-darktheme-dark dark:border-gray-850 text-xs">
 						<td class="px-3 py-2 min-w-[7rem] w-28">
 							<button
-								class=" flex items-center gap-2 text-xs px-3 py-0.5 rounded-lg {user.role ===
+								class=" flex items-center gap-2 text-xs px-3 py-0.5 rounded {user.role ===
 									'admin' && 'text-sky-600 dark:text-sky-200 bg-sky-200/30'} {user.role ===
 									'user' && 'text-green-600 dark:text-green-200 bg-green-200/30'} {user.role ===
 									'pending' && 'text-gray-600 dark:text-gray-200 bg-gray-200/30'}"
@@ -187,7 +187,7 @@
 								{$i18n.t(user.role)}</button
 							>
 						</td>
-						<td class="px-3 py-2 font-medium text-gray-900 dark:text-white w-max">
+						<td class="px-3 py-2 font-medium text-primary-lightdarkest dark:text-white w-max">
 							<div class="flex flex-row w-max">
 								<img
 									class=" rounded-full w-6 h-6 object-cover mr-2.5"
@@ -217,7 +217,7 @@
 								{#if user.role !== 'admin'}
 									<Tooltip content={$i18n.t('Chats')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 											on:click={async () => {
 												showUserChatsModal = !showUserChatsModal;
 												selectedUser = user;
@@ -229,7 +229,7 @@
 
 									<Tooltip content={$i18n.t('Edit User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 											on:click={async () => {
 												showEditUserModal = !showEditUserModal;
 												selectedUser = user;
@@ -254,7 +254,7 @@
 
 									<Tooltip content={$i18n.t('Delete User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 											on:click={async () => {
 												deleteUserHandler(user.id);
 											}}
@@ -278,7 +278,7 @@
 								{:else}
 									<Tooltip content={$i18n.t('Edit User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 											on:click={async () => {
 												showEditUserModal = !showEditUserModal;
 												selectedUser = user;

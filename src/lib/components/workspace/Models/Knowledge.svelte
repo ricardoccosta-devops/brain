@@ -22,9 +22,9 @@
 				{#each knowledge as file, fileIdx}
 					<div class=" relative group">
 						<div
-							class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded-xl border border-gray-200 dark:border-none"
+							class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 bg-white rounded border border-gray-200 dark:border-none"
 						>
-							<div class="p-2.5 bg-red-400 text-white rounded-lg">
+							<div class="p-2.5 bg-red-400 text-white rounded">
 								{#if (file?.type ?? 'doc') === 'doc'}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@
 		<div class="flex flex-wrap text-sm font-medium gap-1.5 mt-2">
 			<Selector bind:knowledge>
 				<button
-					class=" px-3.5 py-1.5 font-medium hover:bg-black/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded-3xl"
+					class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded"
 					type="button">Select Documents</button
 				>
 			</Selector>

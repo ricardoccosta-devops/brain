@@ -268,7 +268,7 @@
 
 			<div class="flex-1 mr-2">
 				<select
-					class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+					class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 					bind:value={defaultModelId}
 					placeholder="Select a model"
 				>
@@ -283,7 +283,7 @@
 
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

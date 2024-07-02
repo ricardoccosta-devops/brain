@@ -275,7 +275,7 @@
 			class="p-1.5
 
             {loading
-				? ' bg-gray-200 dark:bg-gray-700/50'
+				? ' bg-primary-med dark:bg-darktheme-tertiary/50'
 				: 'bg-indigo-400/20 text-indigo-600 dark:text-indigo-300 '} 
 
 

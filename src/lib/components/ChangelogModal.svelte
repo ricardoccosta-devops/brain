@@ -50,7 +50,7 @@
 		</div>
 		<div class="flex items-center mt-1">
 			<div class="text-sm dark:text-gray-200">{$i18n.t('Release Notes')}</div>
-			<div class="flex self-center w-[1px] h-6 mx-2.5 bg-gray-200 dark:bg-gray-700" />
+			<div class="flex self-center w-[1px] h-6 mx-2.5 bg-primary-dark dark:bg-darktheme-tertiary" />
 			<div class="text-sm dark:text-gray-200">
 				v{WEBUI_VERSION}
 			</div>
@@ -108,7 +108,7 @@
 					localStorage.version = $config.version;
 					show = false;
 				}}
-				class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+				class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			>
 				<span class="relative">{$i18n.t("Okay, Let's Go!")}</span>
 			</button>

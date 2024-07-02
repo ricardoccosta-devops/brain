@@ -18,7 +18,7 @@
 		<div class="flex gap-2 group">
 			<div class="flex items-start pt-1">
 				<button
-					class="px-2 py-1 text-sm font-semibold uppercase min-w-[6rem] text-left dark:group-hover:bg-gray-800 rounded-lg transition"
+					class="px-2 py-1 text-sm font-semibold uppercase min-w-[6rem] text-left dark:group-hover:bg-gray-800 rounded transition"
 					on:click={() => {
 						message.role = message.role === 'user' ? 'assistant' : 'user';
 					}}>{$i18n.t(message.role)}</button
@@ -31,7 +31,7 @@
 				<textarea
 					id="{message.role}-{idx}-textarea"
 					bind:this={textAreaElement}
-					class="w-full bg-transparent outline-none rounded-lg p-2 text-sm resize-none overflow-hidden"
+					class="w-full bg-white border border-solid border-gray-250 outline-none rounded p-2 text-sm resize-none overflow-hidden"
 					placeholder={$i18n.t(`Enter {{role}} message here`, {
 						role: message.role === 'user' ? $i18n.t('a user') : $i18n.t('an assistant')
 					})}
@@ -52,7 +52,7 @@
 
 			<div class=" pt-1">
 				<button
-					class=" group-hover:text-gray-500 dark:text-gray-900 dark:hover:text-gray-300 transition"
+					class=" group-hover:text-gray-500 dark:text-primary-lightdarkest dark:hover:text-gray-300 transition"
 					on:click={() => {
 						messages = messages.filter((message, messageIdx) => messageIdx !== idx);
 					}}

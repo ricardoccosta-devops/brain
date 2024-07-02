@@ -215,7 +215,7 @@
 
 	<div>
 		<button
-			class=" px-2 py-2 rounded-xl border border-gray-200 dark:border-gray-600 dark:border-0 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition font-medium text-sm flex items-center space-x-1"
+			class=" px-2 py-2 rounded border border-gray-200 dark:border-gray-600 dark:border-0 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition font-medium text-sm flex items-center space-x-1"
 			on:click={() => {
 				showAddDocModal = true;
 			}}
@@ -236,7 +236,7 @@
 
 <!-- <div>
     <div
-        class="my-3 py-16 rounded-lg border-2 border-dashed dark:border-gray-600 {dragged &&
+        class="my-3 py-16 rounded border-2 border-dashed dark:border-gray-600 {dragged &&
             ' dark:bg-gray-700'} "
         role="region"
         on:drop={onDrop}
@@ -336,7 +336,7 @@
 <div class="my-3 mb-5">
 	{#each filteredDocs as doc}
 		<button
-			class=" flex space-x-4 cursor-pointer text-left w-full px-3 py-2 dark:hover:bg-white/5 hover:bg-black/5 rounded-xl"
+			class=" flex space-x-4 cursor-pointer text-left w-full px-3 py-2 dark:hover:bg-white/5 hover:bg-primary-dark/5 rounded"
 			on:click={() => {
 				if (doc?.selected === 'checked') {
 					doc.selected = 'unchecked';
@@ -350,7 +350,7 @@
 			</div>
 			<div class=" flex flex-1 space-x-4 cursor-pointer w-full">
 				<div class=" flex items-center space-x-3">
-					<div class="p-2.5 bg-red-400 text-white rounded-lg">
+					<div class="p-2.5 bg-red-400 text-white rounded">
 						{#if doc}
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -416,7 +416,7 @@
 			</div>
 			<div class="flex flex-row space-x-1 self-center">
 				<button
-					class="self-center w-fit text-sm z-20 px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+					class="self-center w-fit text-sm z-20 px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 					type="button"
 					on:click={async (e) => {
 						e.stopPropagation();
@@ -441,7 +441,7 @@
 				</button>
 
 				<!-- <button
-            class="self-center w-fit text-sm px-2 py-2 border dark:border-gray-600 rounded-xl"
+            class="self-center w-fit text-sm px-2 py-2 border dark:border-gray-600 rounded"
             type="button"
             on:click={() => {
                 console.log('download file');
@@ -463,7 +463,7 @@
         </button> -->
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 					type="button"
 					on:click={(e) => {
 						e.stopPropagation();
@@ -533,7 +533,7 @@
 		/>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded-xl bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
 			on:click={() => {
 				documentsImportInputElement.click();
 			}}
@@ -557,7 +557,7 @@
 		</button>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded-xl bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
 			on:click={async () => {
 				let blob = new Blob([JSON.stringify($documents)], {
 					type: 'application/json'

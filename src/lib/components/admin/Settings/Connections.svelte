@@ -185,7 +185,7 @@
 								<div class="flex w-full gap-2">
 									<div class="flex-1 relative">
 										<input
-											class="w-full rounded-lg py-2 px-4 {pipelineUrls[url]
+											class="w-full rounded py-2 px-4 {pipelineUrls[url]
 												? 'pr-8'
 												: ''} text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 											placeholder={$i18n.t('API Base URL')}
@@ -219,7 +219,7 @@
 
 									<div class="flex-1">
 										<input
-											class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+											class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 											placeholder={$i18n.t('API Key')}
 											bind:value={OPENAI_API_KEYS[idx]}
 											autocomplete="off"
@@ -272,7 +272,7 @@
 									<div class="flex">
 										<Tooltip content="Verify connection" className="self-start mt-0.5">
 											<button
-												class="self-center p-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-850 rounded-lg transition"
+												class="self-center p-2 bg-gray-200 hover:bg-gray-300 dark:bg-darktheme-dark dark:hover:bg-gray-850 rounded transition"
 												on:click={() => {
 													verifyOpenAIHandler(idx);
 												}}
@@ -329,7 +329,7 @@
 							{#each OLLAMA_BASE_URLS as url, idx}
 								<div class="flex gap-1.5">
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 										placeholder={$i18n.t('Enter URL (e.g. http://localhost:11434)')}
 										bind:value={url}
 									/>
@@ -379,7 +379,7 @@
 									<div class="flex">
 										<Tooltip content="Verify connection" className="self-start mt-0.5">
 											<button
-												class="self-center p-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 dark:hover:bg-gray-850 rounded-lg transition"
+												class="self-center p-2 bg-gray-200 hover:bg-gray-300 dark:bg-darktheme-dark dark:hover:bg-gray-850 rounded transition"
 												on:click={() => {
 													verifyOllamaHandler(idx);
 												}}
@@ -428,7 +428,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class="  px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class="  px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

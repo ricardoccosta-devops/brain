@@ -223,7 +223,7 @@
 
 {#if $showSidebar}
 	<div
-		class=" fixed md:hidden z-40 top-0 right-0 left-0 bottom-0 bg-black/60 w-full min-h-screen h-screen flex justify-center overflow-hidden overscroll-contain"
+		class=" fixed md:hidden z-40 top-0 right-0 left-0 bottom-0 bg-primary-dark/60 w-full min-h-screen h-screen flex justify-center overflow-hidden overscroll-contain"
 		on:mousedown={() => {
 			showSidebar.set(!$showSidebar);
 		}}
@@ -235,7 +235,7 @@
 	id="sidebar"
 	class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
 		? 'md:relative w-[260px]'
-		: '-translate-x-[260px] w-[0px]'} bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-200 text-sm transition fixed z-50 top-0 left-0 rounded-r-2xl
+		: '-translate-x-[260px] w-[0px]'} bg-gray-50 text-primary-lightdarkest dark:bg-darktheme-darkest dark:text-gray-200 text-sm transition fixed z-50 top-0 left-0 rounded-r-2xl
         "
 	data-state={$showSidebar}
 >
@@ -247,7 +247,7 @@
 		<div class="px-2.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400">
 			<a
 				id="sidebar-new-chat-button"
-				class="flex flex-1 justify-between rounded-xl px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+				class="flex flex-1 justify-between rounded px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-850 transition"
 				href="/"
 				draggable="false"
 				on:click={async () => {
@@ -267,19 +267,19 @@
 				<div class="self-center mx-1.5">
 					<img
 						crossorigin="anonymous"
-						src="{WEBUI_BASE_URL}/static/favicon.png"
-						class=" size-6 -translate-x-1.5 rounded-full"
+						src="{WEBUI_BASE_URL}/favicon.png"
+						class=" size-6 -translate-x-1.5 rounded-full bg-white"
 						alt="logo"
 					/>
 				</div>
-				<div class=" self-center font-medium text-sm text-gray-850 dark:text-white">
+				<div class=" self-center font-medium text-sm text-primary-dark dark:text-white">
 					{$i18n.t('New Chat')}
 				</div>
 				<div class="self-center ml-auto">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 20 20"
-						fill="currentColor"
+						fill="#00002d"
 						class="size-5"
 					>
 						<path
@@ -293,7 +293,7 @@
 			</a>
 
 			<button
-				class=" cursor-pointer px-2 py-2 flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+				class=" cursor-pointer px-2 py-2 flex rounded hover:bg-gray-100 dark:hover:bg-gray-850 transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}
@@ -304,7 +304,7 @@
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke-width="2"
-						stroke="currentColor"
+						stroke="#00002d"
 						class="size-5"
 					>
 						<path
@@ -318,9 +318,9 @@
 		</div>
 
 		{#if $user?.role === 'admin'}
-			<div class="px-2.5 flex justify-center text-gray-800 dark:text-gray-200">
+			<div class="px-2.5 flex justify-center text-primary-dark dark:text-gray-200">
 				<a
-					class="flex-grow flex space-x-3 rounded-xl px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+					class="flex-grow flex space-x-3 rounded px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-primary-lightdarkest transition"
 					href="/workspace"
 					on:click={() => {
 						selectedChatId = null;
@@ -338,7 +338,7 @@
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke-width="2"
-							stroke="currentColor"
+							stroke="#00002d"
 							class="size-[1.1rem]"
 						>
 							<path
@@ -358,7 +358,7 @@
 
 		<div class="relative flex flex-col flex-1 overflow-y-auto">
 			{#if !($settings.saveChatHistory ?? true)}
-				<div class="absolute z-40 w-full h-full bg-gray-50/90 dark:bg-black/90 flex justify-center">
+				<div class="absolute z-40 w-full h-full bg-gray-50/90 dark:bg-darktheme-dark/90 flex justify-center">
 					<div class=" text-left px-5 py-2">
 						<div class=" font-medium">{$i18n.t('Chat History is off for this browser.')}</div>
 						<div class="text-xs mt-2">
@@ -372,7 +372,7 @@
 
 						<div class="mt-3">
 							<button
-								class="flex justify-center items-center space-x-1.5 px-3 py-2.5 rounded-lg text-xs bg-gray-100 hover:bg-gray-200 transition text-gray-800 font-medium w-full"
+								class="flex justify-center items-center space-x-1.5 px-3 py-2.5 rounded text-xs bg-gray-100 hover:bg-gray-200 transition text-primary-dark font-medium w-full"
 								type="button"
 								on:click={() => {
 									saveSettings({
@@ -383,7 +383,7 @@
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 16 16"
-									fill="currentColor"
+									fill="#00002d"
 									class="w-3 h-3"
 								>
 									<path
@@ -401,12 +401,12 @@
 			{/if}
 
 			<div class="px-2 mt-0.5 mb-2 flex justify-center space-x-2">
-				<div class="flex w-full rounded-xl" id="chat-search">
+				<div class="flex w-full rounded" id="chat-search">
 					<div class="self-center pl-3 py-2 rounded-l-xl bg-transparent">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
-							fill="currentColor"
+							fill="#00002d"
 							class="w-4 h-4"
 						>
 							<path
@@ -431,7 +431,7 @@
 			{#if $tags.length > 0}
 				<div class="px-2.5 mb-2 flex gap-1 flex-wrap">
 					<button
-						class="px-2.5 text-xs font-medium bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 transition rounded-full"
+						class="px-2.5 text-xs font-medium bg-gray-50 dark:bg-darktheme-dark dark:hover:bg-gray-800 transition rounded-full"
 						on:click={async () => {
 							await chats.set(await getChatList(localStorage.token));
 						}}
@@ -440,7 +440,7 @@
 					</button>
 					{#each $tags as tag}
 						<button
-							class="px-2.5 text-xs font-medium bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 transition rounded-full"
+							class="px-2.5 text-xs font-medium bg-gray-50 dark:bg-darktheme-dark dark:hover:bg-gray-800 transition rounded-full"
 							on:click={async () => {
 								let chatIds = await getChatListByTagName(localStorage.token, tag.name);
 								if (chatIds.length === 0) {
@@ -489,13 +489,13 @@
 					<div class=" w-full pr-2 relative group">
 						{#if chatTitleEditId === chat.id}
 							<div
-								class=" w-full flex justify-between rounded-xl px-3 py-2 {chat.id === $chatId ||
+								class=" w-full flex justify-between rounded px-3 py-2 {chat.id === $chatId ||
 								chat.id === chatTitleEditId ||
 								chat.id === chatDeleteId
-									? 'bg-gray-200 dark:bg-gray-900'
+									? 'bg-gray-200 dark:bg-darktheme-dark'
 									: chat.id === selectedChatId
-									? 'bg-gray-100 dark:bg-gray-950'
-									: 'group-hover:bg-gray-100 dark:group-hover:bg-gray-950'}  whitespace-nowrap text-ellipsis"
+									? 'bg-gray-100 dark:bg-darktheme-darkest'
+									: 'group-hover:bg-gray-100 dark:group-hover:bg-primary-darkest'}  whitespace-nowrap text-ellipsis"
 							>
 								<input
 									use:focusEdit
@@ -505,13 +505,13 @@
 							</div>
 						{:else}
 							<a
-								class=" w-full flex justify-between rounded-xl px-3 py-2 {chat.id === $chatId ||
+								class=" w-full flex justify-between rounded px-3 py-2 {chat.id === $chatId ||
 								chat.id === chatTitleEditId ||
 								chat.id === chatDeleteId
-									? 'bg-gray-200 dark:bg-gray-900'
+									? 'bg-gray-200 dark:bg-darktheme-dark'
 									: chat.id === selectedChatId
-									? 'bg-gray-100 dark:bg-gray-950'
-									: ' group-hover:bg-gray-100 dark:group-hover:bg-gray-950'}  whitespace-nowrap text-ellipsis"
+									? 'bg-gray-100 dark:bg-darktheme-darkest'
+									: ' group-hover:bg-gray-100 dark:group-hover:bg-primary-darkest'}  whitespace-nowrap text-ellipsis"
 								href="/c/{chat.id}"
 								on:click={() => {
 									selectedChatId = chat.id;
@@ -537,10 +537,10 @@
 							class="
 
 							{chat.id === $chatId || chat.id === chatTitleEditId || chat.id === chatDeleteId
-								? 'from-gray-200 dark:from-gray-900'
+								? 'from-gray-200 dark:from-primary-lightdarkest'
 								: chat.id === selectedChatId
-								? 'from-gray-100 dark:from-gray-950'
-								: 'invisible group-hover:visible from-gray-100 dark:from-gray-950'}
+								? 'from-gray-100 dark:from-primary-darkest'
+								: 'invisible group-hover:visible from-gray-100 dark:from-primary-darkest'}
 								absolute right-[10px] top-[10px] pr-2 pl-5 bg-gradient-to-l from-80%
 
 								  to-transparent"
@@ -558,7 +558,7 @@
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 20 20"
-											fill="currentColor"
+											fill="#00002d"
 											class="w-4 h-4"
 										>
 											<path
@@ -578,7 +578,7 @@
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 20 20"
-											fill="currentColor"
+											fill="#00002d"
 											class="w-4 h-4"
 										>
 											<path
@@ -598,7 +598,7 @@
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 20 20"
-											fill="currentColor"
+											fill="#00002d"
 											class="w-4 h-4"
 										>
 											<path
@@ -617,7 +617,7 @@
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 20 20"
-											fill="currentColor"
+											fill="#00002d"
 											class="w-4 h-4"
 										>
 											<path
@@ -661,7 +661,7 @@
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
 												viewBox="0 0 16 16"
-												fill="currentColor"
+												fill="#00002d"
 												class="w-4 h-4"
 											>
 												<path
@@ -682,7 +682,7 @@
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
 												viewBox="0 0 16 16"
-												fill="currentColor"
+												fill="#00002d"
 												class="w-4 h-4"
 											>
 												<path
@@ -700,7 +700,7 @@
 		</div>
 
 		<div class="px-2.5">
-			<!-- <hr class=" border-gray-900 mb-1 w-full" /> -->
+			<!-- <hr class=" border-primary-lightdarkest mb-1 w-full" /> -->
 
 			<div class="flex flex-col">
 				{#if $user !== undefined}
@@ -713,7 +713,7 @@
 						}}
 					>
 						<button
-							class=" flex rounded-xl py-3 px-3.5 w-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+							class=" flex rounded py-3 px-3.5 w-full hover:bg-gray-100 dark:hover:bg-primary-lightdarkest transition"
 							on:click={() => {
 								showDropdown = !showDropdown;
 							}}

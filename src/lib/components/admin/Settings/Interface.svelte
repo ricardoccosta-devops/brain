@@ -88,7 +88,7 @@
 				<div class="flex-1">
 					<div class=" text-xs mb-1">{$i18n.t('Local Models')}</div>
 					<select
-						class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 						bind:value={taskConfig.TASK_MODEL}
 						placeholder={$i18n.t('Select a model')}
 					>
@@ -104,7 +104,7 @@
 				<div class="flex-1">
 					<div class=" text-xs mb-1">{$i18n.t('External Models')}</div>
 					<select
-						class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 						bind:value={taskConfig.TASK_MODEL_EXTERNAL}
 						placeholder={$i18n.t('Select a model')}
 					>
@@ -122,7 +122,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Title Generation Prompt')}</div>
 				<textarea
 					bind:value={taskConfig.TITLE_GENERATION_PROMPT_TEMPLATE}
-					class="w-full rounded-lg py-3 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded bg-white border border-solid border-gray-250 py-3 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
 					rows="6"
 				/>
 			</div>
@@ -131,7 +131,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Search Query Generation Prompt')}</div>
 				<textarea
 					bind:value={taskConfig.SEARCH_QUERY_GENERATION_PROMPT_TEMPLATE}
-					class="w-full rounded-lg py-3 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded py-3 px-4 text-sm bg-white border border-solid border-gray-250 dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
 					rows="6"
 				/>
 			</div>
@@ -142,7 +142,7 @@
 				</div>
 				<input
 					bind:value={taskConfig.SEARCH_QUERY_PROMPT_LENGTH_THRESHOLD}
-					class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
 					type="number"
 				/>
 			</div>
@@ -190,20 +190,20 @@
 			<div class="flex flex-col space-y-1">
 				{#each banners as banner, bannerIdx}
 					<div class=" flex justify-between">
-						<div class="flex flex-row flex-1 border rounded-xl dark:border-gray-800">
+						<div class="flex flex-row flex-1 border rounded dark:border-gray-800">
 							<select
-								class="w-fit capitalize rounded-xl py-2 px-4 text-xs bg-transparent outline-none"
+								class="w-fit capitalize rounded py-2 px-4 text-xs bg-transparent outline-none"
 								bind:value={banner.type}
 								required
 							>
 								{#if banner.type == ''}
-									<option value="" selected disabled class="text-gray-900">{$i18n.t('Type')}</option
+									<option value="" selected disabled class="text-primary-lightdarkest">{$i18n.t('Type')}</option
 									>
 								{/if}
-								<option value="info" class="text-gray-900">{$i18n.t('Info')}</option>
-								<option value="warning" class="text-gray-900">{$i18n.t('Warning')}</option>
-								<option value="error" class="text-gray-900">{$i18n.t('Error')}</option>
-								<option value="success" class="text-gray-900">{$i18n.t('Success')}</option>
+								<option value="info" class="text-primary-lightdarkest">{$i18n.t('Info')}</option>
+								<option value="warning" class="text-primary-lightdarkest">{$i18n.t('Warning')}</option>
+								<option value="error" class="text-primary-lightdarkest">{$i18n.t('Error')}</option>
+								<option value="success" class="text-primary-lightdarkest">{$i18n.t('Success')}</option>
 							</select>
 
 							<input
@@ -273,7 +273,7 @@
 				</div>
 				<div class="grid lg:grid-cols-2 flex-col gap-1.5">
 					{#each promptSuggestions as prompt, promptIdx}
-						<div class=" flex dark:bg-gray-850 rounded-xl py-1.5">
+						<div class=" flex dark:bg-gray-850 rounded py-1.5">
 							<div class="flex flex-col flex-1 pl-1">
 								<div class="flex border-b dark:border-gray-800 w-full">
 									<input
@@ -330,7 +330,7 @@
 
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

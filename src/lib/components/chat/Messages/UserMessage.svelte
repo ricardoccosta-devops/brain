@@ -96,10 +96,10 @@
 					{#each message.files as file}
 						<div class={$settings?.chatBubble ?? true ? 'self-end' : ''}>
 							{#if file.type === 'image'}
-								<img src={file.url} alt="input" class=" max-h-96 rounded-lg" draggable="false" />
+								<img src={file.url} alt="input" class=" max-h-96 rounded" draggable="false" />
 							{:else if file.type === 'doc'}
 								<button
-									class="h-16 w-72 flex items-center space-x-3 px-2.5 dark:bg-gray-850 rounded-xl border border-gray-200 dark:border-none text-left"
+									class="h-16 w-72 flex items-center space-x-3 px-2.5 dark:bg-gray-850 rounded border border-gray-200 dark:border-none text-left"
 									type="button"
 									on:click={() => {
 										if (file?.url) {
@@ -107,7 +107,7 @@
 										}
 									}}
 								>
-									<div class="p-2.5 bg-red-400 text-white rounded-lg">
+									<div class="p-2.5 bg-red-400 text-white rounded">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 24 24"
@@ -135,10 +135,10 @@
 								</button>
 							{:else if file.type === 'collection'}
 								<button
-									class="h-16 w-72 flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded-xl border border-gray-200 dark:border-none text-left"
+									class="h-16 w-72 flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded border bg-white border-gray-200 dark:border-none text-left"
 									type="button"
 								>
-									<div class="p-2.5 bg-red-400 text-white rounded-lg">
+									<div class="p-2.5 bg-red-400 text-white rounded">
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 24 24"
@@ -169,11 +169,11 @@
 			{/if}
 
 			{#if edit === true}
-				<div class=" w-full bg-gray-50 dark:bg-gray-800 rounded-3xl px-5 py-3 mb-2">
+				<div class=" w-full bg-gray-50 dark:bg-gray-800 rounded px-5 py-3 mb-2">
 					<textarea
 						id="message-edit-{message.id}"
 						bind:this={messageEditTextAreaElement}
-						class=" bg-transparent outline-none w-full resize-none"
+						class=" bg-white border border-solid border-gray-250 outline-none w-full resize-none"
 						bind:value={editedContent}
 						on:input={(e) => {
 							e.target.style.height = '';
@@ -196,7 +196,7 @@
 					<div class=" mt-2 mb-1 flex justify-end space-x-1.5 text-sm font-medium">
 						<button
 							id="close-edit-message-button"
-							class="px-4 py-2 bg-white dark:bg-gray-900 hover:bg-gray-100 text-gray-800 dark:text-gray-100 transition rounded-3xl"
+							class="px-4 py-2 bg-white dark:bg-darktheme-dark hover:bg-gray-100 text-primary-dark dark:text-gray-100 transition rounded"
 							on:click={() => {
 								cancelEditMessage();
 							}}
@@ -206,7 +206,7 @@
 
 						<button
 							id="save-edit-message-button"
-							class=" px-4 py-2 bg-gray-900 dark:bg-white hover:bg-gray-850 text-gray-100 dark:text-gray-800 transition rounded-3xl"
+							class=" px-4 py-2 bg-primary-lightdarkest dark:bg-white hover:bg-gray-850 text-gray-100 dark:text-primary-dark transition rounded"
 							on:click={() => {
 								editMessageConfirmHandler();
 							}}
@@ -219,7 +219,7 @@
 				<div class="w-full">
 					<div class="flex {$settings?.chatBubble ?? true ? 'justify-end' : ''} mb-2">
 						<div
-							class="rounded-3xl {$settings?.chatBubble ?? true
+							class="rounded {$settings?.chatBubble ?? true
 								? `max-w-[90%] px-5 py-2  bg-gray-50 dark:bg-gray-850 ${
 										message.files ? 'rounded-tr-lg' : ''
 								  }`
@@ -238,7 +238,7 @@
 							{#if siblings.length > 1}
 								<div class="flex self-center" dir="ltr">
 									<button
-										class="self-center p-1 hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
 										on:click={() => {
 											showPreviousMessage(message);
 										}}
@@ -264,7 +264,7 @@
 									</div>
 
 									<button
-										class="self-center p-1 hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
 										on:click={() => {
 											showNextMessage(message);
 										}}
@@ -290,7 +290,7 @@
 						{#if !readOnly}
 							<Tooltip content={$i18n.t('Edit')} placement="bottom">
 								<button
-									class="invisible group-hover:visible p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition edit-user-message-button"
+									class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition edit-user-message-button"
 									on:click={() => {
 										editMessageHandler();
 									}}
@@ -315,7 +315,7 @@
 
 						<Tooltip content={$i18n.t('Copy')} placement="bottom">
 							<button
-								class="invisible group-hover:visible p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition"
+								class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition"
 								on:click={() => {
 									copyToClipboard(message.content);
 								}}
@@ -367,7 +367,7 @@
 							{#if siblings.length > 1}
 								<div class="flex self-center" dir="ltr">
 									<button
-										class="self-center p-1 hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
 										on:click={() => {
 											showPreviousMessage(message);
 										}}
@@ -393,7 +393,7 @@
 									</div>
 
 									<button
-										class="self-center p-1 hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
 										on:click={() => {
 											showNextMessage(message);
 										}}

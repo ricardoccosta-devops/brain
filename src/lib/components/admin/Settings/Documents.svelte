@@ -228,7 +228,7 @@
 				</div>
 
 				<button
-					class=" self-center text-xs p-1 px-3 bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg flex flex-row space-x-1 items-center {scanDirLoading
+					class=" self-center text-xs p-1 px-3 bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 rounded flex flex-row space-x-1 items-center {scanDirLoading
 						? ' cursor-not-allowed'
 						: ''}"
 					on:click={() => {
@@ -274,7 +274,7 @@
 				<div class=" self-center text-xs font-medium">{$i18n.t('Embedding Model Engine')}</div>
 				<div class="flex items-center relative">
 					<select
-						class="dark:bg-gray-900 w-fit pr-8 rounded px-2 p-1 text-xs bg-transparent outline-none text-right"
+						class="dark:bg-darktheme-dark w-fit pr-8 rounded px-2 p-1 text-xs bg-transparent outline-none text-right"
 						bind:value={embeddingEngine}
 						placeholder="Select an embedding model engine"
 						on:change={(e) => {
@@ -297,14 +297,14 @@
 			{#if embeddingEngine === 'openai'}
 				<div class="my-0.5 flex gap-2">
 					<input
-						class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 						placeholder={$i18n.t('API Base URL')}
 						bind:value={OpenAIUrl}
 						required
 					/>
 
 					<input
-						class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 						placeholder={$i18n.t('API Key')}
 						bind:value={OpenAIKey}
 						required
@@ -320,7 +320,7 @@
 							max="2048"
 							step="1"
 							bind:value={OpenAIBatchSize}
-							class="w-full h-2 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+							class="w-full h-2 rounded appearance-none cursor-pointer dark:bg-gray-700"
 						/>
 					</div>
 					<div class="">
@@ -365,7 +365,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<select
-							class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							bind:value={embeddingModel}
 							placeholder={$i18n.t('Select a model')}
 							required
@@ -383,7 +383,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<input
-							class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							placeholder={$i18n.t('Set embedding model (e.g. {{model}})', {
 								model: embeddingModel.slice(-40)
 							})}
@@ -393,7 +393,7 @@
 
 					{#if embeddingEngine === ''}
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
+							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
 							on:click={() => {
 								embeddingModelUpdateHandler();
 							}}
@@ -458,7 +458,7 @@
 					<div class="flex w-full">
 						<div class="flex-1 mr-2">
 							<input
-								class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								placeholder={$i18n.t('Set reranking model (e.g. {{model}})', {
 									model: 'BAAI/bge-reranker-v2-m3'
 								})}
@@ -466,7 +466,7 @@
 							/>
 						</div>
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
+							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
 							on:click={() => {
 								rerankingModelUpdateHandler();
 							}}
@@ -530,7 +530,7 @@
 
 					<div class="self-center p-3">
 						<input
-							class=" w-full rounded-lg py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class=" w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Top K')}
 							bind:value={querySettings.k}
@@ -548,7 +548,7 @@
 
 						<div class="self-center p-3">
 							<input
-								class=" w-full rounded-lg py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class=" w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 								type="number"
 								step="0.01"
 								placeholder={$i18n.t('Enter Score')}
@@ -576,7 +576,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('RAG Template')}</div>
 				<textarea
 					bind:value={querySettings.template}
-					class="w-full rounded-lg px-4 py-3 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded px-4 py-3 text-sm bg-white border border-solid border-gray-250 dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
 					rows="4"
 				/>
 			</div>
@@ -592,7 +592,7 @@
 					<div class="self-center text-xs font-medium min-w-fit mb-1">{$i18n.t('Chunk Size')}</div>
 					<div class="self-center">
 						<input
-							class=" w-full rounded-lg py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class=" w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Chunk Size')}
 							bind:value={chunkSize}
@@ -609,7 +609,7 @@
 
 					<div class="self-center">
 						<input
-							class="w-full rounded-lg py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Chunk Overlap')}
 							bind:value={chunkOverlap}
@@ -711,7 +711,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded-xl py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+					class=" flex rounded py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
 					on:click={() => {
 						showResetUploadDirConfirm = true;
 					}}
@@ -808,7 +808,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded-xl py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+					class=" flex rounded py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
 					on:click={() => {
 						showResetConfirm = true;
 					}}
@@ -835,7 +835,7 @@
 	</div>
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

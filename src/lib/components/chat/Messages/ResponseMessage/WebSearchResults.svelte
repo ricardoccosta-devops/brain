@@ -24,7 +24,7 @@
 	</Collapsible.Trigger>
 
 	<Collapsible.Content
-		class=" text-sm border border-gray-300/30 dark:border-gray-700/50 rounded-xl"
+		class=" text-sm border border-gray-300/30 dark:border-gray-700/50 rounded"
 		transition={slide}
 	>
 		{#each urls as url, urlIdx}
@@ -33,14 +33,14 @@
 				target="_blank"
 				class="flex w-full items-center p-3 px-4 {urlIdx === urls.length - 1
 					? ''
-					: 'border-b border-gray-300/30 dark:border-gray-700/50'} group/item justify-between font-normal text-gray-800 dark:text-gray-300"
+					: 'border-b border-gray-300/30 dark:border-gray-700/50'} group/item justify-between font-normal text-primary-dark dark:text-gray-300"
 			>
 				<div class=" line-clamp-1">
 					{url}
 				</div>
 
 				<div
-					class=" ml-1 text-white dark:text-gray-900 group-hover/item:text-gray-600 dark:group-hover/item:text-white transition"
+					class=" ml-1 text-white dark:text-primary-lightdarkest group-hover/item:text-gray-600 dark:group-hover/item:text-white transition"
 				>
 					<!--  -->
 					<svg

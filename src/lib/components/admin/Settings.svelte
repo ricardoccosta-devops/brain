@@ -28,10 +28,10 @@
 		class="tabs flex flex-row overflow-x-auto space-x-1 max-w-full lg:space-x-0 lg:space-y-1 lg:flex-col lg:flex-none lg:w-44 dark:text-gray-200 text-xs text-left scrollbar-none"
 	>
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 lg:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 lg:flex-none flex text-left transition {selectedTab ===
 			'general'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'general';
 			}}
@@ -54,10 +54,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'users'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'users';
 			}}
@@ -78,10 +78,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'connections'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'connections';
 			}}
@@ -102,10 +102,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'models'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'models';
 			}}
@@ -128,10 +128,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'documents'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'documents';
 			}}
@@ -158,10 +158,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'web'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'web';
 			}}
@@ -182,10 +182,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'interface'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'interface';
 			}}
@@ -208,10 +208,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'audio'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'audio';
 			}}
@@ -235,10 +235,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'images'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'images';
 			}}
@@ -261,10 +261,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'pipelines'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'pipelines';
 			}}
@@ -291,10 +291,10 @@
 		</button>
 
 		<button
-			class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'db'
-				? 'bg-gray-200 dark:bg-gray-800'
-				: ' hover:bg-gray-300 dark:hover:bg-gray-850'}"
+				? 'bg-primary-med text-white dark:bg-gray-800'
+				: ' hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-850'}"
 			on:click={() => {
 				selectedTab = 'db';
 			}}

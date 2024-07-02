@@ -178,7 +178,7 @@
 
 					<div>
 						<button
-							class=" text-xs text-center text-gray-800 dark:text-gray-400 rounded-full px-4 py-0.5 bg-gray-100 dark:bg-gray-850"
+							class=" text-xs text-center text-primary-dark dark:text-gray-400 rounded-full px-4 py-0.5 bg-gray-100 dark:bg-gray-850"
 							on:click={async () => {
 								if (canvasPixelTest()) {
 									profileImageUrl = generateInitialsImage(name);
@@ -196,7 +196,7 @@
 						>
 
 						<button
-							class=" text-xs text-center text-gray-800 dark:text-gray-400 rounded-full px-4 py-0.5 bg-gray-100 dark:bg-gray-850"
+							class=" text-xs text-center text-primary-dark dark:text-gray-400 rounded-full px-4 py-0.5 bg-gray-100 dark:bg-gray-850"
 							on:click={async () => {
 								const url = await getGravatarUrl($user.email);
 
@@ -205,7 +205,7 @@
 						>
 
 						<button
-							class=" text-xs text-center text-gray-800 dark:text-gray-400 rounded-lg px-2 py-1"
+							class=" text-xs text-center text-primary-dark dark:text-gray-400 rounded px-2 py-1"
 							on:click={async () => {
 								profileImageUrl = '/user.png';
 							}}>{$i18n.t('Remove')}</button
@@ -220,7 +220,7 @@
 
 					<div class="flex-1">
 						<input
-							class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 							type="text"
 							bind:value={name}
 							required
@@ -304,7 +304,7 @@
 						</div>
 
 						<button
-							class="ml-1.5 px-1.5 py-1 dark:hover:bg-gray-850 transition rounded-lg"
+							class="ml-1.5 px-1.5 py-1 dark:hover:bg-gray-850 transition rounded"
 							on:click={() => {
 								copyToClipboard(localStorage.token);
 								JWTTokenCopied = true;
@@ -404,7 +404,7 @@
 							</div>
 
 							<button
-								class="ml-1.5 px-1.5 py-1 dark:hover:bg-gray-850 transition rounded-lg"
+								class="ml-1.5 px-1.5 py-1 dark:hover:bg-gray-850 transition rounded"
 								on:click={() => {
 									copyToClipboard(APIKey);
 									APIKeyCopied = true;
@@ -449,7 +449,7 @@
 
 							<Tooltip content={$i18n.t('Create new key')}>
 								<button
-									class=" px-1.5 py-1 dark:hover:bg-gray-850transition rounded-lg"
+									class=" px-1.5 py-1 dark:hover:bg-gray-850transition rounded"
 									on:click={() => {
 										createAPIKeyHandler();
 									}}
@@ -472,7 +472,7 @@
 							</Tooltip>
 						{:else}
 							<button
-								class="flex gap-1.5 items-center font-medium px-3.5 py-1.5 rounded-lg bg-gray-100/70 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-850 transition"
+								class="flex gap-1.5 items-center font-medium px-3.5 py-1.5 rounded bg-gray-100/70 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-850 transition"
 								on:click={() => {
 									createAPIKeyHandler();
 								}}
@@ -490,7 +490,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class="  px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+			class="  px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 			on:click={async () => {
 				const res = await submitHandler();
 

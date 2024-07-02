@@ -100,7 +100,7 @@
 
 		<div class="mt-3 flex justify-end">
 			<button
-				class=" px-4 py-2 text-xs bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-800 text-gray-100 transition rounded-md font-medium"
+				class=" px-4 py-2 text-xs bg-gray-800 hover:bg-primary-lightdarkest dark:bg-gray-700 dark:hover:bg-gray-800 text-gray-100 transition rounded-md font-medium"
 			>
 				{$i18n.t('Update password')}
 			</button>

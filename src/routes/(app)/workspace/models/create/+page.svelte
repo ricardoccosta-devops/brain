@@ -330,7 +330,7 @@
 
 				<div>
 					<input
-						class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 						placeholder={$i18n.t('Name your model')}
 						bind:value={name}
 						required
@@ -343,7 +343,7 @@
 
 				<div>
 					<input
-						class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 						placeholder={$i18n.t('Add a model id')}
 						bind:value={id}
 						required
@@ -357,14 +357,14 @@
 
 			<div>
 				<select
-					class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 					placeholder="Select a base model (e.g. llama3, gpt-4o)"
 					bind:value={info.base_model_id}
 					required
 				>
-					<option value={null} class=" text-gray-900">{$i18n.t('Select a base model')}</option>
+					<option value={null} class=" text-primary-lightdarkest">{$i18n.t('Select a base model')}</option>
 					{#each $models.filter((m) => !m?.preset) as model}
-						<option value={model.id} class=" text-gray-900">{model.name}</option>
+						<option value={model.id} class=" text-primary-lightdarkest">{model.name}</option>
 					{/each}
 				</select>
 			</div>
@@ -395,7 +395,7 @@
 
 			{#if info.meta.description !== null}
 				<input
-					class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 					placeholder={$i18n.t('Add a short description about what this model does')}
 					bind:value={info.meta.description}
 				/>
@@ -414,7 +414,7 @@
 					<div class=" text-xs font-semibold mb-2">{$i18n.t('System Prompt')}</div>
 					<div>
 						<textarea
-							class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg -mb-1"
+							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded -mb-1"
 							placeholder={`Write your model system prompt content here\ne.g.) You are Mario from Super Mario Bros, acting as an assistant.`}
 							rows="4"
 							bind:value={info.params.system}
@@ -512,9 +512,9 @@
 				<div class="flex flex-col space-y-1 mt-2">
 					{#if info.meta.suggestion_prompts.length > 0}
 						{#each info.meta.suggestion_prompts as prompt, promptIdx}
-							<div class=" flex border dark:border-gray-600 rounded-lg">
+							<div class=" flex border dark:border-gray-600 rounded">
 								<input
-									class="px-3 py-1.5 text-sm w-full bg-transparent outline-none border-r dark:border-gray-600"
+									class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 outline-none border-r dark:border-gray-600"
 									placeholder={$i18n.t('Write a prompt suggestion (e.g. Who are you?)')}
 									bind:value={prompt.content}
 								/>
@@ -618,7 +618,7 @@
 			{#if showPreview}
 				<div>
 					<textarea
-						class="px-3 py-1.5 text-sm w-full bg-transparent border dark:border-gray-600 outline-none rounded-lg"
+						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
 						rows="10"
 						value={JSON.stringify(info, null, 2)}
 						disabled
@@ -630,7 +630,7 @@
 
 		<div class="my-2 flex justify-end mb-20">
 			<button
-				class=" text-sm px-3 py-2 transition rounded-xl {loading
+				class=" text-sm px-3 py-2 transition rounded {loading
 					? ' cursor-not-allowed bg-gray-100 dark:bg-gray-800'
 					: ' bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-800'} flex"
 				type="submit"

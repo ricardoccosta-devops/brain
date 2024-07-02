@@ -128,7 +128,7 @@
 													.includes(searchValue.toLowerCase())) as chat, idx}
 											<tr
 												class="bg-transparent {idx !== chats.length - 1 &&
-													'border-b'} dark:bg-gray-900 dark:border-gray-850 text-xs"
+													'border-b'} dark:bg-darktheme-dark dark:border-gray-850 text-xs"
 											>
 												<td class="px-3 py-1 w-2/3">
 													<a href="/c/{chat.id}" target="_blank">
@@ -148,7 +148,7 @@
 													<div class="flex justify-end w-full">
 														<Tooltip content="Unarchive Chat">
 															<button
-																class="self-center w-fit text-sm px-2 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 																on:click={async () => {
 																	unarchiveChatHandler(chat.id);
 																}}
@@ -172,7 +172,7 @@
 
 														<Tooltip content="Delete Chat">
 															<button
-																class="self-center w-fit text-sm px-2 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
 																on:click={async () => {
 																	deleteChatHandler(chat.id);
 																}}
@@ -204,7 +204,7 @@
 
 						<div class="flex flex-wrap text-sm font-medium gap-1.5 mt-2 m-1">
 							<button
-								class=" px-3.5 py-1.5 font-medium hover:bg-black/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded-3xl"
+								class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded"
 								on:click={() => {
 									exportChatsHandler();
 								}}>Export All Archived Chats</button

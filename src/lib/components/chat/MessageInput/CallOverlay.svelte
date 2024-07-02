@@ -450,14 +450,14 @@
 	<audio id="audioElement" src="" style="display: none;" />
 	<div class=" absolute w-full h-screen max-h-[100dvh] flex z-[999] overflow-hidden">
 		<div
-			class="absolute w-full h-screen max-h-[100dvh] bg-white text-gray-700 dark:bg-black dark:text-gray-300 flex justify-center"
+			class="absolute w-full h-screen max-h-[100dvh] bg-white text-gray-700 dark:bg-darktheme-dark dark:text-gray-300 flex justify-center"
 		>
 			<div class="max-w-lg w-full h-screen max-h-[100dvh] flex flex-col justify-between p-3 md:p-6">
 				{#if camera}
 					<div class="flex justify-center items-center w-full min-h-20">
 						{#if loading}
 							<svg
-								class="size-12 text-gray-900 dark:text-gray-400"
+								class="size-12 text-primary-lightdarkest dark:text-gray-400"
 								viewBox="0 0 24 24"
 								fill="currentColor"
 								xmlns="http://www.w3.org/2000/svg"
@@ -500,7 +500,7 @@
 									? ' size-16'
 									: rmsLevel * 100 > 1
 									? 'size-14'
-									: 'size-12'}  transition-all bg-black dark:bg-white rounded-full"
+									: 'size-12'}  transition-all bg-primary-med dark:bg-white rounded-full"
 							/>
 						{/if}
 						<!-- navbar -->
@@ -511,7 +511,7 @@
 					{#if !camera}
 						{#if loading}
 							<svg
-								class="size-44 text-gray-900 dark:text-gray-400"
+								class="size-44 text-primary-lightdarkest dark:text-gray-400"
 								viewBox="0 0 24 24"
 								fill="currentColor"
 								xmlns="http://www.w3.org/2000/svg"
@@ -554,7 +554,7 @@
 									? 'size-48'
 									: rmsLevel * 100 > 1
 									? 'size-[11.5rem]'
-									: 'size-44'}  transition-all bg-black dark:bg-white rounded-full"
+									: 'size-44'}  transition-all bg-primary-med dark:bg-white rounded-full"
 							/>
 						{/if}
 					{:else}
@@ -564,7 +564,7 @@
 							<video
 								id="camera-feed"
 								autoplay
-								class="rounded-2xl h-full min-w-full object-cover object-center"
+								class="rounded h-full min-w-full object-cover object-center"
 								playsinline
 							/>
 
@@ -573,7 +573,7 @@
 							<div class=" absolute top-4 md:top-8 left-4">
 								<button
 									type="button"
-									class="p-1.5 text-white cursor-pointer backdrop-blur-xl bg-black/10 rounded-full"
+									class="p-1.5 text-white cursor-pointer backdrop-blur-xl bg-primary-med rounded-full"
 									on:click={() => {
 										stopCamera();
 									}}
@@ -606,7 +606,7 @@
 									await startVideoStream();
 								}}
 							>
-								<button class=" p-3 rounded-full bg-gray-50 dark:bg-gray-900" type="button">
+								<button class=" p-3 rounded-full bg-gray-50 dark:bg-darktheme-dark" type="button">
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										viewBox="0 0 20 20"
@@ -624,7 +624,7 @@
 						{:else}
 							<Tooltip content={$i18n.t('Camera')}>
 								<button
-									class=" p-3 rounded-full bg-gray-50 dark:bg-gray-900"
+									class=" p-3 rounded-full bg-gray-50 dark:bg-darktheme-dark"
 									type="button"
 									on:click={() => {
 										startCamera();
@@ -668,7 +668,7 @@
 
 					<div>
 						<button
-							class=" p-3 rounded-full bg-gray-50 dark:bg-gray-900"
+							class=" p-3 rounded-full bg-gray-50 dark:bg-darktheme-dark"
 							on:click={async () => {
 								showCallOverlay.set(false);
 							}}

@@ -63,10 +63,10 @@
 				class="tabs flex flex-row overflow-x-auto space-x-1 md:space-x-0 md:space-y-1 md:flex-col flex-1 md:flex-none md:w-40 dark:text-gray-200 text-xs text-left mb-3 md:mb-0"
 			>
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'general'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 					on:click={() => {
 						selectedTab = 'general';
 					}}
@@ -90,10 +90,10 @@
 
 				{#if $user.role === 'admin'}
 					<button
-						class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+						class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 						'admin'
-							? 'bg-gray-200 dark:bg-gray-700'
-							: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+							? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+							: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 						on:click={async () => {
 							await goto('/admin/settings');
 							show = false;
@@ -118,11 +118,11 @@
 				{/if}
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'interface'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
-					on:click={() => {
+					? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+					: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+				on:click={() => {
 						selectedTab = 'interface';
 					}}
 				>
@@ -144,10 +144,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'personalization'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 					on:click={() => {
 						selectedTab = 'personalization';
 					}}
@@ -159,10 +159,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'audio'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 					on:click={() => {
 						selectedTab = 'audio';
 					}}
@@ -186,10 +186,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'chats'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 					on:click={() => {
 						selectedTab = 'chats';
 					}}
@@ -212,10 +212,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'account'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 					on:click={() => {
 						selectedTab = 'account';
 					}}
@@ -238,10 +238,10 @@
 				</button>
 
 				<button
-					class="px-2.5 py-2.5 min-w-fit rounded-lg flex-1 md:flex-none flex text-right transition {selectedTab ===
+					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'about'
-						? 'bg-gray-200 dark:bg-gray-700'
-						: ' hover:bg-gray-300 dark:hover:bg-gray-800'}"
+						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
+						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
 					on:click={() => {
 						selectedTab = 'about';
 					}}

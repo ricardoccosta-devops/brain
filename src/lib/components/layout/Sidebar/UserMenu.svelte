@@ -30,14 +30,14 @@
 
 	<slot name="content">
 		<DropdownMenu.Content
-			class="w-full {className} text-sm rounded-xl px-1 py-1.5 border border-gray-300/30 dark:border-gray-700/50 z-50 bg-white dark:bg-gray-850 dark:text-white shadow"
+			class="w-full {className} text-sm rounded px-1 py-1.5 border border-gray-300/30 dark:border-gray-700/50 z-50 bg-white dark:bg-gray-850 dark:text-white shadow"
 			sideOffset={8}
 			side="bottom"
 			align="start"
 			transition={(e) => fade(e, { duration: 100 })}
 		>
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-800 transition"
 				on:click={async () => {
 					await showSettings.set(true);
 					show = false;
@@ -68,7 +68,7 @@
 			</button>
 
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-800 transition"
 				on:click={() => {
 					dispatch('show', 'archived-chat');
 					show = false;
@@ -82,7 +82,7 @@
 
 			{#if role === 'admin'}
 				<button
-					class="flex rounded-md py-2 px-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+					class="flex rounded-md py-2 px-3 w-full hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-800 transition"
 					on:click={() => {
 						goto('/admin');
 						show = false;
@@ -111,7 +111,7 @@
 			<hr class=" dark:border-gray-800 my-1.5 p-0" />
 
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-primary-lightest text-primary-med dark:hover:bg-gray-800 transition"
 				on:click={() => {
 					localStorage.removeItem('token');
 					location.href = '/auth';

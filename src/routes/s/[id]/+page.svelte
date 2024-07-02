@@ -124,7 +124,7 @@
 
 {#if loaded}
 	<div
-		class="min-h-screen max-h-screen w-full flex flex-col text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-900"
+		class="min-h-screen max-h-screen w-full flex flex-col text-gray-700 dark:text-gray-100 bg-white dark:bg-darktheme-dark"
 	>
 		<div class="flex flex-col flex-auto justify-center py-8">
 			<div class="px-3 w-full max-w-5xl mx-auto">

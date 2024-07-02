@@ -128,7 +128,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded-xl py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 									type="text"
 									bind:value={doc.title}
 									autocomplete="off"
@@ -146,7 +146,7 @@
 
 					<div class="flex justify-end pt-5 text-sm font-medium">
 						<button
-							class=" px-4 py-2 bg-emerald-700 hover:bg-emerald-800 text-gray-100 transition rounded-lg"
+							class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
 							type="submit"
 						>
 							{$i18n.t('Save')}

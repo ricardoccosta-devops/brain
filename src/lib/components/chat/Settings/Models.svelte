@@ -557,7 +557,7 @@
 						<div class="flex gap-2">
 							<div class="flex-1 pb-1">
 								<select
-									class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 									bind:value={selectedOllamaUrlIdx}
 									placeholder={$i18n.t('Select an Ollama instance')}
 								>
@@ -571,7 +571,7 @@
 								<div class="flex w-full justify-end">
 									<Tooltip content="Update All Models" placement="top">
 										<button
-											class="p-2.5 flex gap-2 items-center bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
+											class="p-2.5 flex gap-2 items-center bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
 											on:click={() => {
 												updateModelsHandler();
 											}}
@@ -606,7 +606,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2">
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 										placeholder={$i18n.t('Enter model tag (e.g. {{modelTag}})', {
 											modelTag: 'mistral:7b'
 										})}
@@ -614,7 +614,7 @@
 									/>
 								</div>
 								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
+									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
 									on:click={() => {
 										pullModelHandler();
 									}}
@@ -698,13 +698,13 @@
 
 													<Tooltip content={$i18n.t('Cancel')}>
 														<button
-															class="text-gray-800 dark:text-gray-100"
+															class="text-primary-dark dark:text-gray-100"
 															on:click={() => {
 																cancelModelPullHandler(model);
 															}}
 														>
 															<svg
-																class="w-4 h-4 text-gray-800 dark:text-white"
+																class="w-4 h-4 text-primary-dark dark:text-white"
 																aria-hidden="true"
 																xmlns="http://www.w3.org/2000/svg"
 																width="24"
@@ -740,7 +740,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2">
 									<select
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 										bind:value={deleteModelTag}
 										placeholder={$i18n.t('Select a model')}
 									>
@@ -758,7 +758,7 @@
 									</select>
 								</div>
 								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition"
+									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
 									on:click={() => {
 										deleteModelHandler();
 									}}
@@ -784,7 +784,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2 flex flex-col gap-2">
 									<input
-										class="w-full rounded-lg py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
 										placeholder={$i18n.t('Enter model tag (e.g. {{modelTag}})', {
 											modelTag: 'my-modelfile'
 										})}
@@ -794,7 +794,7 @@
 
 									<textarea
 										bind:value={createModelContent}
-										class="w-full rounded-lg py-2 px-4 text-sm bg-gray-100 dark:text-gray-100 dark:bg-gray-850 outline-none resize-none scrollbar-hidden"
+										class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250 dark:text-gray-100 dark:bg-gray-850 outline-none resize-none scrollbar-hidden"
 										rows="6"
 										placeholder={`TEMPLATE """{{ .System }}\nUSER: {{ .Prompt }}\nASSISTANT: """\nPARAMETER num_ctx 4096\nPARAMETER stop "</s>"\nPARAMETER stop "USER:"\nPARAMETER stop "ASSISTANT:"`}
 										disabled={createModelLoading}
@@ -803,7 +803,7 @@
 
 								<div class="flex self-start">
 									<button
-										class="px-2.5 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg transition disabled:cursor-not-allowed"
+										class="px-2.5 py-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition disabled:cursor-not-allowed"
 										on:click={() => {
 											createModelHandler();
 										}}
@@ -912,7 +912,7 @@
 
 												<button
 													type="button"
-													class="w-full rounded-lg text-left py-2 px-4 bg-white dark:text-gray-300 dark:bg-gray-850"
+													class="w-full rounded text-left py-2 px-4 bg-white dark:text-gray-300 dark:bg-gray-850"
 													on:click={() => {
 														modelUploadInputElement.click();
 													}}
@@ -927,7 +927,7 @@
 										{:else}
 											<div class="flex-1 {modelFileUrl !== '' ? 'mr-2' : ''}">
 												<input
-													class="w-full rounded-lg text-left py-2 px-4 bg-white dark:text-gray-300 dark:bg-gray-850 outline-none {modelFileUrl !==
+													class="w-full rounded text-left py-2 px-4 bg-white dark:text-gray-300 dark:bg-gray-850 outline-none {modelFileUrl !==
 													''
 														? 'mr-2'
 														: ''}"
@@ -942,7 +942,7 @@
 
 									{#if (modelUploadMode === 'file' && modelInputFile && modelInputFile.length > 0) || (modelUploadMode === 'url' && modelFileUrl !== '')}
 										<button
-											class="px-2.5 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded-lg disabled:cursor-not-allowed transition"
+											class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded disabled:cursor-not-allowed transition"
 											type="submit"
 											disabled={modelTransferring}
 										>
@@ -1001,7 +1001,7 @@
 											<div class=" my-2.5 text-sm font-medium">{$i18n.t('Modelfile Content')}</div>
 											<textarea
 												bind:value={modelFileContent}
-												class="w-full rounded-lg py-2 px-4 text-sm bg-gray-100 dark:text-gray-100 dark:bg-gray-850 outline-none resize-none"
+												class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250 dark:text-gray-100 dark:bg-gray-850 outline-none resize-none"
 												rows="6"
 											/>
 										</div>

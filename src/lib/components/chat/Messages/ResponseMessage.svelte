@@ -383,7 +383,7 @@
 	>
 		<ProfileImage
 			src={model?.info?.meta?.profile_image_url ??
-				($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/static/favicon.png`)}
+				($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/favicon.png`)}
 		/>
 
 		<div class="w-full overflow-hidden pl-1">
@@ -442,7 +442,7 @@
 					{/if}
 
 					{#if edit === true}
-						<div class="w-full bg-gray-50 dark:bg-gray-800 rounded-3xl px-5 py-3 my-2">
+						<div class="w-full bg-white border border-solid border-gray-250 dark:bg-gray-800 rounded px-5 py-3 my-2">
 							<textarea
 								id="message-edit-{message.id}"
 								bind:this={editTextAreaElement}
@@ -457,7 +457,7 @@
 							<div class=" mt-2 mb-1 flex justify-end space-x-1.5 text-sm font-medium">
 								<button
 									id="close-edit-message-button"
-									class="px-4 py-2 bg-white hover:bg-gray-100 text-gray-800 transition rounded-3xl"
+									class="px-4 py-2 bg-white hover:bg-gray-100 text-primary-dark transition rounded"
 									on:click={() => {
 										cancelEditMessage();
 									}}
@@ -467,7 +467,7 @@
 
 								<button
 									id="save-edit-message-button"
-									class=" px-4 py-2 bg-gray-900 hover:bg-gray-850 text-gray-100 transition rounded-3xl"
+									class=" px-4 py-2 bg-primary-lightdarkest hover:bg-gray-850 text-gray-100 transition rounded"
 									on:click={() => {
 										editMessageConfirmHandler();
 									}}
@@ -507,7 +507,7 @@
 
 							{#if message.error}
 								<div
-									class="flex mt-2 mb-4 space-x-2 border px-4 py-3 border-red-800 bg-red-800/30 font-medium rounded-lg"
+									class="flex mt-2 mb-4 space-x-2 border px-4 py-3 border-red-800 bg-red-800/30 font-medium rounded"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -555,7 +555,7 @@
 									}, []) as citation, idx}
 										<div class="flex gap-1 text-xs font-semibold">
 											<button
-												class="flex dark:text-gray-300 py-1 px-1 bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-xl"
+												class="flex dark:text-gray-300 py-1 px-1 bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded"
 												on:click={() => {
 													showCitationModal = true;
 													selectedCitation = citation;
@@ -580,7 +580,7 @@
 									{#if siblings.length > 1}
 										<div class="flex self-center min-w-fit" dir="ltr">
 											<button
-												class="self-center p-1 hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+												class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
 												on:click={() => {
 													showPreviousMessage(message);
 												}}
@@ -608,7 +608,7 @@
 											</div>
 
 											<button
-												class="self-center p-1 hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+												class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
 												on:click={() => {
 													showNextMessage(message);
 												}}
@@ -637,7 +637,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition"
 													on:click={() => {
 														editMessageHandler();
 													}}
@@ -664,7 +664,7 @@
 											<button
 												class="{isLastMessage
 													? 'visible'
-													: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition copy-response-button"
+													: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition copy-response-button"
 												on:click={() => {
 													copyToClipboard(message.content);
 												}}
@@ -691,7 +691,7 @@
 												id="speak-button-{message.id}"
 												class="{isLastMessage
 													? 'visible'
-													: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition"
+													: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition"
 												on:click={() => {
 													if (!loadingSpeech) {
 														toggleSpeakMessage(message);
@@ -772,7 +772,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'}  p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition"
+														: 'invisible group-hover:visible'}  p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition"
 													on:click={() => {
 														if (!generatingImage) {
 															generateImage(message);
@@ -839,7 +839,7 @@
 												<button
 													class=" {isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition whitespace-pre-wrap"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition whitespace-pre-wrap"
 													on:click={() => {
 														console.log(message);
 													}}
@@ -868,7 +868,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg {message
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded {message
 														?.annotation?.rating === 1
 														? 'bg-gray-100 dark:bg-gray-800'
 														: ''} dark:hover:text-white hover:text-black transition"
@@ -903,7 +903,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg {message
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded {message
 														?.annotation?.rating === -1
 														? 'bg-gray-100 dark:bg-gray-800'
 														: ''} dark:hover:text-white hover:text-black transition"
@@ -940,7 +940,7 @@
 													type="button"
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition regenerate-response-button"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition regenerate-response-button"
 													on:click={() => {
 														continueGeneration();
 													}}
@@ -972,7 +972,7 @@
 													type="button"
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg dark:hover:text-white hover:text-black transition regenerate-response-button"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition regenerate-response-button"
 													on:click={() => {
 														regenerateResponse(message);
 													}}
