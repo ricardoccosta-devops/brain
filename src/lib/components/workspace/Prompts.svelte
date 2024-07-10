@@ -73,7 +73,7 @@
 
 	<div>
 		<a
-			class=" px-2 py-2 rounded border border-gray-200 dark:border-gray-600 dark:border-0 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition font-medium text-sm flex items-center space-x-1"
+			class=" px-2 py-2 rounded border border-gray-200   hover:bg-primary-light   transition font-medium text-sm flex items-center space-x-1"
 			href="/workspace/prompts/create"
 		>
 			<svg
@@ -89,12 +89,12 @@
 		</a>
 	</div>
 </div>
-<hr class=" dark:border-gray-850 my-2.5" />
+<hr class="  my-2.5" />
 
 <div class="my-3 mb-5">
 	{#each $prompts.filter((p) => query === '' || p.command.includes(query)) as prompt}
 		<div
-			class=" flex space-x-4 cursor-pointer w-full px-3 py-2 dark:hover:bg-white/5 hover:bg-primary-dark/5 rounded"
+			class=" flex space-x-4 cursor-pointer w-full px-3 py-2  hover:bg-primary-dark/5 rounded"
 		>
 			<div class=" flex flex-1 space-x-4 cursor-pointer w-full">
 				<a href={`/workspace/prompts/edit?command=${encodeURIComponent(prompt.command)}`}>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="flex flex-row space-x-1 self-center">
 				<a
-					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
 					type="button"
 					href={`/workspace/prompts/edit?command=${encodeURIComponent(prompt.command)}`}
 				>
@@ -129,7 +129,7 @@
 				</a>
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
 					type="button"
 					on:click={() => {
 						// console.log(modelfile);
@@ -154,7 +154,7 @@
 				</button>
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
 					type="button"
 					on:click={() => {
 						sharePrompt(prompt);
@@ -177,7 +177,7 @@
 				</button>
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
 					type="button"
 					on:click={() => {
 						deletePrompt(prompt.command);
@@ -240,7 +240,7 @@
 		/>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-primary-light    transition"
 			on:click={() => {
 				promptsImportInputElement.click();
 			}}
@@ -264,7 +264,7 @@
 		</button>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-primary-light    transition"
 			on:click={async () => {
 				// promptsImportInputElement.click();
 				let blob = new Blob([JSON.stringify($prompts)], {
@@ -311,7 +311,7 @@
 	>
 		<div class=" self-center w-10">
 			<div
-				class="w-full h-10 flex justify-center rounded-full bg-transparent dark:bg-gray-700 border border-dashed border-gray-200"
+				class="w-full h-10 flex justify-center rounded-full bg-transparent  border border-dashed border-gray-200"
 			>
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6">
 					<path

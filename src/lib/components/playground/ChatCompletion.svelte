@@ -18,7 +18,7 @@
 		<div class="flex gap-2 group">
 			<div class="flex items-start pt-1">
 				<button
-					class="px-2 py-1 text-sm font-semibold uppercase min-w-[6rem] text-left dark:group-hover:bg-gray-800 rounded transition"
+					class="px-2 py-1 text-sm font-semibold uppercase min-w-[6rem] text-left  rounded transition"
 					on:click={() => {
 						message.role = message.role === 'user' ? 'assistant' : 'user';
 					}}>{$i18n.t(message.role)}</button
@@ -52,7 +52,7 @@
 
 			<div class=" pt-1">
 				<button
-					class=" group-hover:text-gray-500 dark:text-primary-lightdarkest dark:hover:text-gray-300 transition"
+					class=" group-hover:text-gray-500   transition"
 					on:click={() => {
 						messages = messages.filter((message, messageIdx) => messageIdx !== idx);
 					}}
@@ -75,7 +75,7 @@
 			</div>
 		</div>
 
-		<hr class=" dark:border-gray-800" />
+		<hr class=" " />
 	{/each}
 
 	<button

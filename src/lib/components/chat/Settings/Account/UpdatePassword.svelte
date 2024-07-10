@@ -60,7 +60,7 @@
 
 				<div class="flex-1">
 					<input
-						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-800 outline-none"
+						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 						type="password"
 						bind:value={currentPassword}
 						autocomplete="current-password"
@@ -74,7 +74,7 @@
 
 				<div class="flex-1">
 					<input
-						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-800 outline-none"
+						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 						type="password"
 						bind:value={newPassword}
 						autocomplete="new-password"
@@ -88,7 +88,7 @@
 
 				<div class="flex-1">
 					<input
-						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-800 outline-none"
+						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 						type="password"
 						bind:value={newPasswordConfirm}
 						autocomplete="off"
@@ -100,7 +100,7 @@
 
 		<div class="mt-3 flex justify-end">
 			<button
-				class=" px-4 py-2 text-xs bg-gray-800 hover:bg-primary-lightdarkest dark:bg-gray-700 dark:hover:bg-gray-800 text-gray-100 transition rounded-md font-medium"
+				class=" px-4 py-2 text-xs bg-gray-800 hover:bg-primary-lightdarkest   text-gray-100 transition rounded-md font-medium"
 			>
 				{$i18n.t('Update password')}
 			</button>

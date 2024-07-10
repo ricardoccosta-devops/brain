@@ -213,7 +213,7 @@
 					<div class="flex gap-2">
 						<div class="flex-1">
 							<select
-								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 								bind:value={selectedPipelinesUrlIdx}
 								placeholder={$i18n.t('Select a pipeline url')}
 								on:change={async () => {
@@ -221,12 +221,12 @@
 									await setPipelines();
 								}}
 							>
-								<option value="" selected disabled class="bg-gray-100 dark:bg-gray-700"
+								<option value="" selected disabled class="bg-gray-100 "
 									>{$i18n.t('Select a pipeline url')}</option
 								>
 
 								{#each PIPELINES_LIST as pipelines, idx}
-									<option value={pipelines.idx.toString()} class="bg-gray-100 dark:bg-gray-700"
+									<option value={pipelines.idx.toString()} class="bg-gray-100 "
 										>{pipelines.url}</option
 									>
 								{/each}
@@ -250,7 +250,7 @@
 							/>
 
 							<button
-								class="w-full text-sm font-medium py-2 bg-transparent hover:bg-gray-100 border border-dashed dark:border-gray-800 dark:hover:bg-gray-850 text-center rounded"
+								class="w-full text-sm font-medium py-2 bg-transparent hover:bg-primary-light border border-dashed   text-center rounded"
 								type="button"
 								on:click={() => {
 									document.getElementById('pipelines-upload-input')?.click();
@@ -264,7 +264,7 @@
 							</button>
 						</div>
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
+							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
 							on:click={() => {
 								uploadPipelineHandler();
 							}}
@@ -327,13 +327,13 @@
 					<div class="flex w-full">
 						<div class="flex-1 mr-2">
 							<input
-								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 								placeholder={$i18n.t('Enter Github Raw URL')}
 								bind:value={pipelineDownloadUrl}
 							/>
 						</div>
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
+							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
 							on:click={() => {
 								addPipelineHandler();
 							}}
@@ -389,15 +389,15 @@
 					</div>
 
 					<div class="mt-2 text-xs text-gray-500">
-						<span class=" font-semibold dark:text-gray-200">Warning:</span> Pipelines are a plugin
+						<span class=" font-semibold ">Warning:</span> Pipelines are a plugin
 						system with arbitrary code execution —
-						<span class=" font-medium dark:text-gray-400"
+						<span class=" font-medium "
 							>don't fetch random pipelines from sources you don't trust.</span
 						>
 					</div>
 				</div>
 
-				<hr class=" dark:border-gray-800 my-3 w-full" />
+				<hr class="  my-3 w-full" />
 
 				{#if pipelines !== null}
 					{#if pipelines.length > 0}
@@ -411,7 +411,7 @@
 								<div class="flex gap-2">
 									<div class="flex-1">
 										<select
-											class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+											class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 											bind:value={selectedPipelineIdx}
 											placeholder={$i18n.t('Select a pipeline')}
 											on:change={async () => {
@@ -420,7 +420,7 @@
 											}}
 										>
 											{#each pipelines as pipeline, idx}
-												<option value={idx} class="bg-gray-100 dark:bg-gray-700"
+												<option value={idx} class="bg-gray-100 "
 													>{pipeline.name} ({pipeline.type ?? 'pipe'})</option
 												>
 											{/each}
@@ -428,7 +428,7 @@
 									</div>
 
 									<button
-										class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
+										class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
 										on:click={() => {
 											deletePipelineHandler();
 										}}
@@ -479,7 +479,7 @@
 													<div class="flex mt-0.5 space-x-2">
 														<div class=" flex-1">
 															<input
-																class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+																class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 																type="text"
 																placeholder={valves_spec.properties[property].title}
 																bind:value={valves[property]}
@@ -522,7 +522,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			Save

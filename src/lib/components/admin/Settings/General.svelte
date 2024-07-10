@@ -71,7 +71,7 @@
 					<div class=" self-center text-xs font-medium">{$i18n.t('Default User Role')}</div>
 					<div class="flex items-center relative">
 						<select
-							class="dark:bg-darktheme-dark w-fit pr-8 rounded px-2 text-xs bg-transparent outline-none text-right"
+							class=" w-fit pr-8 rounded px-2 text-xs bg-transparent outline-none text-right"
 							bind:value={adminConfig.DEFAULT_USER_ROLE}
 							placeholder="Select a role"
 						>
@@ -82,7 +82,7 @@
 					</div>
 				</div>
 
-				<hr class=" dark:border-gray-850 my-2" />
+				<hr class="  my-2" />
 
 				<div class="my-3 flex w-full items-center justify-between pr-2">
 					<div class=" self-center text-xs font-medium">
@@ -98,7 +98,7 @@
 					<Switch bind:state={adminConfig.ENABLE_COMMUNITY_SHARING} />
 				</div>
 
-				<hr class=" dark:border-gray-850 my-2" />
+				<hr class="  my-2" />
 
 				<div class=" w-full justify-between">
 					<div class="flex w-full justify-between">
@@ -107,14 +107,14 @@
 
 					<div class="flex mt-2 space-x-2">
 						<input
-							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 							type="text"
 							placeholder={`e.g.) "30m","1h", "10d". `}
 							bind:value={adminConfig.JWT_EXPIRES_IN}
 						/>
 					</div>
 
-					<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
+					<div class="mt-2 text-xs text-gray-400 ">
 						{$i18n.t('Valid time units:')}
 						<span class=" text-gray-300 font-medium"
 							>{$i18n.t("'s', 'm', 'h', 'd', 'w' or '-1' for no expiration.")}</span
@@ -122,7 +122,7 @@
 					</div>
 				</div>
 
-				<hr class=" dark:border-gray-850 my-2" />
+				<hr class="  my-2" />
 
 				<div class=" w-full justify-between">
 					<div class="flex w-full justify-between">
@@ -131,7 +131,7 @@
 
 					<div class="flex mt-2 space-x-2">
 						<input
-							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 							type="text"
 							placeholder={`https://example.com/webhook`}
 							bind:value={webhookUrl}
@@ -144,7 +144,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

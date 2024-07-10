@@ -42,7 +42,7 @@
 
 <Modal size="sm" bind:show>
 	<div>
-		<div class=" flex justify-between dark:text-gray-300 px-5 py-4">
+		<div class=" flex justify-between  px-5 py-4">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Edit User')}</div>
 			<button
 				class="self-center"
@@ -62,9 +62,9 @@
 				</svg>
 			</button>
 		</div>
-		<hr class=" dark:border-gray-800" />
+		<hr class=" " />
 
-		<div class="flex flex-col md:flex-row w-full p-5 md:space-x-4 dark:text-gray-200">
+		<div class="flex flex-col md:flex-row w-full p-5 md:space-x-4 ">
 			<div class=" flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
 				<form
 					class="flex flex-col w-full"
@@ -91,7 +91,7 @@
 						</div>
 					</div>
 
-					<hr class=" dark:border-gray-800 my-3 w-full" />
+					<hr class="  my-3 w-full" />
 
 					<div class=" flex flex-col space-y-1.5">
 						<div class="flex flex-col w-full">
@@ -99,7 +99,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-800 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
+									class="w-full rounded py-2 px-4 text-sm rounded border border-primary-med  disabled:text-gray-500  outline-none"
 									type="email"
 									bind:value={_user.email}
 									autocomplete="off"
@@ -114,7 +114,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-800 outline-none"
+									class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 									type="text"
 									bind:value={_user.name}
 									autocomplete="off"
@@ -128,7 +128,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-800 outline-none"
+									class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 									type="password"
 									bind:value={_user.password}
 									autocomplete="new-password"
@@ -139,7 +139,7 @@
 
 					<div class="flex justify-end pt-3 text-sm font-medium">
 						<button
-							class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium  dark:hover:bg-secondary-dark dark:text-primary-med text-white transition rounded"
+							class=" px-4 py-2 bg-primary-med hover:bg-primary-light    text-white transition rounded"
 							type="submit"
 						>
 							{$i18n.t('Save')}

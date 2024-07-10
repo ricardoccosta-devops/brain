@@ -288,7 +288,7 @@
 				{#if autoScroll === false && messages.length > 0}
 					<div class=" absolute -top-12 left-0 right-0 flex justify-center z-30">
 						<button
-							class=" bg-white border border-gray-100 dark:border-none dark:bg-white/20 p-1.5 rounded-full"
+							class=" bg-white border border-gray-100   p-1.5 rounded-full"
 							on:click={() => {
 								autoScroll = true;
 								scrollToBottom();
@@ -354,9 +354,9 @@
 
 				{#if atSelectedModel !== undefined}
 					<div
-						class="px-3 py-2.5 text-left w-full flex justify-between items-center absolute bottom-0 left-0 right-0 bg-gradient-to-t from-50% from-white dark:from-primary-lightdarkest"
+						class="px-3 py-2.5 text-left w-full flex justify-between items-center absolute bottom-0 left-0 right-0 bg-gradient-to-t from-50% from-white "
 					>
-						<div class="flex items-center gap-2 text-sm dark:text-gray-500">
+						<div class="flex items-center gap-2 text-sm ">
 							<img
 								crossorigin="anonymous"
 								alt="model profile"
@@ -387,7 +387,7 @@
 		</div>
 	</div>
 
-	<div class="bg-white dark:bg-darktheme-dark">
+	<div class="bg-white ">
 		<div class="max-w-6xl px-2.5 md:px-6 mx-auto inset-x-0">
 			<div class=" pb-2">
 				<input
@@ -475,7 +475,7 @@
 						}}
 					>
 						<div
-							class="flex-1 flex flex-col relative border border-solid border-gray-250 w-full rounded px-1.5 dark:bg-gray-850 dark:text-gray-100"
+							class="flex-1 flex flex-col relative border border-solid border-gray-250 w-full rounded px-1.5  "
 							dir={$settings?.chatDirection ?? 'LTR'}
 						>
 							{#if files.length > 0}
@@ -515,7 +515,7 @@
 												</div>
 											{:else if file.type === 'doc'}
 												<div
-													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded border bg-white border-gray-200 dark:border-none"
+													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5  rounded border bg-white border-gray-200 "
 												>
 													<div class="p-2.5 bg-red-400 text-white rounded">
 														{#if file.upload_status}
@@ -585,7 +585,7 @@
 													</div>
 
 													<div class="flex flex-col justify-center -space-y-0.5">
-														<div class=" dark:text-gray-100 text-sm font-medium line-clamp-1">
+														<div class="  text-sm font-medium line-clamp-1">
 															{file.name}
 														</div>
 
@@ -594,7 +594,7 @@
 												</div>
 											{:else if file.type === 'collection'}
 												<div
-													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded bg-white border border-gray-200 dark:border-none"
+													class="h-16 w-[15rem] flex items-center space-x-3 px-2.5  rounded bg-white border border-gray-200 "
 												>
 													<div class="p-2.5 bg-red-400 text-white rounded">
 														<svg
@@ -613,7 +613,7 @@
 													</div>
 
 													<div class="flex flex-col justify-center -space-y-0.5">
-														<div class=" dark:text-gray-100 text-sm font-medium line-clamp-1">
+														<div class="  text-sm font-medium line-clamp-1">
 															{file?.title ?? `#${file.name}`}
 														</div>
 
@@ -661,7 +661,7 @@
 										}}
 									>
 										<button
-											class="text-primary-dark dark:bg-gray-850 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-2 outline-none focus:outline-none"
+											class="text-primary-dark    transition rounded-full p-2 outline-none focus:outline-none"
 											type="button"
 										>
 											<svg
@@ -681,7 +681,7 @@
 								<textarea
 									id="chat-textarea"
 									bind:this={chatTextAreaElement}
-									class="scrollbar-hidden dark:bg-gray-850 dark:text-gray-100 outline-none bg-white w-full py-3 px-1 rounded resize-none h-[48px]"
+									class="scrollbar-hidden   outline-none bg-white w-full py-3 px-1 rounded resize-none h-[48px]"
 									placeholder={chatInputPlaceholder !== ''
 										? chatInputPlaceholder
 										: $i18n.t('Send a Message')}
@@ -852,7 +852,7 @@
 										<Tooltip content={$i18n.t('Record voice')}>
 											<button
 												id="voice-input-button"
-												class=" text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-850 transition rounded-full p-1.5 mr-0.5 self-center"
+												class=" text-gray-600  hover:bg-gray-50  transition rounded-full p-1.5 mr-0.5 self-center"
 												type="button"
 												on:click={async () => {
 													try {
@@ -901,7 +901,7 @@
 									<div class=" flex items-center mb-1">
 										<Tooltip content={$i18n.t('Call')}>
 											<button
-												class=" text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-850 transition rounded-full p-2 self-center"
+												class=" text-gray-600  hover:bg-gray-50  transition rounded-full p-2 self-center"
 												type="button"
 												on:click={async () => {
 													if (selectedModels.length > 1) {
@@ -939,8 +939,8 @@
 											<button
 												id="send-message-button"
 												class="{prompt !== ''
-													? 'bg-primary-med hover:bg-primary-light text-white dark:bg-white dark:text-black dark:hover:bg-gray-100 '
-													: 'text-white bg-gray-200 dark:text-primary-lightdarkest dark:bg-gray-700 disabled'} transition rounded-full p-1.5 m-0.5 self-center"
+													? 'bg-primary-med hover:bg-primary-light text-white   '
+													: 'text-white bg-gray-200   disabled'} transition rounded-full p-1.5 m-0.5 self-center"
 												type="submit"
 												disabled={prompt === ''}
 											>
@@ -963,7 +963,7 @@
 							{:else}
 								<div class=" flex items-center mb-1.5">
 									<button
-										class="bg-white hover:bg-gray-100 text-primary-dark dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-1.5"
+										class="bg-white hover:bg-primary-light text-primary-dark    transition rounded-full p-1.5"
 										on:click={() => {
 											stopResponse();
 										}}

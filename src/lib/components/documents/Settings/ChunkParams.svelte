@@ -72,7 +72,7 @@
 
 					<div class="self-center p-3">
 						<input
-							class=" w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class=" w-full rounded py-1.5 px-4 text-sm   outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Chunk Size')}
 							bind:value={chunkSize}
@@ -89,7 +89,7 @@
 
 					<div class="self-center p-3">
 						<input
-							class="w-full rounded py-1.5 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded py-1.5 px-4 text-sm   outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Chunk Overlap')}
 							bind:value={chunkOverlap}
@@ -117,7 +117,7 @@
 	</div>
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

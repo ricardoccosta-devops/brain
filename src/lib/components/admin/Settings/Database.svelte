@@ -39,7 +39,7 @@
 					<!-- <div class=" self-center text-xs font-medium">{$i18n.t('Allow Chat Deletion')}</div> -->
 
 					<button
-						class=" flex rounded-md py-1.5 px-3 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+						class=" flex rounded-md py-1.5 px-3 w-full hover:bg-gray-200  transition"
 						type="button"
 						on:click={() => {
 							// exportAllUserChats();
@@ -69,7 +69,7 @@
 				</div>
 
 				<button
-					class=" flex rounded-md py-2 px-3 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+					class=" flex rounded-md py-2 px-3 w-full hover:bg-gray-200  transition"
 					on:click={() => {
 						exportAllUserChats();
 					}}
@@ -95,13 +95,13 @@
 				</button>
 			{/if}
 
-			<hr class=" dark:border-gray-850 my-1" />
+			<hr class="  my-1" />
 
 			<div class="  flex w-full justify-between">
 				<!-- <div class=" self-center text-xs font-medium">{$i18n.t('Allow Chat Deletion')}</div> -->
 
 				<button
-					class=" flex rounded-md py-1.5 px-3 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+					class=" flex rounded-md py-1.5 px-3 w-full hover:bg-gray-200  transition"
 					type="button"
 					on:click={() => {
 						downloadLiteLLMConfig(localStorage.token).catch((error) => {
@@ -134,7 +134,7 @@
 
 	<!-- <div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-dark dark:bg-secondary-medium hover:bg-primary-med dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-dark hover:bg-primary-med   text-gray-100 transition rounded"
 			type="submit"
 		>
 			Save

@@ -88,13 +88,13 @@
 				<div class="flex-1">
 					<div class=" text-xs mb-1">{$i18n.t('Local Models')}</div>
 					<select
-						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 						bind:value={taskConfig.TASK_MODEL}
 						placeholder={$i18n.t('Select a model')}
 					>
 						<option value="" selected>{$i18n.t('Current Model')}</option>
 						{#each $models.filter((m) => m.owned_by === 'ollama') as model}
-							<option value={model.id} class="bg-gray-100 dark:bg-gray-700">
+							<option value={model.id} class="bg-gray-100 ">
 								{model.name}
 							</option>
 						{/each}
@@ -104,13 +104,13 @@
 				<div class="flex-1">
 					<div class=" text-xs mb-1">{$i18n.t('External Models')}</div>
 					<select
-						class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 						bind:value={taskConfig.TASK_MODEL_EXTERNAL}
 						placeholder={$i18n.t('Select a model')}
 					>
 						<option value="" selected>{$i18n.t('Current Model')}</option>
 						{#each $models as model}
-							<option value={model.id} class="bg-gray-100 dark:bg-gray-700">
+							<option value={model.id} class="bg-gray-100 ">
 								{model.name}
 							</option>
 						{/each}
@@ -122,7 +122,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Title Generation Prompt')}</div>
 				<textarea
 					bind:value={taskConfig.TITLE_GENERATION_PROMPT_TEMPLATE}
-					class="w-full rounded bg-white border border-solid border-gray-250 py-3 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded bg-white border border-solid border-gray-250 py-3 px-4 text-sm   outline-none resize-none"
 					rows="6"
 				/>
 			</div>
@@ -131,7 +131,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Search Query Generation Prompt')}</div>
 				<textarea
 					bind:value={taskConfig.SEARCH_QUERY_GENERATION_PROMPT_TEMPLATE}
-					class="w-full rounded py-3 px-4 text-sm bg-white border border-solid border-gray-250 dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded py-3 px-4 text-sm bg-white border border-solid border-gray-250   outline-none resize-none"
 					rows="6"
 				/>
 			</div>
@@ -142,13 +142,13 @@
 				</div>
 				<input
 					bind:value={taskConfig.SEARCH_QUERY_PROMPT_LENGTH_THRESHOLD}
-					class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none resize-none"
+					class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none resize-none"
 					type="number"
 				/>
 			</div>
 		</div>
 
-		<hr class=" dark:border-gray-850 my-3" />
+		<hr class="  my-3" />
 
 		<div class=" space-y-3 {banners.length > 0 ? ' mb-3' : ''}">
 			<div class="flex w-full justify-between">
@@ -190,7 +190,7 @@
 			<div class="flex flex-col space-y-1">
 				{#each banners as banner, bannerIdx}
 					<div class=" flex justify-between">
-						<div class="flex flex-row flex-1 border rounded dark:border-gray-800">
+						<div class="flex flex-row flex-1 border rounded ">
 							<select
 								class="w-fit capitalize rounded py-2 px-4 text-xs bg-transparent outline-none"
 								bind:value={banner.type}
@@ -273,24 +273,24 @@
 				</div>
 				<div class="grid lg:grid-cols-2 flex-col gap-1.5">
 					{#each promptSuggestions as prompt, promptIdx}
-						<div class=" flex dark:bg-gray-850 rounded py-1.5">
+						<div class=" flex  rounded py-1.5">
 							<div class="flex flex-col flex-1 pl-1">
-								<div class="flex border-b dark:border-gray-800 w-full">
+								<div class="flex border-b  w-full">
 									<input
-										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r dark:border-gray-800"
+										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
 										placeholder={$i18n.t('Title (e.g. Tell me a fun fact)')}
 										bind:value={prompt.title[0]}
 									/>
 
 									<input
-										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r dark:border-gray-800"
+										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
 										placeholder={$i18n.t('Subtitle (e.g. about the Roman Empire)')}
 										bind:value={prompt.title[1]}
 									/>
 								</div>
 
 								<input
-									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r dark:border-gray-800"
+									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
 									placeholder={$i18n.t('Prompt (e.g. Tell me a fun fact about the Roman Empire)')}
 									bind:value={prompt.content}
 								/>
@@ -330,7 +330,7 @@
 
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

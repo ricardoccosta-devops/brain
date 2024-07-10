@@ -7,7 +7,7 @@
 
 {#each tags as tag}
 	<div
-		class="px-2 py-[0.5px] gap-0.5 flex justify-between h-fit items-center rounded-full transition border dark:border-gray-800 dark:text-white"
+		class="px-2 py-[0.5px] gap-0.5 flex justify-between h-fit items-center rounded-full transition border  "
 	>
 		<div class=" text-[0.7rem] font-medium self-center line-clamp-1">
 			{tag.name}

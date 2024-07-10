@@ -24,7 +24,7 @@
 			<div class="{$showSidebar ? 'md:hidden' : ''} mr-1 self-start flex flex-none items-center">
 				<button
 					id="sidebar-toggle-button"
-					class="cursor-pointer p-1 flex rounded hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+					class="cursor-pointer p-1 flex rounded hover:bg-primary-light  transition"
 					on:click={() => {
 						showSidebar.set(!$showSidebar);
 					}}
@@ -44,21 +44,21 @@
 		>
 			<a
 				class="min-w-fit rounded p-1.5 px-3 {['/admin', '/admin/'].includes($page.url.pathname)
-					? 'bg-primary-med text-white dark:bg-gray-850'
+					? 'bg-primary-med text-white '
 					: ''} transition"
 				href="/admin">{$i18n.t('Dashboard')}</a
 			>
 
 			<a
 				class="min-w-fit rounded p-1.5 px-3 {$page.url.pathname.includes('/admin/settings')
-					? 'bg-primary-med text-white dark:bg-gray-850'
+					? 'bg-primary-med text-white '
 					: ''} transition"
 				href="/admin/settings">{$i18n.t('Settings')}</a
 			>
 
 			<!-- <a
 				class="min-w-fit rounded p-1.5 px-3 {$page.url.pathname.includes('/workspace/documents')
-					? 'bg-gray-50 dark:bg-gray-850'
+					? 'bg-gray-50 '
 					: ''} transition"
 				href="/workspace/documents"
 			>
@@ -67,14 +67,14 @@
 
 			<a
 				class="min-w-fit rounded p-1.5 px-3 {$page.url.pathname.includes('/workspace/playground')
-					? 'bg-gray-50 dark:bg-gray-850'
+					? 'bg-gray-50 '
 					: ''} transition"
 				href="/workspace/playground">{$i18n.t('Playground')}</a
 			> -->
 		</div>
 	</div>
 
-	<hr class=" my-2 dark:border-gray-850" />
+	<hr class=" my-2 " />
 
 	<div class=" py-1 px-5 flex-1 max-h-full overflow-y-auto">
 		<slot />

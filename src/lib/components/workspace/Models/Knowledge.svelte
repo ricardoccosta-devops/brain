@@ -12,7 +12,7 @@
 		<div class=" self-center text-sm font-semibold">{$i18n.t('Knowledge')}</div>
 	</div>
 
-	<div class=" text-xs dark:text-gray-500">
+	<div class=" text-xs ">
 		To add documents here, upload them to the "Documents" workspace first.
 	</div>
 
@@ -22,7 +22,7 @@
 				{#each knowledge as file, fileIdx}
 					<div class=" relative group">
 						<div
-							class="h-16 w-[15rem] flex items-center space-x-3 px-2.5 dark:bg-gray-600 bg-white rounded border border-gray-200 dark:border-none"
+							class="h-16 w-[15rem] flex items-center space-x-3 px-2.5  bg-white rounded border border-gray-200 "
 						>
 							<div class="p-2.5 bg-red-400 text-white rounded">
 								{#if (file?.type ?? 'doc') === 'doc'}
@@ -59,7 +59,7 @@
 							</div>
 
 							<div class="flex flex-col justify-center -space-y-0.5">
-								<div class=" dark:text-gray-100 text-sm font-medium line-clamp-1">
+								<div class="  text-sm font-medium line-clamp-1">
 									{file?.title ?? `#${file.name}`}
 								</div>
 
@@ -96,7 +96,7 @@
 		<div class="flex flex-wrap text-sm font-medium gap-1.5 mt-2">
 			<Selector bind:knowledge>
 				<button
-					class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded"
+					class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5  outline outline-1 outline-gray-300  rounded"
 					type="button">Select Documents</button
 				>
 			</Selector>

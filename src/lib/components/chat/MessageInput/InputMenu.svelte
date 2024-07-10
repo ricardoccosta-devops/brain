@@ -39,7 +39,7 @@
 
 	<div slot="content">
 		<DropdownMenu.Content
-			class="w-full max-w-[190px] rounded px-1 py-1  border-gray-300/30 dark:border-gray-700/50 z-50 bg-white dark:bg-gray-850 dark:text-white shadow"
+			class="w-full max-w-[190px] rounded px-1 py-1  border-gray-300/30  z-50 bg-white   shadow"
 			sideOffset={15}
 			alignOffset={-8}
 			side="top"
@@ -58,11 +58,11 @@
 					<Switch bind:state={webSearchEnabled} />
 				</div>
 
-				<hr class="border-gray-100 dark:border-gray-800 my-1" />
+				<hr class="border-gray-100  my-1" />
 			{/if}
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800  rounded"
+				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-gray-50   rounded"
 				on:click={() => {
 					uploadFilesHandler();
 				}}

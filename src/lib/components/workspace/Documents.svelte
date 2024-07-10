@@ -168,7 +168,7 @@
 			<div class="m-auto pt-64 flex flex-col justify-center">
 				<div class="max-w-md">
 					<AddFilesPlaceholder>
-						<div class=" mt-2 text-center text-sm dark:text-gray-200 w-full">
+						<div class=" mt-2 text-center text-sm  w-full">
 							Drop any files here to add to my documents
 						</div>
 					</AddFilesPlaceholder>
@@ -215,7 +215,7 @@
 
 	<div>
 		<button
-			class=" px-2 py-2 rounded border border-gray-200 dark:border-gray-600 dark:border-0 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition font-medium text-sm flex items-center space-x-1"
+			class=" px-2 py-2 rounded border border-gray-200   hover:bg-primary-light   transition font-medium text-sm flex items-center space-x-1"
 			on:click={() => {
 				showAddDocModal = true;
 			}}
@@ -236,24 +236,24 @@
 
 <!-- <div>
     <div
-        class="my-3 py-16 rounded border-2 border-dashed dark:border-gray-600 {dragged &&
-            ' dark:bg-gray-700'} "
+        class="my-3 py-16 rounded border-2 border-dashed  {dragged &&
+            ' '} "
         role="region"
         on:drop={onDrop}
         on:dragover={onDragOver}
         on:dragleave={onDragLeave}
     >
         <div class="  pointer-events-none">
-            <div class="text-center dark:text-white text-2xl font-semibold z-50">{$i18n.t('Add Files')}</div>
+            <div class="text-center  text-2xl font-semibold z-50">{$i18n.t('Add Files')}</div>
 
-            <div class=" mt-2 text-center text-sm dark:text-gray-200 w-full">
+            <div class=" mt-2 text-center text-sm  w-full">
                 Drop any files here to add to my documents
             </div>
         </div>
     </div>
 </div> -->
 
-<hr class=" dark:border-gray-850 my-2.5" />
+<hr class="  my-2.5" />
 
 {#if tags.length > 0}
 	<div class="px-2.5 pt-1 flex gap-1 flex-wrap">
@@ -277,7 +277,7 @@
 
 		{#if filteredDocs.filter((doc) => doc?.selected === 'checked').length === 0}
 			<button
-				class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:text-white"
+				class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-primary-light  "
 				on:click={async () => {
 					selectedTag = '';
 					// await chats.set(await getChatListByTagName(localStorage.token, tag.name));
@@ -288,7 +288,7 @@
 
 			{#each tags as tag}
 				<button
-					class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:text-white"
+					class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-primary-light  "
 					on:click={async () => {
 						selectedTag = tag;
 						// await chats.set(await getChatListByTagName(localStorage.token, tag.name));
@@ -307,7 +307,7 @@
 
 				<div class="flex gap-1">
 					<!-- <button
-                        class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:text-white"
+                        class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-primary-light  "
                         on:click={async () => {
                             selectedTag = '';
                             // await chats.set(await getChatListByTagName(localStorage.token, tag.name));
@@ -317,7 +317,7 @@
                     </button> -->
 
 					<button
-						class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:text-white"
+						class="px-2 py-0.5 space-x-1 flex h-fit items-center rounded-full transition bg-gray-50 hover:bg-primary-light  "
 						on:click={async () => {
 							deleteDocs(filteredDocs.filter((doc) => doc.selected === 'checked'));
 							// await chats.set(await getChatListByTagName(localStorage.token, tag.name));
@@ -336,7 +336,7 @@
 <div class="my-3 mb-5">
 	{#each filteredDocs as doc}
 		<button
-			class=" flex space-x-4 cursor-pointer text-left w-full px-3 py-2 dark:hover:bg-white/5 hover:bg-primary-dark/5 rounded"
+			class=" flex space-x-4 cursor-pointer text-left w-full px-3 py-2  hover:bg-primary-dark/5 rounded"
 			on:click={() => {
 				if (doc?.selected === 'checked') {
 					doc.selected = 'unchecked';
@@ -416,7 +416,7 @@
 			</div>
 			<div class="flex flex-row space-x-1 self-center">
 				<button
-					class="self-center w-fit text-sm z-20 px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+					class="self-center w-fit text-sm z-20 px-2 py-2   hover:bg-primary-dark/5  rounded"
 					type="button"
 					on:click={async (e) => {
 						e.stopPropagation();
@@ -441,7 +441,7 @@
 				</button>
 
 				<!-- <button
-            class="self-center w-fit text-sm px-2 py-2 border dark:border-gray-600 rounded"
+            class="self-center w-fit text-sm px-2 py-2 border  rounded"
             type="button"
             on:click={() => {
                 console.log('download file');
@@ -463,7 +463,7 @@
         </button> -->
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2 dark:text-gray-300 dark:hover:text-white hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
 					type="button"
 					on:click={(e) => {
 						e.stopPropagation();
@@ -533,7 +533,7 @@
 		/>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-primary-light    transition"
 			on:click={() => {
 				documentsImportInputElement.click();
 			}}
@@ -557,7 +557,7 @@
 		</button>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-primary-light    transition"
 			on:click={async () => {
 				let blob = new Blob([JSON.stringify($documents)], {
 					type: 'application/json'

@@ -36,8 +36,8 @@
 </script>
 
 <Modal bind:show>
-	<div class="text-gray-700 dark:text-gray-100">
-		<div class=" flex justify-between dark:text-gray-300 px-5 pt-4 pb-1">
+	<div class="text-gray-700 ">
+		<div class=" flex justify-between  px-5 pt-4 pb-1">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Settings')}</div>
 			<button
 				class="self-center"
@@ -60,13 +60,13 @@
 
 		<div class="flex flex-col md:flex-row w-full p-4 md:space-x-4">
 			<div
-				class="tabs flex flex-row overflow-x-auto space-x-1 md:space-x-0 md:space-y-1 md:flex-col flex-1 md:flex-none md:w-40 dark:text-gray-200 text-xs text-left mb-3 md:mb-0"
+				class="tabs flex flex-row overflow-x-auto space-x-1 md:space-x-0 md:space-y-1 md:flex-col flex-1 md:flex-none md:w-40  text-xs text-left mb-3 md:mb-0"
 			>
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'general'
-						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+						? 'bg-primary-med  text-white'
+						: 'hover:bg-primary-light text-support-lightblue '}"
 					on:click={() => {
 						selectedTab = 'general';
 					}}
@@ -92,8 +92,8 @@
 					<button
 						class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 						'admin'
-							? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-							: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+							? 'bg-primary-med  text-white'
+							: 'hover:bg-primary-light text-support-lightblue '}"
 						on:click={async () => {
 							await goto('/admin/settings');
 							show = false;
@@ -120,8 +120,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'interface'
-					? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-					: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+					? 'bg-primary-med  text-white'
+					: 'hover:bg-primary-light text-support-lightblue '}"
 				on:click={() => {
 						selectedTab = 'interface';
 					}}
@@ -146,8 +146,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'personalization'
-						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+						? 'bg-primary-med  text-white'
+						: 'hover:bg-primary-light text-support-lightblue '}"
 					on:click={() => {
 						selectedTab = 'personalization';
 					}}
@@ -161,8 +161,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'audio'
-						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+						? 'bg-primary-med  text-white'
+						: 'hover:bg-primary-light text-support-lightblue '}"
 					on:click={() => {
 						selectedTab = 'audio';
 					}}
@@ -188,8 +188,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'chats'
-						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+						? 'bg-primary-med  text-white'
+						: 'hover:bg-primary-light text-support-lightblue '}"
 					on:click={() => {
 						selectedTab = 'chats';
 					}}
@@ -214,8 +214,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'account'
-						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+						? 'bg-primary-med  text-white'
+						: 'hover:bg-primary-light text-support-lightblue '}"
 					on:click={() => {
 						selectedTab = 'account';
 					}}
@@ -240,8 +240,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'about'
-						? 'bg-primary-med dark:bg-darktheme-tertiary text-white'
-						: 'hover:bg-primary-light dark:hover:bg-primary-dark text-primary-med hover:text-white'}"
+						? 'bg-primary-med  text-white'
+						: 'hover:bg-primary-light text-support-lightblue '}"
 					on:click={() => {
 						selectedTab = 'about';
 					}}

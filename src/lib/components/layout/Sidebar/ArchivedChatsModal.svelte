@@ -59,7 +59,7 @@
 
 <Modal size="lg" bind:show>
 	<div>
-		<div class=" flex justify-between dark:text-gray-300 px-5 pt-4 pb-1">
+		<div class=" flex justify-between  px-5 pt-4 pb-1">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Archived Chats')}</div>
 			<button
 				class="self-center"
@@ -80,7 +80,7 @@
 			</button>
 		</div>
 
-		<div class="flex flex-col w-full px-5 pb-4 dark:text-gray-200">
+		<div class="flex flex-col w-full px-5 pb-4 ">
 			<div class=" flex w-full mt-2 space-x-2">
 				<div class="flex flex-1">
 					<div class=" self-center ml-1 mr-3">
@@ -104,15 +104,15 @@
 					/>
 				</div>
 			</div>
-			<hr class=" dark:border-gray-850 my-2" />
+			<hr class="  my-2" />
 			<div class=" flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
 				{#if chats.length > 0}
 					<div class="w-full">
 						<div class="text-left text-sm w-full mb-3 max-h-[22rem] overflow-y-scroll">
 							<div class="relative overflow-x-auto">
-								<table class="w-full text-sm text-left text-gray-600 dark:text-gray-400 table-auto">
+								<table class="w-full text-sm text-left text-gray-600  table-auto">
 									<thead
-										class="text-xs text-gray-700 uppercase bg-transparent dark:text-gray-200 border-b-2 dark:border-gray-800"
+										class="text-xs text-gray-700 uppercase bg-transparent  border-b-2 "
 									>
 										<tr>
 											<th scope="col" class="px-3 py-2"> {$i18n.t('Name')} </th>
@@ -128,7 +128,7 @@
 													.includes(searchValue.toLowerCase())) as chat, idx}
 											<tr
 												class="bg-transparent {idx !== chats.length - 1 &&
-													'border-b'} dark:bg-darktheme-dark dark:border-gray-850 text-xs"
+													'border-b'}   text-xs"
 											>
 												<td class="px-3 py-1 w-2/3">
 													<a href="/c/{chat.id}" target="_blank">
@@ -148,7 +148,7 @@
 													<div class="flex justify-end w-full">
 														<Tooltip content="Unarchive Chat">
 															<button
-																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
 																on:click={async () => {
 																	unarchiveChatHandler(chat.id);
 																}}
@@ -172,7 +172,7 @@
 
 														<Tooltip content="Delete Chat">
 															<button
-																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
 																on:click={async () => {
 																	deleteChatHandler(chat.id);
 																}}
@@ -204,7 +204,7 @@
 
 						<div class="flex flex-wrap text-sm font-medium gap-1.5 mt-2 m-1">
 							<button
-								class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded"
+								class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5  outline outline-1 outline-gray-300  rounded"
 								on:click={() => {
 									exportChatsHandler();
 								}}>Export All Archived Chats</button

@@ -57,7 +57,7 @@
 			</div>
 		</div>
 
-		<div class="text-xs text-gray-600 dark:text-gray-400">
+		<div class="text-xs text-gray-600 ">
 			<div>
 				{$i18n.t(
 					"You can personalize your interactions with LLMs by adding memories through the 'Manage' button below, making them more helpful and tailored to you."
@@ -77,7 +77,7 @@
 		<div class="mt-3 mb-1 ml-1">
 			<button
 				type="button"
-				class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5 dark:hover:bg-white/5 outline outline-1 outline-gray-300 dark:outline-gray-800 rounded"
+				class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5  outline outline-1 outline-gray-300  rounded"
 				on:click={() => {
 					showManageModal = true;
 				}}
@@ -89,7 +89,7 @@
 
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

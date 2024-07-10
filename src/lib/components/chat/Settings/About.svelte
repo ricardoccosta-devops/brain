@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<div class="flex w-full justify-between items-center">
-				<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
+				<div class="flex flex-col text-xs text-gray-700 ">
 					<div class="flex gap-1">
 						<Tooltip content={WEBUI_BUILD_HASH}>
 							v{WEBUI_VERSION}
@@ -71,7 +71,7 @@
 					</div>
 
 					<button
-						class=" underline flex items-center space-x-1 text-xs text-gray-500 dark:text-gray-500"
+						class=" underline flex items-center space-x-1 text-xs text-gray-500 "
 						on:click={() => {
 							showChangelog.set(true);
 						}}
@@ -81,7 +81,7 @@
 				</div>
 
 				<button
-					class=" text-xs px-3 py-1.5 bg-gray-100 hover:bg-gray-200 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded font-medium"
+					class=" text-xs px-3 py-1.5 bg-gray-100 hover:bg-gray-200   transition rounded font-medium"
 					on:click={() => {
 						checkForVersionUpdates();
 					}}
@@ -92,19 +92,19 @@
 		</div>
 
 		{#if ollamaVersion}
-			<hr class=" dark:border-gray-850" />
+			<hr class=" " />
 
 			<div>
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Ollama Version')}</div>
 				<div class="flex w-full">
-					<div class="flex-1 text-xs text-gray-700 dark:text-gray-200">
+					<div class="flex-1 text-xs text-gray-700 ">
 						{ollamaVersion ?? 'N/A'}
 					</div>
 				</div>
 			</div>
 		{/if}
 
-		<hr class=" dark:border-gray-850" />
+		<hr class=" " />
 
 		<div class="flex space-x-1">
 			<a href="https://discord.gg/5rJgQTnV4s" target="_blank">
@@ -129,12 +129,12 @@
 			</a>
 		</div>
 
-		<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
+		<div class="mt-2 text-xs text-gray-400 ">
 			{#if !$WEBUI_NAME.includes('brAIn')}
-				<span class=" text-gray-500 dark:text-gray-300 font-medium">{$WEBUI_NAME}</span> -
+				<span class=" text-gray-500  font-medium">{$WEBUI_NAME}</span> -
 			{/if}{$i18n.t('Created by')}
 			<a
-				class=" text-gray-500 dark:text-gray-300 font-medium"
+				class=" text-gray-500  font-medium"
 				href="https://github.com/tjbck"
 				target="_blank">Timothy J. Baek</a
 			>

@@ -187,7 +187,7 @@
 										<input
 											class="w-full rounded py-2 px-4 {pipelineUrls[url]
 												? 'pr-8'
-												: ''} text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+												: ''} text-sm   outline-none"
 											placeholder={$i18n.t('API Base URL')}
 											bind:value={url}
 											autocomplete="off"
@@ -219,7 +219,7 @@
 
 									<div class="flex-1">
 										<input
-											class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+											class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 											placeholder={$i18n.t('API Key')}
 											bind:value={OPENAI_API_KEYS[idx]}
 											autocomplete="off"
@@ -272,7 +272,7 @@
 									<div class="flex">
 										<Tooltip content="Verify connection" className="self-start mt-0.5">
 											<button
-												class="self-center p-2 bg-gray-200 hover:bg-gray-300 dark:bg-darktheme-dark dark:hover:bg-gray-850 rounded transition"
+												class="self-center p-2 bg-gray-200 hover:bg-gray-300   rounded transition"
 												on:click={() => {
 													verifyOpenAIHandler(idx);
 												}}
@@ -294,7 +294,7 @@
 										</Tooltip>
 									</div>
 								</div>
-								<div class=" mb-1 text-xs text-gray-400 dark:text-gray-500">
+								<div class=" mb-1 text-xs text-gray-400 ">
 									{$i18n.t('WebUI will make requests to')}
 									<span class=" text-gray-200">'{url}/models'</span>
 								</div>
@@ -304,7 +304,7 @@
 				</div>
 			</div>
 
-			<hr class=" dark:border-gray-850" />
+			<hr class=" " />
 
 			<div class="pr-1.5 space-y-2">
 				<div class="flex justify-between items-center text-sm">
@@ -329,7 +329,7 @@
 							{#each OLLAMA_BASE_URLS as url, idx}
 								<div class="flex gap-1.5">
 									<input
-										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 										placeholder={$i18n.t('Enter URL (e.g. http://localhost:11434)')}
 										bind:value={url}
 									/>
@@ -379,7 +379,7 @@
 									<div class="flex">
 										<Tooltip content="Verify connection" className="self-start mt-0.5">
 											<button
-												class="self-center p-2 bg-gray-200 hover:bg-gray-300 dark:bg-darktheme-dark dark:hover:bg-gray-850 rounded transition"
+												class="self-center p-2 bg-gray-200 hover:bg-gray-300   rounded transition"
 												on:click={() => {
 													verifyOllamaHandler(idx);
 												}}
@@ -405,7 +405,7 @@
 						</div>
 					</div>
 
-					<div class="mt-2 text-xs text-gray-400 dark:text-gray-500">
+					<div class="mt-2 text-xs text-gray-400 ">
 						{$i18n.t('Trouble accessing Ollama?')}
 						<a
 							class=" text-gray-300 font-medium underline"
@@ -428,7 +428,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class="  px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class="  px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

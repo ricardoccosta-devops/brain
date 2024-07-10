@@ -52,11 +52,23 @@
 				],
 				"content": "Check the following sentence for grammar and clarity: \"[sentence]\". Rewrite it for better readability while maintaining its original meaning."
 			}
-		]
+		],
+		"default_models": "llama3:latest",
+		"user_permissions": {
+			"chat": {
+				"deletion": true
+			}
+		}
 	},
 	"ollama": {
 		"base_urls": [
 			"http://localhost:11434"
+		]
+	},
+	"model_filter": {
+		"enable": false,
+		"list": [
+			""
 		]
 	}
 }

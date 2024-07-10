@@ -252,7 +252,7 @@
 					<button
 						class=" {info.meta.profile_image_url
 							? ''
-							: 'p-4'} rounded-full dark:bg-gray-700 border border-dashed border-gray-200 flex items-center"
+							: 'p-4'} rounded-full  border border-dashed border-gray-200 flex items-center"
 						type="button"
 						on:click={() => {
 							filesInputElement.click();
@@ -288,7 +288,7 @@
 
 					<div>
 						<input
-							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
+							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded"
 							placeholder={$i18n.t('Name your model')}
 							bind:value={name}
 							required
@@ -301,7 +301,7 @@
 
 					<div>
 						<input
-							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 disabled:text-gray-500 border dark:border-gray-600 outline-none rounded"
+							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 disabled:text-gray-500 border  outline-none rounded"
 							placeholder={$i18n.t('Add a model id')}
 							value={id}
 							disabled
@@ -317,7 +317,7 @@
 
 					<div>
 						<select
-							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
+							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded"
 							placeholder="Select a base model (e.g. llama3, gpt-4o)"
 							bind:value={info.base_model_id}
 							required
@@ -356,14 +356,14 @@
 
 				{#if info.meta.description !== null}
 					<input
-						class="mt-1 px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
+						class="mt-1 px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded"
 						placeholder={$i18n.t('Add a short description about what this model does')}
 						bind:value={info.meta.description}
 					/>
 				{/if}
 			</div>
 
-			<hr class=" dark:border-gray-850 my-1" />
+			<hr class="  my-1" />
 
 			<div class="my-2">
 				<div class="flex w-full justify-between">
@@ -377,7 +377,7 @@
 						<div class=" text-xs font-semibold mb-2">{$i18n.t('System Prompt')}</div>
 						<div>
 							<textarea
-								class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded -mb-1"
+								class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded -mb-1"
 								placeholder={`Write your model system prompt content here\ne.g.) You are Mario from Super Mario Bros, acting as an assistant.`}
 								rows="4"
 								bind:value={info.params.system}
@@ -418,7 +418,7 @@
 				</div>
 			</div>
 
-			<hr class=" dark:border-gray-850 my-1" />
+			<hr class="  my-1" />
 
 			<div class="my-2">
 				<div class="flex w-full justify-between items-center">
@@ -475,9 +475,9 @@
 					<div class="flex flex-col space-y-1 mt-2">
 						{#if info.meta.suggestion_prompts.length > 0}
 							{#each info.meta.suggestion_prompts as prompt, promptIdx}
-								<div class=" flex border dark:border-gray-600 rounded">
+								<div class=" flex border  rounded">
 									<input
-										class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 outline-none border-r dark:border-gray-600"
+										class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 outline-none border-r "
 										placeholder={$i18n.t('Write a prompt suggestion (e.g. Who are you?)')}
 										bind:value={prompt.content}
 									/>
@@ -559,7 +559,7 @@
 				</div>
 			</div>
 
-			<div class="my-2 text-gray-300 dark:text-gray-700">
+			<div class="my-2 text-gray-300 ">
 				<div class="flex w-full justify-between mb-2">
 					<div class=" self-center text-sm font-semibold">{$i18n.t('JSON Preview')}</div>
 
@@ -581,7 +581,7 @@
 				{#if showPreview}
 					<div>
 						<textarea
-							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
+							class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded"
 							rows="10"
 							value={JSON.stringify(info, null, 2)}
 							disabled
@@ -594,8 +594,8 @@
 			<div class="my-2 flex justify-end mb-20">
 				<button
 					class=" text-sm px-3 py-2 transition rounded {loading
-						? ' cursor-not-allowed bg-gray-100 dark:bg-gray-800'
-						: ' bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-800'} flex"
+						? ' cursor-not-allowed bg-gray-100 '
+						: ' bg-gray-50 hover:bg-primary-light  '} flex"
 					type="submit"
 					disabled={loading}
 				>

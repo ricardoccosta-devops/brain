@@ -124,7 +124,7 @@
 
 {#if loaded}
 	<div
-		class="min-h-screen max-h-screen w-full flex flex-col text-gray-700 dark:text-gray-100 bg-white dark:bg-darktheme-dark"
+		class="min-h-screen max-h-screen w-full flex flex-col text-gray-700  bg-white "
 	>
 		<div class="flex flex-col flex-auto justify-center py-8">
 			<div class="px-3 w-full max-w-5xl mx-auto">
@@ -138,7 +138,7 @@
 					</div>
 				</div>
 
-				<hr class=" dark:border-gray-800 mt-6 mb-2" />
+				<hr class="  mt-6 mb-2" />
 			</div>
 
 			<div class=" flex flex-col w-full flex-auto overflow-auto h-0" id="messages-container">

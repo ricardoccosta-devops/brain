@@ -75,7 +75,7 @@
 
 <Modal size="sm" bind:show>
 	<div>
-		<div class=" flex justify-between dark:text-gray-300 px-5 pt-4">
+		<div class=" flex justify-between  px-5 pt-4">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Edit Doc')}</div>
 			<button
 				class="self-center"
@@ -95,7 +95,7 @@
 				</svg>
 			</button>
 		</div>
-		<div class="flex flex-col md:flex-row w-full px-5 py-4 md:space-x-4 dark:text-gray-200">
+		<div class="flex flex-col md:flex-row w-full px-5 py-4 md:space-x-4 ">
 			<div class=" flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
 				<form
 					class="flex flex-col w-full"
@@ -109,12 +109,12 @@
 
 							<div class="flex flex-1">
 								<div
-									class="bg-gray-200 dark:bg-gray-800 font-bold px-3 py-0.5 border border-r-0 dark:border-gray-800 rounded-l-xl flex items-center"
+									class="bg-gray-200  font-bold px-3 py-0.5 border border-r-0  rounded-l-xl flex items-center"
 								>
 									#
 								</div>
 								<input
-									class="w-full rounded-r-xl py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 disabled:text-gray-500 dark:disabled:text-gray-500 outline-none"
+									class="w-full rounded-r-xl py-2 px-4 text-sm   disabled:text-gray-500  outline-none"
 									type="text"
 									bind:value={doc.name}
 									autocomplete="off"
@@ -128,7 +128,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 									type="text"
 									bind:value={doc.title}
 									autocomplete="off"
@@ -146,7 +146,7 @@
 
 					<div class="flex justify-end pt-5 text-sm font-medium">
 						<button
-							class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+							class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 							type="submit"
 						>
 							{$i18n.t('Save')}

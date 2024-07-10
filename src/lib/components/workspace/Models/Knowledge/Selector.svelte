@@ -55,7 +55,7 @@
 
 	<div slot="content">
 		<DropdownMenu.Content
-			class="w-full max-w-[300px]  rounded px-1 py-1.5 border border-gray-300/30 dark:border-gray-700/50 z-50 bg-white dark:bg-gray-850 dark:text-white shadow-lg"
+			class="w-full max-w-[300px]  rounded px-1 py-1.5 border border-gray-300/30  z-50 bg-white   shadow-lg"
 			sideOffset={8}
 			side="bottom"
 			align="start"
@@ -63,13 +63,13 @@
 		>
 			<div class="max-h-[10rem] overflow-y-scroll">
 				{#if items.length === 0}
-					<div class="text-center text-sm text-gray-500 dark:text-gray-400">
+					<div class="text-center text-sm text-gray-500 ">
 						{$i18n.t('No documents found')}
 					</div>
 				{:else}
 					{#each items as item}
 						<DropdownMenu.Item
-							class="flex gap-2.5 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+							class="flex gap-2.5 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
 							on:click={() => {
 								if (!knowledge.find((k) => k.name === item.name)) {
 									knowledge = [
@@ -119,7 +119,7 @@
 							<div class="flex items-center">
 								<div class="flex flex-col">
 									<div
-										class=" w-fit text-xs font-black px-1 rounded uppercase line-clamp-1 bg-gray-500/20 text-gray-700 dark:text-gray-200"
+										class=" w-fit text-xs font-black px-1 rounded uppercase line-clamp-1 bg-gray-500/20 text-gray-700 "
 									>
 										{item?.type ?? 'Document'}
 									</div>

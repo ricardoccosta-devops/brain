@@ -44,11 +44,11 @@
 			<div
 				class="{$showSidebar
 					? 'md:hidden'
-					: ''} mr-3 self-start flex flex-none items-center text-gray-600 dark:text-gray-400"
+					: ''} mr-3 self-start flex flex-none items-center text-gray-600 "
 			>
 				<button
 					id="sidebar-toggle-button"
-					class="cursor-pointer px-2 py-2 flex rounded hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+					class="cursor-pointer px-2 py-2 flex rounded hover:bg-primary-light  transition"
 					on:click={() => {
 						showSidebar.set(!$showSidebar);
 					}}
@@ -64,8 +64,8 @@
 				{/if}
 			</div>
 
-			<div class="self-start flex flex-none items-center text-gray-600 dark:text-gray-400">
-				<!-- <div class="md:hidden flex self-center w-[1px] h-5 mx-2 bg-gray-300 dark:bg-stone-700" /> -->
+			<div class="self-start flex flex-none items-center text-gray-600 ">
+				<!-- <div class="md:hidden flex self-center w-[1px] h-5 mx-2 bg-gray-300 " /> -->
 
 				{#if shareEnabled && chat && chat.id}
 					<Menu
@@ -79,7 +79,7 @@
 						}}
 					>
 						<button
-							class="hidden md:flex cursor-pointer px-2 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+							class="hidden md:flex cursor-pointer px-2 py-2 rounded hover:bg-primary-light  transition"
 							id="chat-context-menu-button"
 						>
 							<div class=" m-auto self-center">
@@ -106,7 +106,7 @@
 						id="new-chat-button"
 						class=" flex {$showSidebar
 							? 'md:hidden'
-							: ''} cursor-pointer px-2 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+							: ''} cursor-pointer px-2 py-2 rounded hover:bg-primary-light  transition"
 						on:click={() => {
 							initNewChat();
 						}}
@@ -140,7 +140,7 @@
 						}}
 					>
 						<button
-							class="select-none flex rounded p-1.5 w-full hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+							class="select-none flex rounded p-1.5 w-full hover:bg-primary-light  transition"
 							aria-label="User Menu"
 						>
 							<div class=" self-center">

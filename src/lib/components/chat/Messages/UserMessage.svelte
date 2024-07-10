@@ -89,7 +89,7 @@
 		{/if}
 
 		<div
-			class="prose chat-{message.role} w-full max-w-full flex flex-col justify-end dark:prose-invert prose-headings:my-0 prose-p:my-0 prose-p:-mb-4 prose-pre:my-0 prose-table:my-0 prose-blockquote:my-0 prose-img:my-0 prose-ul:-my-4 prose-ol:-my-4 prose-li:-my-3 prose-ul:-mb-6 prose-ol:-mb-6 prose-li:-mb-4 whitespace-pre-line"
+			class="prose chat-{message.role} w-full max-w-full flex flex-col justify-end prose-headings:my-0 prose-p:my-0 prose-p:-mb-4 prose-pre:my-0 prose-table:my-0 prose-blockquote:my-0 prose-img:my-0 prose-ul:-my-4 prose-ol:-my-4 prose-li:-my-3 prose-ul:-mb-6 prose-ol:-mb-6 prose-li:-mb-4 whitespace-pre-line"
 		>
 			{#if message.files}
 				<div class="mt-2.5 mb-1 w-full flex flex-col justify-end overflow-x-auto gap-1 flex-wrap">
@@ -99,7 +99,7 @@
 								<img src={file.url} alt="input" class=" max-h-96 rounded" draggable="false" />
 							{:else if file.type === 'doc'}
 								<button
-									class="h-16 w-72 flex items-center space-x-3 px-2.5 dark:bg-gray-850 rounded border border-gray-200 dark:border-none text-left"
+									class="h-16 w-72 flex items-center space-x-3 px-2.5  rounded border border-gray-200  text-left"
 									type="button"
 									on:click={() => {
 										if (file?.url) {
@@ -126,7 +126,7 @@
 									</div>
 
 									<div class="flex flex-col justify-center -space-y-0.5">
-										<div class=" dark:text-gray-100 text-sm font-medium line-clamp-1">
+										<div class="  text-sm font-medium line-clamp-1">
 											{file.name}
 										</div>
 
@@ -135,7 +135,7 @@
 								</button>
 							{:else if file.type === 'collection'}
 								<button
-									class="h-16 w-72 flex items-center space-x-3 px-2.5 dark:bg-gray-600 rounded border bg-white border-gray-200 dark:border-none text-left"
+									class="h-16 w-72 flex items-center space-x-3 px-2.5  rounded border bg-white border-gray-200  text-left"
 									type="button"
 								>
 									<div class="p-2.5 bg-red-400 text-white rounded">
@@ -155,7 +155,7 @@
 									</div>
 
 									<div class="flex flex-col justify-center -space-y-0.5">
-										<div class=" dark:text-gray-100 text-sm font-medium line-clamp-1">
+										<div class="  text-sm font-medium line-clamp-1">
 											{file?.title ?? `#${file.name}`}
 										</div>
 
@@ -169,7 +169,7 @@
 			{/if}
 
 			{#if edit === true}
-				<div class=" w-full bg-gray-50 dark:bg-gray-800 rounded px-5 py-3 mb-2">
+				<div class=" w-full bg-gray-50  rounded px-5 py-3 mb-2">
 					<textarea
 						id="message-edit-{message.id}"
 						bind:this={messageEditTextAreaElement}
@@ -196,7 +196,7 @@
 					<div class=" mt-2 mb-1 flex justify-end space-x-1.5 text-sm font-medium">
 						<button
 							id="close-edit-message-button"
-							class="px-4 py-2 bg-white dark:bg-darktheme-dark hover:bg-gray-100 text-primary-dark dark:text-gray-100 transition rounded"
+							class="px-4 py-2 bg-white  hover:bg-primary-light text-primary-dark  transition rounded"
 							on:click={() => {
 								cancelEditMessage();
 							}}
@@ -206,7 +206,7 @@
 
 						<button
 							id="save-edit-message-button"
-							class=" px-4 py-2 bg-primary-lightdarkest dark:bg-white hover:bg-gray-850 text-gray-100 dark:text-primary-dark transition rounded"
+							class=" px-4 py-2 bg-primary-lightdarkest hover:bg-gray-850 text-gray-100  transition rounded"
 							on:click={() => {
 								editMessageConfirmHandler();
 							}}
@@ -220,7 +220,7 @@
 					<div class="flex {$settings?.chatBubble ?? true ? 'justify-end' : ''} mb-2">
 						<div
 							class="rounded {$settings?.chatBubble ?? true
-								? `max-w-[90%] px-5 py-2  bg-gray-50 dark:bg-gray-850 ${
+								? `max-w-[90%] px-5 py-2  bg-gray-50  ${
 										message.files ? 'rounded-tr-lg' : ''
 								  }`
 								: ''}  "
@@ -232,13 +232,13 @@
 					<div
 						class=" flex {$settings?.chatBubble ?? true
 							? 'justify-end'
-							: ''}  text-gray-600 dark:text-gray-500"
+							: ''}  text-gray-600 "
 					>
 						{#if !($settings?.chatBubble ?? true)}
 							{#if siblings.length > 1}
 								<div class="flex self-center" dir="ltr">
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
 										on:click={() => {
 											showPreviousMessage(message);
 										}}
@@ -259,12 +259,12 @@
 										</svg>
 									</button>
 
-									<div class="text-sm tracking-widest font-semibold self-center dark:text-gray-100">
+									<div class="text-sm tracking-widest font-semibold self-center ">
 										{siblings.indexOf(message.id) + 1}/{siblings.length}
 									</div>
 
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
 										on:click={() => {
 											showNextMessage(message);
 										}}
@@ -290,7 +290,7 @@
 						{#if !readOnly}
 							<Tooltip content={$i18n.t('Edit')} placement="bottom">
 								<button
-									class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition edit-user-message-button"
+									class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition edit-user-message-button"
 									on:click={() => {
 										editMessageHandler();
 									}}
@@ -315,7 +315,7 @@
 
 						<Tooltip content={$i18n.t('Copy')} placement="bottom">
 							<button
-								class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded dark:hover:text-white hover:text-black transition"
+								class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition"
 								on:click={() => {
 									copyToClipboard(message.content);
 								}}
@@ -340,7 +340,7 @@
 						{#if !isFirstMessage && !readOnly}
 							<Tooltip content={$i18n.t('Delete')} placement="bottom">
 								<button
-									class="invisible group-hover:visible p-1 rounded dark:hover:text-white hover:text-black transition"
+									class="invisible group-hover:visible p-1 rounded  hover:text-black transition"
 									on:click={() => {
 										deleteMessageHandler();
 									}}
@@ -367,7 +367,7 @@
 							{#if siblings.length > 1}
 								<div class="flex self-center" dir="ltr">
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
 										on:click={() => {
 											showPreviousMessage(message);
 										}}
@@ -388,12 +388,12 @@
 										</svg>
 									</button>
 
-									<div class="text-sm tracking-widest font-semibold self-center dark:text-gray-100">
+									<div class="text-sm tracking-widest font-semibold self-center ">
 										{siblings.indexOf(message.id) + 1}/{siblings.length}
 									</div>
 
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
 										on:click={() => {
 											showNextMessage(message);
 										}}

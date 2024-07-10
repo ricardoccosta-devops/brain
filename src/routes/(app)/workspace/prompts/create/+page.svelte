@@ -124,7 +124,7 @@
 
 			<div>
 				<input
-					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
+					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded"
 					placeholder={$i18n.t('Add a short title for this prompt')}
 					bind:value={title}
 					required
@@ -137,25 +137,25 @@
 
 			<div class="flex items-center mb-1">
 				<div
-					class="bg-gray-200 dark:bg-gray-600 font-bold px-3 py-1 border border-r-0 dark:border-gray-600 rounded-l-lg"
+					class="bg-gray-200  font-bold px-3 py-1 border border-r-0  rounded-l-lg"
 				>
 					/
 				</div>
 				<input
-					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded-r-lg"
+					class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded-r-lg"
 					placeholder={$i18n.t('short-summary')}
 					bind:value={command}
 					required
 				/>
 			</div>
 
-			<div class="text-xs text-gray-400 dark:text-gray-500">
+			<div class="text-xs text-gray-400 ">
 				{$i18n.t('Only')}
-				<span class=" text-gray-600 dark:text-gray-300 font-medium"
+				<span class=" text-gray-600  font-medium"
 					>{$i18n.t('alphanumeric characters and hyphens')}</span
 				>
 				{$i18n.t('are allowed - Activate this command by typing')}&nbsp;"<span
-					class=" text-gray-600 dark:text-gray-300 font-medium"
+					class=" text-gray-600  font-medium"
 				>
 					/{command}
 				</span>" &nbsp;
@@ -171,7 +171,7 @@
 			<div class="mt-2">
 				<div>
 					<textarea
-						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border dark:border-gray-600 outline-none rounded"
+						class="px-3 py-1.5 text-sm w-full bg-white border border-solid border-gray-250 border  outline-none rounded"
 						placeholder={$i18n.t('Write a summary in 50 words that summarizes [topic or keyword].')}
 						rows="6"
 						bind:value={content}
@@ -179,18 +179,18 @@
 					/>
 				</div>
 
-				<div class="text-xs text-gray-400 dark:text-gray-500">
+				<div class="text-xs text-gray-400 ">
 					ⓘ {$i18n.t('Format your variables using square brackets like this:')}&nbsp;<span
-						class=" text-gray-600 dark:text-gray-300 font-medium">[{$i18n.t('variable')}]</span
+						class=" text-gray-600  font-medium">[{$i18n.t('variable')}]</span
 					>.
 					{$i18n.t('Make sure to enclose them with')}
-					<span class=" text-gray-600 dark:text-gray-300 font-medium">'['</span>
+					<span class=" text-gray-600  font-medium">'['</span>
 					{$i18n.t('and')}
-					<span class=" text-gray-600 dark:text-gray-300 font-medium">']'</span>.
+					<span class=" text-gray-600  font-medium">']'</span>.
 				</div>
 
-				<div class="text-xs text-gray-400 dark:text-gray-500">
-					{$i18n.t('Utilize')}<span class=" text-gray-600 dark:text-gray-300 font-medium">
+				<div class="text-xs text-gray-400 ">
+					{$i18n.t('Utilize')}<span class=" text-gray-600  font-medium">
 						{` {{CLIPBOARD}}`}</span
 					>
 					{$i18n.t('variable to have them replaced with clipboard content.')}
@@ -201,8 +201,8 @@
 		<div class="my-2 flex justify-end">
 			<button
 				class=" text-sm px-3 py-2 transition rounded {loading
-					? ' cursor-not-allowed bg-gray-100 dark:bg-gray-800'
-					: ' bg-gray-50 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-800'} flex"
+					? ' cursor-not-allowed bg-gray-100 '
+					: ' bg-gray-50 hover:bg-primary-light  '} flex"
 				type="submit"
 				disabled={loading}
 			>

@@ -96,7 +96,7 @@
 
 <Modal size="sm" bind:show>
 	<div>
-		<div class=" flex justify-between dark:text-gray-300 px-5 pt-4">
+		<div class=" flex justify-between  px-5 pt-4">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Add Docs')}</div>
 			<button
 				class="self-center"
@@ -116,7 +116,7 @@
 				</svg>
 			</button>
 		</div>
-		<div class="flex flex-col md:flex-row w-full px-5 py-4 md:space-x-4 dark:text-gray-200">
+		<div class="flex flex-col md:flex-row w-full px-5 py-4 md:space-x-4 ">
 			<div class=" flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
 				<form
 					class="flex flex-col w-full"
@@ -135,7 +135,7 @@
 						/>
 
 						<button
-							class="w-full text-sm font-medium py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-850 dark:hover:bg-gray-800 text-center rounded"
+							class="w-full text-sm font-medium py-3 bg-gray-100 hover:bg-gray-200   text-center rounded"
 							type="button"
 							on:click={() => {
 								uploadDocInputElement.click();
@@ -159,7 +159,7 @@
 
 					<div class="flex justify-end pt-5 text-sm font-medium">
 						<button
-							class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+							class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 							type="submit"
 						>
 							{$i18n.t('Save')}

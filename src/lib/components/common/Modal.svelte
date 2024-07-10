@@ -58,7 +58,7 @@
 		<div
 			class=" m-auto rounded max-w-full {sizeToWidth(
 				size
-			)} mx-2 bg-gray-50 dark:bg-darktheme-dark shadow-3xl"
+			)} mx-2 bg-gray-50  shadow-3xl"
 			in:flyAndScale
 			on:mousedown={(e) => {
 				e.stopPropagation();

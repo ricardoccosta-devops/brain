@@ -26,7 +26,7 @@
 
 	<div slot="content">
 		<DropdownMenu.Content
-			class="w-full max-w-[180px] rounded px-1 py-1.5 border border-gray-300/30 dark:border-gray-700/50 z-[9999] bg-white dark:bg-darktheme-dark dark:text-white shadow-sm"
+			class="w-full max-w-[180px] rounded px-1 py-1.5 border border-gray-300/30  z-[9999] bg-white   shadow-sm"
 			sideOffset={6}
 			side="top"
 			align="start"
@@ -34,7 +34,7 @@
 		>
 			{#each devices as device}
 				<DropdownMenu.Item
-					class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
+					class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
 					on:click={() => {
 						dispatch('change', device.deviceId);
 					}}

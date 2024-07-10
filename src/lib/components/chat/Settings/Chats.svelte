@@ -161,7 +161,7 @@
 			</div>
 		</div>
 
-		<hr class=" dark:border-gray-850" />
+		<hr class=" " />
 
 		<div class="flex flex-col">
 			<input
@@ -173,7 +173,7 @@
 				hidden
 			/>
 			<button
-				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
 				on:click={() => {
 					chatImportInputElement.click();
 				}}
@@ -195,7 +195,7 @@
 				<div class=" self-center text-sm font-medium">{$i18n.t('Import Chats')}</div>
 			</button>
 			<button
-				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
 				on:click={() => {
 					exportChats();
 				}}
@@ -218,7 +218,7 @@
 			</button>
 		</div>
 
-		<hr class=" dark:border-gray-850" />
+		<hr class=" " />
 
 		<div class="flex flex-col">
 			{#if showArchiveConfirm}
@@ -282,7 +282,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
 					on:click={() => {
 						showArchiveConfirm = true;
 					}}
@@ -369,7 +369,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
 					on:click={() => {
 						showDeleteConfirm = true;
 					}}

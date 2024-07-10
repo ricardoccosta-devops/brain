@@ -35,7 +35,7 @@
 
 <Modal size="lg" bind:show>
 	<div>
-		<div class=" flex justify-between dark:text-gray-300 px-5 py-4">
+		<div class=" flex justify-between  px-5 py-4">
 			<div class=" text-lg font-medium self-center capitalize">
 				{$i18n.t("{{user}}'s Chats", { user: user.name })}
 			</div>
@@ -57,16 +57,16 @@
 				</svg>
 			</button>
 		</div>
-		<hr class=" dark:border-gray-850" />
+		<hr class=" " />
 
-		<div class="flex flex-col md:flex-row w-full px-5 py-4 md:space-x-4 dark:text-gray-200">
+		<div class="flex flex-col md:flex-row w-full px-5 py-4 md:space-x-4 ">
 			<div class=" flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
 				{#if chats.length > 0}
 					<div class="text-left text-sm w-full mb-4 max-h-[22rem] overflow-y-scroll">
 						<div class="relative overflow-x-auto">
-							<table class="w-full text-sm text-left text-gray-600 dark:text-gray-400 table-auto">
+							<table class="w-full text-sm text-left text-gray-600  table-auto">
 								<thead
-									class="text-xs text-gray-700 uppercase bg-transparent dark:text-gray-200 border-b-2 dark:border-gray-800"
+									class="text-xs text-gray-700 uppercase bg-transparent  border-b-2 "
 								>
 									<tr>
 										<th scope="col" class="px-3 py-2"> {$i18n.t('Name')} </th>
@@ -78,7 +78,7 @@
 									{#each chats as chat, idx}
 										<tr
 											class="bg-transparent {idx !== chats.length - 1 &&
-												'border-b'} dark:bg-darktheme-dark dark:border-gray-850 text-xs"
+												'border-b'}   text-xs"
 										>
 											<td class="px-3 py-1 w-2/3">
 												<a href="/s/{chat.id}" target="_blank">
@@ -98,7 +98,7 @@
 												<div class="flex justify-end w-full">
 													<Tooltip content={$i18n.t('Delete Chat')}>
 														<button
-															class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5 dark:hover:bg-white/5 rounded"
+															class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
 															on:click={async () => {
 																deleteChatHandler(chat.id);
 															}}

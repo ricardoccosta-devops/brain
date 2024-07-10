@@ -14,7 +14,7 @@
 	<Pagination.Root bind:page {count} {perPage} let:pages>
 		<div class="my-2 flex items-center">
 			<Pagination.PrevButton
-				class="mr-[25px] inline-flex size-8 items-center justify-center rounded-[9px] bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-98 disabled:cursor-not-allowed disabled:text-gray-400 dark:disabled:text-gray-700 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent"
+				class="mr-[25px] inline-flex size-8 items-center justify-center rounded-[9px] bg-transparent hover:bg-primary-light  active:scale-98 disabled:cursor-not-allowed disabled:text-gray-400  hover:disabled:bg-transparent"
 			>
 				<ChevronLeft className="size-4" strokeWidth="2" />
 			</Pagination.PrevButton>
@@ -25,7 +25,7 @@
 					{:else}
 						<Pagination.Page
 							{page}
-							class="inline-flex size-8 items-center justify-center rounded-[9px] bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 text-sm font-medium hover:bg-dark-10 active:scale-98 disabled:cursor-not-allowed disabled:opacity-50 hover:disabled:bg-transparent data-[selected]:bg-primary-dark data-[selected]:text-gray-100 data-[selected]:hover:bg-primary-dark dark:data-[selected]:bg-white dark:data-[selected]:text-primary-lightdarkest dark:data-[selected]:hover:bg-white"
+							class="inline-flex size-8 items-center justify-center rounded-[9px] bg-transparent hover:bg-primary-light  text-sm font-medium hover:bg-dark-10 active:scale-98 disabled:cursor-not-allowed disabled:opacity-50 hover:disabled:bg-transparent data-[selected]:bg-primary-dark data-[selected]:text-gray-100 data-[selected]:hover:bg-primary-dark"
 						>
 							{page.value}
 						</Pagination.Page>
@@ -33,7 +33,7 @@
 				{/each}
 			</div>
 			<Pagination.NextButton
-				class="ml-[25px]  inline-flex size-8 items-center justify-center rounded-[9px] bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 active:scale-98 disabled:cursor-not-allowed disabled:text-gray-400 dark:disabled:text-gray-700 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent"
+				class="ml-[25px]  inline-flex size-8 items-center justify-center rounded-[9px] bg-transparent hover:bg-primary-light  active:scale-98 disabled:cursor-not-allowed disabled:text-gray-400  hover:disabled:bg-transparent"
 			>
 				<ChevronRight className="size-4" strokeWidth="2" />
 			</Pagination.NextButton>

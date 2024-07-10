@@ -257,7 +257,7 @@
 			</div>
 		</div>
 
-		<hr class=" dark:border-gray-850" />
+		<hr class=" " />
 
 		<div class=" space-y-1 mb-3">
 			<div class="mb-2">
@@ -268,13 +268,13 @@
 
 			<div class="flex-1 mr-2">
 				<select
-					class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+					class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 					bind:value={defaultModelId}
 					placeholder="Select a model"
 				>
 					<option value="" disabled selected>{$i18n.t('Select a model')}</option>
 					{#each $models.filter((model) => model.id) as model}
-						<option value={model.id} class="bg-gray-100 dark:bg-gray-700">{model.name}</option>
+						<option value={model.id} class="bg-gray-100 ">{model.name}</option>
 					{/each}
 				</select>
 			</div>
@@ -283,7 +283,7 @@
 
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

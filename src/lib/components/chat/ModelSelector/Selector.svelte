@@ -219,7 +219,7 @@
 	<DropdownMenu.Content
 		class=" z-40 {$mobile
 			? `w-full`
-			: `${className}`} max-w-[calc(100vw-1rem)] justify-start rounded  bg-white dark:bg-gray-850 dark:text-white shadow-lg border border-gray-300/30 dark:border-gray-850/50  outline-none "
+			: `${className}`} max-w-[calc(100vw-1rem)] justify-start rounded  bg-white   shadow-lg border border-gray-300/30 /50  outline-none "
 		transition={flyAndScale}
 		side={$mobile ? 'bottom' : 'bottom-start'}
 		sideOffset={4}
@@ -238,14 +238,14 @@
 					/>
 				</div>
 
-				<hr class="border-gray-100 dark:border-gray-800" />
+				<hr class="border-gray-100 " />
 			{/if}
 
 			<div class="px-3 my-2 max-h-64 overflow-y-auto scrollbar-hidden">
 				{#each filteredItems as item}
 					<button
 						aria-label="model-item"
-						class="flex w-full text-left font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700 dark:text-gray-100 outline-none transition-all duration-75 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer data-[highlighted]:bg-muted"
+						class="flex w-full text-left font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 hover:bg-primary-light  rounded cursor-pointer data-[highlighted]:bg-muted"
 						on:click={() => {
 							value = item.value;
 
@@ -257,7 +257,7 @@
 								<div class="flex gap-0.5 self-start h-full mb-0.5 -translate-x-1">
 									{#each item.model?.info?.meta.tags as tag}
 										<div
-											class=" text-xs font-black px-1 rounded uppercase line-clamp-1 bg-gray-500/20 text-gray-700 dark:text-gray-200"
+											class=" text-xs font-black px-1 rounded uppercase line-clamp-1 bg-gray-500/20 text-gray-700 "
 										>
 											{tag.name}
 										</div>
@@ -284,7 +284,7 @@
 												className="self-end"
 											>
 												<span
-													class=" text-xs font-medium text-gray-600 dark:text-gray-400 line-clamp-1"
+													class=" text-xs font-medium text-gray-600  line-clamp-1"
 													>{item.model.ollama?.details?.parameter_size ?? ''}</span
 												>
 											</Tooltip>
@@ -296,7 +296,7 @@
 									<div class="flex gap-0.5 self-center items-center h-full translate-y-[0.5px]">
 										{#each item.model?.info?.meta.tags as tag}
 											<div
-												class=" text-xs font-black px-1 rounded uppercase line-clamp-1 bg-gray-500/20 text-gray-700 dark:text-gray-200"
+												class=" text-xs font-black px-1 rounded uppercase line-clamp-1 bg-gray-500/20 text-gray-700 "
 											>
 												{tag.name}
 											</div>
@@ -365,7 +365,7 @@
 					</button>
 				{:else}
 					<div>
-						<div class="block px-3 py-2 text-sm text-gray-700 dark:text-gray-100">
+						<div class="block px-3 py-2 text-sm text-gray-700 ">
 							{$i18n.t('No results found')}
 						</div>
 					</div>
@@ -373,7 +373,7 @@
 
 				{#if !(searchValue.trim() in $MODEL_DOWNLOAD_POOL) && searchValue && ollamaVersion && $user.role === 'admin'}
 					<button
-						class="flex w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700 dark:text-gray-100 outline-none transition-all duration-75 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer data-[highlighted]:bg-muted"
+						class="flex w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 hover:bg-primary-light  rounded cursor-pointer data-[highlighted]:bg-muted"
 						on:click={() => {
 							pullModelHandler();
 						}}
@@ -384,7 +384,7 @@
 
 				{#each Object.keys($MODEL_DOWNLOAD_POOL) as model}
 					<div
-						class="flex w-full justify-between font-medium select-none rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700 dark:text-gray-100 outline-none transition-all duration-75 rounded cursor-pointer data-[highlighted]:bg-muted"
+						class="flex w-full justify-between font-medium select-none rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 rounded cursor-pointer data-[highlighted]:bg-muted"
 					>
 						<div class="flex">
 							<div class="-ml-2 mr-2.5 translate-y-0.5">
@@ -421,7 +421,7 @@
 								</div>
 
 								{#if 'digest' in $MODEL_DOWNLOAD_POOL[model] && $MODEL_DOWNLOAD_POOL[model].digest}
-									<div class="-mt-1 h-fit text-[0.7rem] dark:text-gray-500 line-clamp-1">
+									<div class="-mt-1 h-fit text-[0.7rem]  line-clamp-1">
 										{$MODEL_DOWNLOAD_POOL[model].digest}
 									</div>
 								{/if}
@@ -431,13 +431,13 @@
 						<div class="mr-2 translate-y-0.5">
 							<Tooltip content={$i18n.t('Cancel')}>
 								<button
-									class="text-primary-dark dark:text-gray-100"
+									class="text-primary-dark "
 									on:click={() => {
 										cancelModelPullHandler(model);
 									}}
 								>
 									<svg
-										class="w-4 h-4 text-primary-dark dark:text-white"
+										class="w-4 h-4 text-primary-dark "
 										aria-hidden="true"
 										xmlns="http://www.w3.org/2000/svg"
 										width="24"

@@ -246,8 +246,8 @@
 					<div>
 						<button
 							class=" flex items-center gap-0.5 text-xs px-2.5 py-0.5 rounded {mode === 'chat' &&
-								'text-sky-600 dark:text-sky-200 bg-sky-200/30'} {mode === 'complete' &&
-								'text-green-600 dark:text-green-200 bg-green-200/30'} "
+								'text-sky-600  bg-sky-200/30'} {mode === 'complete' &&
+								'text-green-600  bg-green-200/30'} "
 							on:click={() => {
 								if (mode === 'complete') {
 									mode = 'chat';
@@ -298,7 +298,7 @@
 					</div>
 
 					<!-- <button
-							class=" self-center dark:hover:text-gray-300"
+							class=" self-center "
 							id="open-settings-button"
 							on:click={async () => {}}
 						>
@@ -327,7 +327,7 @@
 
 			{#if mode === 'chat'}
 				<div class="p-1">
-					<div class="p-3 outline outline-1 outline-gray-200 dark:outline-gray-800 rounded">
+					<div class="p-3 outline outline-1 outline-gray-200  rounded">
 						<div class=" text-sm font-medium">{$i18n.t('System')}</div>
 						<textarea
 							id="system-textarea"
@@ -351,7 +351,7 @@
 							<textarea
 								id="text-completion-textarea"
 								bind:this={textCompletionAreaElement}
-								class="w-full h-full p-3 bg-white border border-solid border-gray-250 outline outline-1 outline-gray-200 dark:outline-gray-800 resize-none rounded text-sm"
+								class="w-full h-full p-3 bg-white border border-solid border-gray-250 outline outline-1 outline-gray-200  resize-none rounded text-sm"
 								bind:value={text}
 								placeholder={$i18n.t("You're a helpful assistant.")}
 							/>
@@ -365,7 +365,7 @@
 			<div class="pb-3">
 				{#if !loading}
 					<button
-						class="px-3 py-1.5 text-sm font-medium bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-50 transition rounded"
+						class="px-3 py-1.5 text-sm font-medium bg-primary-med hover:bg-primary-light   text-gray-50 transition rounded"
 						on:click={() => {
 							submitHandler();
 						}}

@@ -11,10 +11,10 @@
 </script>
 
 <button
-	class=" outline -outline-offset-1 outline-[1.5px] outline-gray-200 dark:outline-gray-600 {state !==
+	class=" outline -outline-offset-1 outline-[1.5px] outline-gray-200  {state !==
 	'unchecked'
 		? 'bg-primary-med outline-black '
-		: 'hover:outline-primary-light hover:bg-primary-lightest dark:hover:bg-gray-800'} text-white transition-all rounded inline-block w-3.5 h-3.5 relative"
+		: 'hover:outline-primary-light hover:bg-support-lightblue '} text-white transition-all rounded inline-block w-3.5 h-3.5 relative"
 	on:click={() => {
 		if (_state === 'unchecked') {
 			_state = 'checked';
@@ -50,7 +50,7 @@
 			</svg>
 		{:else if indeterminate}
 			<svg
-				class="w-3 h-3.5 text-primary-dark dark:text-white"
+				class="w-3 h-3.5 text-primary-dark "
 				aria-hidden="true"
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

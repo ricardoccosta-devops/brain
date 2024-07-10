@@ -20,10 +20,10 @@
 	let mounted = false;
 
 	const classNames: Record<string, string> = {
-		info: 'bg-blue-500/20 text-blue-700 dark:text-blue-200 ',
-		success: 'bg-green-500/20 text-green-700 dark:text-green-200',
-		warning: 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-200',
-		error: 'bg-red-500/20 text-red-700 dark:text-red-200'
+		info: 'bg-blue-500/20 text-blue-700  ',
+		success: 'bg-green-500/20 text-green-700 ',
+		warning: 'bg-yellow-500/20 text-yellow-700 ',
+		error: 'bg-red-500/20 text-red-700 '
 	};
 
 	const dismiss = (id) => {
@@ -39,7 +39,7 @@
 {#if !dismissed}
 	{#if mounted}
 		<div
-			class=" top-0 left-0 right-0 p-2 mx-4 px-3 flex justify-center items-center relative rounded border border-gray-50 dark:border-gray-850 text-primary-dark dark:text-gary-100 bg-white dark:bg-darktheme-dark backdrop-blur-xl z-30"
+			class=" top-0 left-0 right-0 p-2 mx-4 px-3 flex justify-center items-center relative rounded border border-gray-50  text-primary-dark  bg-white  backdrop-blur-xl z-30"
 			transition:fade={{ delay: 100, duration: 300 }}
 		>
 			<div class=" flex flex-col md:flex-row md:items-center flex-1 text-sm w-fit gap-1.5">
@@ -54,13 +54,13 @@
 					{#if banner.url}
 						<div class="flex md:hidden group w-fit md:items-center">
 							<a
-								class="text-gray-700 dark:text-white text-xs font-bold underline"
+								class="text-gray-700  text-xs font-bold underline"
 								href="/assets/files/whitepaper.pdf"
 								target="_blank">Learn More</a
 							>
 
 							<div
-								class=" ml-1 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-white"
+								class=" ml-1 text-gray-400 group-hover:text-gray-600 "
 							>
 								<!--  -->
 								<svg
@@ -80,7 +80,7 @@
 					{/if}
 				</div>
 
-				<div class="flex-1 text-xs text-gray-700 dark:text-white">
+				<div class="flex-1 text-xs text-gray-700 ">
 					{banner.content}
 				</div>
 			</div>
@@ -88,12 +88,12 @@
 			{#if banner.url}
 				<div class="hidden md:flex group w-fit md:items-center">
 					<a
-						class="text-gray-700 dark:text-white text-xs font-bold underline"
+						class="text-gray-700  text-xs font-bold underline"
 						href="/"
 						target="_blank">Learn More</a
 					>
 
-					<div class=" ml-1 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-white">
+					<div class=" ml-1 text-gray-400 group-hover:text-gray-600 ">
 						<!--  -->
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@
 						on:click={() => {
 							dismiss(banner.id);
 						}}
-						class=" -mt-[3px] ml-1.5 mr-1 text-gray-400 dark:hover:text-white h-1">&times;</button
+						class=" -mt-[3px] ml-1.5 mr-1 text-gray-400  h-1">&times;</button
 					>
 				{/if}
 			</div>

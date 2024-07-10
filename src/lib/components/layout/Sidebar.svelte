@@ -235,7 +235,7 @@
 	id="sidebar"
 	class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
 		? 'md:relative w-[260px]'
-		: '-translate-x-[260px] w-[0px]'} bg-gray-50 text-primary-lightdarkest dark:bg-darktheme-darkest dark:text-gray-200 text-sm transition fixed z-50 top-0 left-0 rounded-r-2xl
+		: '-translate-x-[260px] w-[0px]'} bg-gray-50 text-primary-lightdarkest est  text-sm transition fixed z-50 top-0 left-0 rounded-r-2xl
         "
 	data-state={$showSidebar}
 >
@@ -244,10 +244,10 @@
 			? ''
 			: 'invisible'}"
 	>
-		<div class="px-2.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400">
+		<div class="px-2.5 flex justify-between space-x-1 text-gray-600 ">
 			<a
 				id="sidebar-new-chat-button"
-				class="flex flex-1 justify-between rounded px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+				class="flex flex-1 justify-between rounded px-2 py-2 hover:underline transition"
 				href="/"
 				draggable="false"
 				on:click={async () => {
@@ -272,7 +272,7 @@
 						alt="logo"
 					/>
 				</div>
-				<div class=" self-center font-medium text-sm text-primary-dark dark:text-white">
+				<div class=" self-center font-medium text-sm text-primary-dark ">
 					{$i18n.t('New Chat')}
 				</div>
 				<div class="self-center ml-auto">
@@ -293,7 +293,7 @@
 			</a>
 
 			<button
-				class=" cursor-pointer px-2 py-2 flex rounded hover:bg-gray-100 dark:hover:bg-gray-850 transition"
+				class=" cursor-pointer px-2 py-2 flex rounded hover:bg-support-lightblue transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}
@@ -318,9 +318,9 @@
 		</div>
 
 		{#if $user?.role === 'admin'}
-			<div class="px-2.5 flex justify-center text-primary-dark dark:text-gray-200">
+			<div class="px-2.5 flex justify-center text-primary-dark ">
 				<a
-					class="flex-grow flex space-x-3 rounded px-2.5 py-2 hover:bg-gray-100 dark:hover:bg-primary-lightdarkest transition"
+					class="flex-grow flex space-x-3 rounded px-2.5 py-2 hover:underline transition"
 					href="/workspace"
 					on:click={() => {
 						selectedChatId = null;
@@ -358,7 +358,7 @@
 
 		<div class="relative flex flex-col flex-1 overflow-y-auto">
 			{#if !($settings.saveChatHistory ?? true)}
-				<div class="absolute z-40 w-full h-full bg-gray-50/90 dark:bg-darktheme-dark/90 flex justify-center">
+				<div class="absolute z-40 w-full h-full bg-gray-50/ flex justify-center">
 					<div class=" text-left px-5 py-2">
 						<div class=" font-medium">{$i18n.t('Chat History is off for this browser.')}</div>
 						<div class="text-xs mt-2">
@@ -418,7 +418,7 @@
 					</div>
 
 					<input
-						class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm bg-transparent dark:text-gray-300 outline-none"
+						class="w-full rounded-r-xl py-1.5 pl-2.5 pr-4 text-sm bg-transparent  outline-none"
 						placeholder={$i18n.t('Search')}
 						bind:value={search}
 						on:focus={() => {
@@ -431,7 +431,7 @@
 			{#if $tags.length > 0}
 				<div class="px-2.5 mb-2 flex gap-1 flex-wrap">
 					<button
-						class="px-2.5 text-xs font-medium bg-gray-50 dark:bg-darktheme-dark dark:hover:bg-gray-800 transition rounded-full"
+						class="px-2.5 text-xs font-medium bg-gray-50   transition rounded-full"
 						on:click={async () => {
 							await chats.set(await getChatList(localStorage.token));
 						}}
@@ -440,7 +440,7 @@
 					</button>
 					{#each $tags as tag}
 						<button
-							class="px-2.5 text-xs font-medium bg-gray-50 dark:bg-darktheme-dark dark:hover:bg-gray-800 transition rounded-full"
+							class="px-2.5 text-xs font-medium bg-gray-50   transition rounded-full"
 							on:click={async () => {
 								let chatIds = await getChatListByTagName(localStorage.token, tag.name);
 								if (chatIds.length === 0) {
@@ -460,7 +460,7 @@
 				{#each filteredChatList as chat, idx}
 					{#if idx === 0 || (idx > 0 && chat.time_range !== filteredChatList[idx - 1].time_range)}
 						<div
-							class="w-full pl-2.5 text-xs text-gray-500 dark:text-gray-500 font-medium {idx === 0
+							class="w-full pl-2.5 text-xs text-gray-500  font-medium {idx === 0
 								? ''
 								: 'pt-5'} pb-0.5"
 						>
@@ -492,10 +492,10 @@
 								class=" w-full flex justify-between rounded px-3 py-2 {chat.id === $chatId ||
 								chat.id === chatTitleEditId ||
 								chat.id === chatDeleteId
-									? 'bg-gray-200 dark:bg-darktheme-dark'
+									? 'bg-gray-200 '
 									: chat.id === selectedChatId
-									? 'bg-gray-100 dark:bg-darktheme-darkest'
-									: 'group-hover:bg-gray-100 dark:group-hover:bg-primary-darkest'}  whitespace-nowrap text-ellipsis"
+									? 'bg-gray-100 est'
+									: 'group-hover:bg-primary-light '}  whitespace-nowrap text-ellipsis"
 							>
 								<input
 									use:focusEdit
@@ -508,10 +508,10 @@
 								class=" w-full flex justify-between rounded px-3 py-2 {chat.id === $chatId ||
 								chat.id === chatTitleEditId ||
 								chat.id === chatDeleteId
-									? 'bg-gray-200 dark:bg-darktheme-dark'
+									? 'bg-gray-200 '
 									: chat.id === selectedChatId
-									? 'bg-gray-100 dark:bg-darktheme-darkest'
-									: ' group-hover:bg-gray-100 dark:group-hover:bg-primary-darkest'}  whitespace-nowrap text-ellipsis"
+									? 'bg-gray-100 est'
+									: ' group-hover:bg-primary-light '}  whitespace-nowrap text-ellipsis"
 								href="/c/{chat.id}"
 								on:click={() => {
 									selectedChatId = chat.id;
@@ -537,10 +537,10 @@
 							class="
 
 							{chat.id === $chatId || chat.id === chatTitleEditId || chat.id === chatDeleteId
-								? 'from-gray-200 dark:from-primary-lightdarkest'
+								? 'from-gray-200 '
 								: chat.id === selectedChatId
-								? 'from-gray-100 dark:from-primary-darkest'
-								: 'invisible group-hover:visible from-gray-100 dark:from-primary-darkest'}
+								? 'from-gray-100 '
+								: 'invisible group-hover:visible from-gray-100 '}
 								absolute right-[10px] top-[10px] pr-2 pl-5 bg-gradient-to-l from-80%
 
 								  to-transparent"
@@ -548,7 +548,7 @@
 							{#if chatTitleEditId === chat.id}
 								<div class="flex self-center space-x-1.5 z-10">
 									<button
-										class=" self-center dark:hover:text-white transition"
+										class=" self-center  transition"
 										on:click={() => {
 											editChatTitle(chat.id, chatTitle);
 											chatTitleEditId = null;
@@ -569,7 +569,7 @@
 										</svg>
 									</button>
 									<button
-										class=" self-center dark:hover:text-white transition"
+										class=" self-center  transition"
 										on:click={() => {
 											chatTitleEditId = null;
 											chatTitle = '';
@@ -590,7 +590,7 @@
 							{:else if chatDeleteId === chat.id}
 								<div class="flex self-center space-x-1.5 z-10">
 									<button
-										class=" self-center dark:hover:text-white transition"
+										class=" self-center  transition"
 										on:click={() => {
 											deleteChat(chat.id);
 										}}
@@ -609,7 +609,7 @@
 										</svg>
 									</button>
 									<button
-										class=" self-center dark:hover:text-white transition"
+										class=" self-center  transition"
 										on:click={() => {
 											chatDeleteId = null;
 										}}
@@ -653,7 +653,7 @@
 									>
 										<button
 											aria-label="Chat Menu"
-											class=" self-center dark:hover:text-white transition"
+											class=" self-center  transition"
 											on:click={() => {
 												selectedChatId = chat.id;
 											}}
@@ -713,7 +713,7 @@
 						}}
 					>
 						<button
-							class=" flex rounded py-3 px-3.5 w-full hover:bg-gray-100 dark:hover:bg-primary-lightdarkest transition"
+							class=" flex rounded py-3 px-3.5 w-full hover:bg-support-lightblue transition"
 							on:click={() => {
 								showDropdown = !showDropdown;
 							}}
@@ -754,12 +754,12 @@
 					>
 						<div class="flex h-6 w-6 flex-col items-center">
 							<div
-								class="h-3 w-1 rounded-full bg-[#0f0f0f] dark:bg-white rotate-0 translate-y-[0.15rem] {$showSidebar
+								class="h-3 w-1 rounded-full bg-[#0f0f0f] rotate-0 translate-y-[0.15rem] {$showSidebar
 									? 'group-hover:rotate-[15deg]'
 									: 'group-hover:rotate-[-15deg]'}"
 							/>
 							<div
-								class="h-3 w-1 rounded-full bg-[#0f0f0f] dark:bg-white rotate-0 translate-y-[-0.15rem] {$showSidebar
+								class="h-3 w-1 rounded-full bg-[#0f0f0f] rotate-0 translate-y-[-0.15rem] {$showSidebar
 									? 'group-hover:rotate-[-15deg]'
 									: 'group-hover:rotate-[15deg]'}"
 							/>

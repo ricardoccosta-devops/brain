@@ -135,7 +135,7 @@
 				<div class=" self-center text-xs font-medium">{$i18n.t('Theme')}</div>
 				<div class="flex items-center relative">
 					<select
-						class=" dark:bg-darktheme-dark w-fit pr-8 rounded py-2 px-2 text-xs bg-transparent outline-none text-right"
+						class="  w-fit pr-8 rounded py-2 px-2 text-xs bg-transparent outline-none text-right"
 						bind:value={selectedTheme}
 						placeholder="Select a theme"
 						on:change={() => themeChangeHandler(selectedTheme)}
@@ -154,7 +154,7 @@
 				<div class=" self-center text-xs font-medium">{$i18n.t('Language')}</div>
 				<div class="flex items-center relative">
 					<select
-						class=" dark:bg-darktheme-dark w-fit pr-8 rounded py-2 px-2 text-xs bg-transparent outline-none text-right"
+						class="  w-fit pr-8 rounded py-2 px-2 text-xs bg-transparent outline-none text-right"
 						bind:value={lang}
 						placeholder="Select a language"
 						on:change={(e) => {
@@ -168,7 +168,7 @@
 				</div>
 			</div>
 			{#if $i18n.language === 'en-US'}
-				<div class="mb-2 text-xs text-gray-400 dark:text-gray-500">
+				<div class="mb-2 text-xs text-gray-400 ">
 					Couldn't find your language?
 					<a
 						class=" text-gray-300 font-medium underline"
@@ -201,13 +201,13 @@
 			</div>
 		</div>
 
-		<hr class=" dark:border-gray-850 my-3" />
+		<hr class="  my-3" />
 
 		<div>
 			<div class=" my-2.5 text-sm font-medium">{$i18n.t('System Prompt')}</div>
 			<textarea
 				bind:value={system}
-				class="w-full rounded p-4 text-sm dark:text-gray-850 dark:bg-gray-50 outline-none bg-white border border-solid border-gray-250 resize-none"
+				class="w-full rounded p-4 text-sm   outline-none bg-white border border-solid border-gray-250 resize-none"
 				rows="4"
 			/>
 		</div>
@@ -226,7 +226,7 @@
 
 			{#if showAdvanced}
 				<AdvancedParams bind:params />
-				<hr class=" dark:border-gray-850" />
+				<hr class=" " />
 
 				<div class=" py-1 w-full justify-between">
 					<div class="flex w-full justify-between">
@@ -250,7 +250,7 @@
 					{#if keepAlive !== null}
 						<div class="flex mt-1 space-x-2">
 							<input
-								class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 								type="text"
 								placeholder={$i18n.t("e.g. '30s','10m'. Valid time units are 's', 'm', 'h'.")}
 								bind:value={keepAlive}
@@ -293,7 +293,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class="  px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class="  px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			on:click={() => {
 				saveSettings({
 					system: system !== '' ? system : undefined,

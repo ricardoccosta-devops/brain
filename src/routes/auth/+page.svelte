@@ -88,7 +88,7 @@
 		</div>
 	</div>
 
-	<div class=" bg-white dark:bg-darktheme-darkest min-h-screen w-full flex justify-center font-mona">
+	<div class=" bg-white est min-h-screen w-full flex justify-center font-mona">
 		<!-- <div class="hidden lg:flex lg:flex-1 px-10 md:px-16 w-full bg-yellow-50 justify-center">
 			<div class=" my-auto pb-16 text-left">
 				<div>
@@ -107,7 +107,7 @@
 			{#if ($config?.features.auth_trusted_header ?? false) || $config?.features.auth === false}
 				<div class=" my-auto pb-10 w-full">
 					<div
-						class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-center font-medium dark:text-gray-200"
+						class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-center font-medium "
 					>
 						<div>
 							{$i18n.t('Signing in')}
@@ -121,7 +121,7 @@
 					</div>
 				</div>
 			{:else}
-				<div class="  my-auto pb-10 w-full dark:text-gray-100">
+				<div class="  my-auto pb-10 w-full ">
 					<form
 						class=" flex flex-col justify-center"
 						on:submit|preventDefault={() => {
@@ -152,14 +152,14 @@
 									<input
 										bind:value={name}
 										type="text"
-										class=" px-5 py-3 rounded w-full text-sm outline-none border dark:border-none dark:bg-darktheme-dark"
+										class=" px-5 py-3 rounded w-full text-sm outline-none border  "
 										autocomplete="name"
 										placeholder={$i18n.t('Enter Your Full Name')}
 										required
 									/>
 								</div>
 
-								<hr class=" my-3 dark:border-primary-lightdarkest" />
+								<hr class=" my-3 " />
 							{/if}
 
 							<div class="mb-2">
@@ -167,7 +167,7 @@
 								<input
 									bind:value={email}
 									type="email"
-									class=" px-5 py-3 rounded w-full text-sm outline-none border dark:border-none dark:bg-darktheme-dark"
+									class=" px-5 py-3 rounded w-full text-sm outline-none border  "
 									autocomplete="email"
 									placeholder={$i18n.t('Enter Your Email')}
 									required
@@ -180,7 +180,7 @@
 								<input
 									bind:value={password}
 									type="password"
-									class=" px-5 py-3 rounded w-full text-sm outline-none border dark:border-none dark:bg-darktheme-dark"
+									class=" px-5 py-3 rounded w-full text-sm outline-none border  "
 									placeholder={$i18n.t('Enter Your Password')}
 									autocomplete="current-password"
 									required
@@ -190,7 +190,7 @@
 
 						<div class="mt-5">
 							<button
-								class=" bg-primary-lightdarkest hover:bg-gray-800 w-full rounded text-white font-medium text-sm py-3 transition"
+								class=" bg-primary-lightdarkest hover:bg-primary-light w-full rounded text-white font-medium text-sm py-3 transition"
 								type="submit"
 							>
 								{mode === 'signin' ? $i18n.t('Sign in') : $i18n.t('Create Account')}

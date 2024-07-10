@@ -141,7 +141,7 @@
 				<div class="flex flex-col">
 					<div class="self-center mt-2">
 						<button
-							class="relative rounded-full dark:bg-gray-700"
+							class="relative rounded-full "
 							type="button"
 							on:click={() => {
 								profileImageInputElement.click();
@@ -178,7 +178,7 @@
 
 					<div>
 						<button
-							class=" text-xs text-center text-primary-dark dark:text-gray-400 rounded-full px-4 py-0.5 bg-gray-100 dark:bg-gray-850"
+							class=" text-xs text-center text-primary-dark  rounded-full px-4 py-0.5 bg-gray-100 "
 							on:click={async () => {
 								if (canvasPixelTest()) {
 									profileImageUrl = generateInitialsImage(name);
@@ -196,7 +196,7 @@
 						>
 
 						<button
-							class=" text-xs text-center text-primary-dark dark:text-gray-400 rounded-full px-4 py-0.5 bg-gray-100 dark:bg-gray-850"
+							class=" text-xs text-center text-primary-dark  rounded-full px-4 py-0.5 bg-gray-100 "
 							on:click={async () => {
 								const url = await getGravatarUrl($user.email);
 
@@ -205,7 +205,7 @@
 						>
 
 						<button
-							class=" text-xs text-center text-primary-dark dark:text-gray-400 rounded px-2 py-1"
+							class=" text-xs text-center text-primary-dark  rounded px-2 py-1"
 							on:click={async () => {
 								profileImageUrl = '/user.png';
 							}}>{$i18n.t('Remove')}</button
@@ -220,7 +220,7 @@
 
 					<div class="flex-1">
 						<input
-							class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+							class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 							type="text"
 							bind:value={name}
 							required
@@ -234,7 +234,7 @@
 			<UpdatePassword />
 		</div>
 
-		<hr class=" dark:border-gray-850 my-4" />
+		<hr class="  my-4" />
 
 		<div class="flex justify-between items-center text-sm">
 			<div class="  font-medium">{$i18n.t('API keys')}</div>
@@ -257,14 +257,14 @@
 					<div class="flex mt-2">
 						<div class="flex w-full">
 							<input
-								class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white dark:text-gray-300 dark:bg-gray-850 outline-none"
+								class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white   outline-none"
 								type={showJWTToken ? 'text' : 'password'}
 								value={localStorage.token}
 								disabled
 							/>
 
 							<button
-								class="px-2 transition rounded-r-lg bg-white dark:bg-gray-850"
+								class="px-2 transition rounded-r-lg bg-white "
 								on:click={() => {
 									showJWTToken = !showJWTToken;
 								}}
@@ -304,7 +304,7 @@
 						</div>
 
 						<button
-							class="ml-1.5 px-1.5 py-1 dark:hover:bg-gray-850 transition rounded"
+							class="ml-1.5 px-1.5 py-1  transition rounded"
 							on:click={() => {
 								copyToClipboard(localStorage.token);
 								JWTTokenCopied = true;
@@ -357,14 +357,14 @@
 						{#if APIKey}
 							<div class="flex w-full">
 								<input
-									class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white   outline-none"
 									type={showAPIKey ? 'text' : 'password'}
 									value={APIKey}
 									disabled
 								/>
 
 								<button
-									class="px-2 transition rounded-r-lg bg-white dark:bg-gray-850"
+									class="px-2 transition rounded-r-lg bg-white "
 									on:click={() => {
 										showAPIKey = !showAPIKey;
 									}}
@@ -404,7 +404,7 @@
 							</div>
 
 							<button
-								class="ml-1.5 px-1.5 py-1 dark:hover:bg-gray-850 transition rounded"
+								class="ml-1.5 px-1.5 py-1  transition rounded"
 								on:click={() => {
 									copyToClipboard(APIKey);
 									APIKeyCopied = true;
@@ -449,7 +449,7 @@
 
 							<Tooltip content={$i18n.t('Create new key')}>
 								<button
-									class=" px-1.5 py-1 dark:hover:bg-gray-850transition rounded"
+									class=" px-1.5 py-1 transition rounded"
 									on:click={() => {
 										createAPIKeyHandler();
 									}}
@@ -472,7 +472,7 @@
 							</Tooltip>
 						{:else}
 							<button
-								class="flex gap-1.5 items-center font-medium px-3.5 py-1.5 rounded bg-gray-100/70 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-850 transition"
+								class="flex gap-1.5 items-center font-medium px-3.5 py-1.5 rounded bg-gray-100/70 hover:bg-primary-light   transition"
 								on:click={() => {
 									createAPIKeyHandler();
 								}}
@@ -490,7 +490,7 @@
 
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class="  px-4 py-2 bg-primary-med hover:bg-primary-light dark:bg-secondary-medium dark:hover:bg-secondary-dark dark:text-primary-med text-gray-100 transition rounded"
+			class="  px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
 			on:click={async () => {
 				const res = await submitHandler();
 

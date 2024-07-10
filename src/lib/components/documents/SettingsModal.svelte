@@ -18,7 +18,7 @@
 
 <Modal bind:show>
 	<div>
-		<div class=" flex justify-between dark:text-gray-300 px-5 pt-4">
+		<div class=" flex justify-between  px-5 pt-4">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Document Settings')}</div>
 			<button
 				class="self-center"
@@ -41,13 +41,13 @@
 
 		<div class="flex flex-col md:flex-row w-full p-4 md:space-x-4">
 			<div
-				class="tabs flex flex-row overflow-x-auto space-x-1 md:space-x-0 md:space-y-1 md:flex-col flex-1 md:flex-none md:w-40 dark:text-gray-200 text-xs text-left mb-3 md:mb-0"
+				class="tabs flex flex-row overflow-x-auto space-x-1 md:space-x-0 md:space-y-1 md:flex-col flex-1 md:flex-none md:w-40  text-xs text-left mb-3 md:mb-0"
 			>
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'general'
-						? 'bg-primary-med dark:bg-darktheme-tertiary'
-						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
+						? 'bg-primary-med '
+						: ' hover:bg-primary-light'}"
 					on:click={() => {
 						selectedTab = 'general';
 					}}
@@ -72,8 +72,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'chunk'
-						? 'bg-primary-med dark:bg-darktheme-tertiary'
-						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
+						? 'bg-primary-med '
+						: ' hover:bg-primary-light'}"
 					on:click={() => {
 						selectedTab = 'chunk';
 					}}
@@ -101,8 +101,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'query'
-						? 'bg-primary-med dark:bg-darktheme-tertiary'
-						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
+						? 'bg-primary-med '
+						: ' hover:bg-primary-light'}"
 					on:click={() => {
 						selectedTab = 'query';
 					}}
@@ -131,8 +131,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'web'
-						? 'bg-primary-med dark:bg-darktheme-tertiary'
-						: ' hover:bg-primary-light dark:hover:bg-primary-dark'}"
+						? 'bg-primary-med '
+						: ' hover:bg-primary-light'}"
 					on:click={() => {
 						selectedTab = 'web';
 					}}

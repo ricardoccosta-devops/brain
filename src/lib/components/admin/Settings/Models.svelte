@@ -560,12 +560,12 @@
 						<div class="flex gap-2">
 							<div class="flex-1 pb-1">
 								<select
-									class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+									class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 									bind:value={selectedOllamaUrlIdx}
 									placeholder={$i18n.t('Select an Ollama instance')}
 								>
 									{#each OLLAMA_URLS as url, idx}
-										<option value={idx} class="bg-gray-100 dark:bg-gray-700">{url}</option>
+										<option value={idx} class="bg-gray-100 ">{url}</option>
 									{/each}
 								</select>
 							</div>
@@ -574,7 +574,7 @@
 								<div class="flex w-full justify-end">
 									<Tooltip content="Update All Models" placement="top">
 										<button
-											class="p-2.5 flex gap-2 items-center bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
+											class="p-2.5 flex gap-2 items-center bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
 											on:click={() => {
 												updateModelsHandler();
 											}}
@@ -609,7 +609,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2">
 									<input
-										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 										placeholder={$i18n.t('Enter model tag (e.g. {{modelTag}})', {
 											modelTag: 'mistral:7b'
 										})}
@@ -617,7 +617,7 @@
 									/>
 								</div>
 								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
+									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
 									on:click={() => {
 										pullModelHandler();
 									}}
@@ -671,10 +671,10 @@
 								</button>
 							</div>
 
-							<div class="mt-2 mb-1 text-xs text-gray-400 dark:text-gray-500">
+							<div class="mt-2 mb-1 text-xs text-gray-400 ">
 								{$i18n.t('To access the available model names for downloading,')}
 								<a
-									class=" text-gray-500 dark:text-gray-300 font-medium underline"
+									class=" text-gray-500  font-medium underline"
 									href="https://ollama.com/library"
 									target="_blank">{$i18n.t('click here.')}</a
 								>
@@ -689,7 +689,7 @@
 												<div class="flex flex-row justify-between space-x-4 pr-2">
 													<div class=" flex-1">
 														<div
-															class="dark:bg-gray-600 bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
+															class=" bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
 															style="width: {Math.max(
 																15,
 																$MODEL_DOWNLOAD_POOL[model].pullProgress ?? 0
@@ -701,13 +701,13 @@
 
 													<Tooltip content={$i18n.t('Cancel')}>
 														<button
-															class="text-primary-dark dark:text-gray-100"
+															class="text-primary-dark "
 															on:click={() => {
 																cancelModelPullHandler(model);
 															}}
 														>
 															<svg
-																class="w-4 h-4 text-primary-dark dark:text-white"
+																class="w-4 h-4 text-primary-dark "
 																aria-hidden="true"
 																xmlns="http://www.w3.org/2000/svg"
 																width="24"
@@ -727,7 +727,7 @@
 													</Tooltip>
 												</div>
 												{#if 'digest' in $MODEL_DOWNLOAD_POOL[model]}
-													<div class="mt-1 text-xs dark:text-gray-500" style="font-size: 0.5rem;">
+													<div class="mt-1 text-xs " style="font-size: 0.5rem;">
 														{$MODEL_DOWNLOAD_POOL[model].digest}
 													</div>
 												{/if}
@@ -743,7 +743,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2">
 									<select
-										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 										bind:value={deleteModelTag}
 										placeholder={$i18n.t('Select a model')}
 									>
@@ -751,7 +751,7 @@
 											<option value="" disabled selected>{$i18n.t('Select a model')}</option>
 										{/if}
 										{#each $models.filter((m) => !(m?.preset ?? false) && m.owned_by === 'ollama' && (selectedOllamaUrlIdx === null ? true : (m?.ollama?.urls ?? []).includes(selectedOllamaUrlIdx))) as model}
-											<option value={model.name} class="bg-gray-100 dark:bg-gray-700"
+											<option value={model.name} class="bg-gray-100 "
 												>{model.name +
 													' (' +
 													(model.ollama.size / 1024 ** 3).toFixed(1) +
@@ -761,7 +761,7 @@
 									</select>
 								</div>
 								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition"
+									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
 									on:click={() => {
 										deleteModelHandler();
 									}}
@@ -787,7 +787,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2 flex flex-col gap-2">
 									<input
-										class="w-full rounded py-2 px-4 text-sm dark:text-gray-300 dark:bg-gray-850 outline-none"
+										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
 										placeholder={$i18n.t('Enter model tag (e.g. {{modelTag}})', {
 											modelTag: 'my-modelfile'
 										})}
@@ -797,7 +797,7 @@
 
 									<textarea
 										bind:value={createModelContent}
-										class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250 dark:text-gray-100 dark:bg-gray-850 outline-none resize-none scrollbar-hidden"
+										class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250   outline-none resize-none scrollbar-hidden"
 										rows="6"
 										placeholder={`TEMPLATE """{{ .System }}\nUSER: {{ .Prompt }}\nASSISTANT: """\nPARAMETER num_ctx 4096\nPARAMETER stop "</s>"\nPARAMETER stop "USER:"\nPARAMETER stop "ASSISTANT:"`}
 										disabled={createModelLoading}
@@ -806,7 +806,7 @@
 
 								<div class="flex self-start">
 									<button
-										class="px-2.5 py-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded transition disabled:cursor-not-allowed"
+										class="px-2.5 py-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition disabled:cursor-not-allowed"
 										on:click={() => {
 											createModelHandler();
 										}}
@@ -836,7 +836,7 @@
 										<div class="flex flex-row justify-between space-x-4 pr-2">
 											<div class=" flex-1">
 												<div
-													class="dark:bg-gray-600 bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
+													class=" bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
 													style="width: {Math.max(15, createModelPullProgress ?? 0)}%"
 												>
 													{createModelPullProgress ?? 0}%
@@ -844,7 +844,7 @@
 											</div>
 										</div>
 										{#if createModelDigest}
-											<div class="mt-1 text-xs dark:text-gray-500" style="font-size: 0.5rem;">
+											<div class="mt-1 text-xs " style="font-size: 0.5rem;">
 												{createModelDigest}
 											</div>
 										{/if}
@@ -915,7 +915,7 @@
 
 												<button
 													type="button"
-													class="w-full rounded text-left py-2 px-4 bg-white dark:text-gray-300 dark:bg-gray-850"
+													class="w-full rounded text-left py-2 px-4 bg-white  "
 													on:click={() => {
 														modelUploadInputElement.click();
 													}}
@@ -930,7 +930,7 @@
 										{:else}
 											<div class="flex-1 {modelFileUrl !== '' ? 'mr-2' : ''}">
 												<input
-													class="w-full rounded text-left py-2 px-4 bg-white dark:text-gray-300 dark:bg-gray-850 outline-none {modelFileUrl !==
+													class="w-full rounded text-left py-2 px-4 bg-white   outline-none {modelFileUrl !==
 													''
 														? 'mr-2'
 														: ''}"
@@ -945,7 +945,7 @@
 
 									{#if (modelUploadMode === 'file' && modelInputFile && modelInputFile.length > 0) || (modelUploadMode === 'url' && modelFileUrl !== '')}
 										<button
-											class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark dark:bg-gray-850 dark:hover:bg-gray-800 dark:text-gray-100 rounded disabled:cursor-not-allowed transition"
+											class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded disabled:cursor-not-allowed transition"
 											type="submit"
 											disabled={modelTransferring}
 										>
@@ -1004,16 +1004,16 @@
 											<div class=" my-2.5 text-sm font-medium">{$i18n.t('Modelfile Content')}</div>
 											<textarea
 												bind:value={modelFileContent}
-												class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250 dark:text-gray-100 dark:bg-gray-850 outline-none resize-none"
+												class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250   outline-none resize-none"
 												rows="6"
 											/>
 										</div>
 									</div>
 								{/if}
-								<div class=" mt-1 text-xs text-gray-400 dark:text-gray-500">
+								<div class=" mt-1 text-xs text-gray-400 ">
 									{$i18n.t('To access the GGUF models available for downloading,')}
 									<a
-										class=" text-gray-500 dark:text-gray-300 font-medium underline"
+										class=" text-gray-500  font-medium underline"
 										href="https://huggingface.co/models?search=gguf"
 										target="_blank">{$i18n.t('click here.')}</a
 									>
@@ -1023,15 +1023,15 @@
 									<div class="mt-2">
 										<div class=" mb-2 text-xs">{$i18n.t('Upload Progress')}</div>
 
-										<div class="w-full rounded-full dark:bg-gray-800">
+										<div class="w-full rounded-full ">
 											<div
-												class="dark:bg-gray-600 bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
+												class=" bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
 												style="width: 100%"
 											>
 												{uploadMessage}
 											</div>
 										</div>
-										<div class="mt-1 text-xs dark:text-gray-500" style="font-size: 0.5rem;">
+										<div class="mt-1 text-xs " style="font-size: 0.5rem;">
 											{modelFileDigest}
 										</div>
 									</div>
@@ -1039,15 +1039,15 @@
 									<div class="mt-2">
 										<div class=" mb-2 text-xs">{$i18n.t('Upload Progress')}</div>
 
-										<div class="w-full rounded-full dark:bg-gray-800">
+										<div class="w-full rounded-full ">
 											<div
-												class="dark:bg-gray-600 bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
+												class=" bg-gray-500 text-xs font-medium text-gray-100 text-center p-0.5 leading-none rounded-full"
 												style="width: {Math.max(15, uploadProgress ?? 0)}%"
 											>
 												{uploadProgress ?? 0}%
 											</div>
 										</div>
-										<div class="mt-1 text-xs dark:text-gray-500" style="font-size: 0.5rem;">
+										<div class="mt-1 text-xs " style="font-size: 0.5rem;">
 											{modelFileDigest}
 										</div>
 									</div>
