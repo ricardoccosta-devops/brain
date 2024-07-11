@@ -294,7 +294,7 @@
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'db'
 				? 'bg-primary-med text-white'
-				: ' hover:bg-support-lightblue text-primary-med '}"
+				: ' hover:bg-support-lightblue text-primary-med'}"
 			on:click={() => {
 				selectedTab = 'db';
 			}}

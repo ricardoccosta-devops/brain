@@ -204,7 +204,7 @@
 
 						<div class="flex flex-wrap text-sm font-medium gap-1.5 mt-2 m-1">
 							<button
-								class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5  outline outline-1 outline-gray-300  rounded"
+								class=" px-3.5 py-1.5 font-medium hover:underline text-primary-medium outline outline-1 outline-primary-medium rounded"
 								on:click={() => {
 									exportChatsHandler();
 								}}>Export All Archived Chats</button
