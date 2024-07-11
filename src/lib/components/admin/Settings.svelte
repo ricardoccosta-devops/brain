@@ -30,7 +30,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 lg:flex-none flex text-left transition {selectedTab ===
 			'general'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'general';
@@ -56,7 +56,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'users'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'users';
@@ -80,7 +80,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'connections'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'connections';
@@ -104,7 +104,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'models'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'models';
@@ -130,7 +130,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'documents'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'documents';
@@ -160,7 +160,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'web'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'web';
@@ -184,7 +184,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'interface'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'interface';
@@ -210,7 +210,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'audio'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'audio';
@@ -237,7 +237,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'images'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'images';
@@ -263,7 +263,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'pipelines'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'pipelines';
@@ -293,7 +293,7 @@
 		<button
 			class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 			'db'
-				? 'bg-primary-med text-white '
+				? 'bg-primary-med text-white'
 				: ' hover:bg-support-lightblue text-primary-med '}"
 			on:click={() => {
 				selectedTab = 'db';

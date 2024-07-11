@@ -88,7 +88,7 @@
 				<div class="flex-1">
 					<div class=" text-xs mb-1">{$i18n.t('Local Models')}</div>
 					<select
-						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 						bind:value={taskConfig.TASK_MODEL}
 						placeholder={$i18n.t('Select a model')}
 					>
@@ -104,7 +104,7 @@
 				<div class="flex-1">
 					<div class=" text-xs mb-1">{$i18n.t('External Models')}</div>
 					<select
-						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 						bind:value={taskConfig.TASK_MODEL_EXTERNAL}
 						placeholder={$i18n.t('Select a model')}
 					>
@@ -142,7 +142,7 @@
 				</div>
 				<input
 					bind:value={taskConfig.SEARCH_QUERY_PROMPT_LENGTH_THRESHOLD}
-					class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none resize-none"
+					class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none resize-none"
 					type="number"
 				/>
 			</div>

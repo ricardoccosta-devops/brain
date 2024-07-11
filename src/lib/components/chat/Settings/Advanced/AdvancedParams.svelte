@@ -58,7 +58,7 @@
 			<div class="flex mt-0.5 space-x-2">
 				<div class=" flex-1">
 					<input
-						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 						type="number"
 						placeholder="Enter Seed"
 						bind:value={params.seed}
@@ -93,7 +93,7 @@
 			<div class="flex mt-0.5 space-x-2">
 				<div class=" flex-1">
 					<input
-						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 						type="text"
 						placeholder={$i18n.t('Enter stop sequence')}
 						bind:value={params.stop}

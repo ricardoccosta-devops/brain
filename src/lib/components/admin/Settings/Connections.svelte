@@ -219,7 +219,7 @@
 
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 											placeholder={$i18n.t('API Key')}
 											bind:value={OPENAI_API_KEYS[idx]}
 											autocomplete="off"
@@ -329,7 +329,7 @@
 							{#each OLLAMA_BASE_URLS as url, idx}
 								<div class="flex gap-1.5">
 									<input
-										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+										class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 										placeholder={$i18n.t('Enter URL (e.g. http://localhost:11434)')}
 										bind:value={url}
 									/>

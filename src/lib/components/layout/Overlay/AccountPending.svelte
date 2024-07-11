@@ -40,7 +40,7 @@
 
 				<div class=" mt-6 mx-auto relative group w-fit">
 					<button
-						class="relative z-20 flex px-5 py-2 rounded bg-white border border-primary-med hover:bg-primary-light text-primary-med hover:text-white transition font-medium text-sm"
+						class="relative z-20 flex px-5 py-2 rounded bg-white border border-gray-50 hover:bg-primary-light text-primary-med hover:text-white transition font-medium text-sm"
 						on:click={async () => {
 							location.href = '/';
 						}}

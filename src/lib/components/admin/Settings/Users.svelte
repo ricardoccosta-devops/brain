@@ -112,7 +112,7 @@
 
 					<div class="flex-1 mr-2">
 						<select
-							class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 							bind:value={defaultModelId}
 							placeholder="Select a model"
 						>
@@ -140,7 +140,7 @@
 									<div class="flex w-full">
 										<div class="flex-1 mr-2">
 											<select
-												class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+												class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 												bind:value={modelId}
 												placeholder="Select a model"
 											>

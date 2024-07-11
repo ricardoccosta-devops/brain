@@ -331,7 +331,7 @@
 						<div class=" text-sm font-medium">{$i18n.t('System')}</div>
 						<textarea
 							id="system-textarea"
-							class="w-full h-full bg-white border border-solid border-gray-250 resize-none outline-none text-sm"
+							class="w-full h-full bg-white resize-none outline-none text-sm"
 							bind:value={system}
 							placeholder={$i18n.t("You're a helpful assistant.")}
 							rows="4"
@@ -351,7 +351,7 @@
 							<textarea
 								id="text-completion-textarea"
 								bind:this={textCompletionAreaElement}
-								class="w-full h-full p-3 bg-white border border-solid border-gray-250 outline outline-1 outline-gray-200  resize-none rounded text-sm"
+								class="w-full h-full p-3 bg-white  outline outline-1 outline-gray-200 resize-none rounded text-sm"
 								bind:value={text}
 								placeholder={$i18n.t("You're a helpful assistant.")}
 							/>

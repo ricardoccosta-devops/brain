@@ -65,8 +65,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'general'
-						? 'bg-primary-med  text-white'
-						: 'hover:bg-primary-light text-support-lightblue '}"
+						? 'bg-primary-med text-white'
+						: 'hover:bg-support-lightblue text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'general';
 					}}
@@ -92,8 +92,8 @@
 					<button
 						class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 						'admin'
-							? 'bg-primary-med  text-white'
-							: 'hover:bg-primary-light text-support-lightblue '}"
+							? 'bg-primary-med text-white'
+							: 'hover:bg-support-lightblue text-primary-med'}"
 						on:click={async () => {
 							await goto('/admin/settings');
 							show = false;
@@ -120,8 +120,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'interface'
-					? 'bg-primary-med  text-white'
-					: 'hover:bg-primary-light text-support-lightblue '}"
+					? 'bg-primary-med text-white'
+					: 'hover:bg-support-lightblue text-primary-med'}"
 				on:click={() => {
 						selectedTab = 'interface';
 					}}
@@ -146,8 +146,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'personalization'
-						? 'bg-primary-med  text-white'
-						: 'hover:bg-primary-light text-support-lightblue '}"
+						? 'bg-primary-med text-white'
+						: 'hover:bg-support-lightblue text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'personalization';
 					}}
@@ -161,8 +161,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'audio'
-						? 'bg-primary-med  text-white'
-						: 'hover:bg-primary-light text-support-lightblue '}"
+						? 'bg-primary-med text-white'
+						: 'hover:bg-support-lightblue text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'audio';
 					}}
@@ -188,8 +188,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'chats'
-						? 'bg-primary-med  text-white'
-						: 'hover:bg-primary-light text-support-lightblue '}"
+						? 'bg-primary-med text-white'
+						: 'hover:bg-support-lightblue text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'chats';
 					}}
@@ -214,8 +214,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'account'
-						? 'bg-primary-med  text-white'
-						: 'hover:bg-primary-light text-support-lightblue '}"
+						? 'bg-primary-med text-white'
+						: 'hover:bg-support-lightblue text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'account';
 					}}
@@ -240,8 +240,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'about'
-						? 'bg-primary-med  text-white'
-						: 'hover:bg-primary-light text-support-lightblue '}"
+						? 'bg-primary-med text-white'
+						: 'hover:bg-support-lightblue text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'about';
 					}}

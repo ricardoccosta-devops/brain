@@ -297,14 +297,14 @@
 			{#if embeddingEngine === 'openai'}
 				<div class="my-0.5 flex gap-2">
 					<input
-						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('API Base URL')}
 						bind:value={OpenAIUrl}
 						required
 					/>
 
 					<input
-						class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('API Key')}
 						bind:value={OpenAIKey}
 						required
@@ -365,7 +365,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<select
-							class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 							bind:value={embeddingModel}
 							placeholder={$i18n.t('Select a model')}
 							required
@@ -383,7 +383,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<input
-							class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 							placeholder={$i18n.t('Set embedding model (e.g. {{model}})', {
 								model: embeddingModel.slice(-40)
 							})}
@@ -458,7 +458,7 @@
 					<div class="flex w-full">
 						<div class="flex-1 mr-2">
 							<input
-								class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 								placeholder={$i18n.t('Set reranking model (e.g. {{model}})', {
 									model: 'BAAI/bge-reranker-v2-m3'
 								})}
@@ -835,7 +835,7 @@
 	</div>
 	<div class="flex justify-end pt-3 text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light  text-white transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

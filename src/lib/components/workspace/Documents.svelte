@@ -533,7 +533,7 @@
 		/>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-primary-light    transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-primary-med text-white hover:text-white hover:bg-primary-light    transition"
 			on:click={() => {
 				documentsImportInputElement.click();
 			}}
@@ -557,7 +557,7 @@
 		</button>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-gray-50 hover:bg-primary-light    transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-primary-med text-white hover:text-white hover:bg-primary-light    transition"
 			on:click={async () => {
 				let blob = new Blob([JSON.stringify($documents)], {
 					type: 'application/json'

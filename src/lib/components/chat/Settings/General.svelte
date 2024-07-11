@@ -250,7 +250,7 @@
 					{#if keepAlive !== null}
 						<div class="flex mt-1 space-x-2">
 							<input
-								class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 								type="text"
 								placeholder={$i18n.t("e.g. '30s','10m'. Valid time units are 's', 'm', 'h'.")}
 								bind:value={keepAlive}

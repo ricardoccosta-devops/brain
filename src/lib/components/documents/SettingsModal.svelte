@@ -46,8 +46,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'general'
-						? 'bg-primary-med '
-						: ' hover:bg-primary-light'}"
+						? 'bg-primary-med text-white'
+						: ' hover:bg-primary-light text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'general';
 					}}
@@ -72,8 +72,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'chunk'
-						? 'bg-primary-med '
-						: ' hover:bg-primary-light'}"
+						? 'bg-primary-med text-white'
+						: ' hover:bg-primary-light text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'chunk';
 					}}
@@ -101,8 +101,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'query'
-						? 'bg-primary-med '
-						: ' hover:bg-primary-light'}"
+						? 'bg-primary-med text-white'
+						: ' hover:bg-primary-light text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'query';
 					}}
@@ -131,8 +131,8 @@
 				<button
 					class="px-2.5 py-2.5 min-w-fit rounded flex-1 md:flex-none flex text-left transition {selectedTab ===
 					'web'
-						? 'bg-primary-med '
-						: ' hover:bg-primary-light'}"
+						? 'bg-primary-med text-white'
+						: ' hover:bg-primary-light text-primary-med'}"
 					on:click={() => {
 						selectedTab = 'web';
 					}}

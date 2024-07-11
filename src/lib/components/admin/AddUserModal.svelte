@@ -188,7 +188,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded border border-primary-med py-2 px-4 text-sm disabled:text-gray-500 outline-none"
+										class="w-full rounded border border-gray-50 py-2 px-4 text-sm disabled:text-gray-500 outline-none"
 										type="text"
 										bind:value={_user.name}
 										placeholder={$i18n.t('Enter Your Full Name')}
@@ -205,7 +205,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded py-2 px-4 text-sm border border-primary-med disabled:text-gray-500 outline-none"
+										class="w-full rounded py-2 px-4 text-sm border border-gray-50 disabled:text-gray-500 outline-none"
 										type="email"
 										bind:value={_user.email}
 										placeholder={$i18n.t('Enter Your Email')}
@@ -220,7 +220,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded py-2 px-4 text-sm rounded border border-primary-med  disabled:text-gray-500  outline-none"
+										class="w-full rounded py-2 px-4 text-sm rounded border border-gray-50  disabled:text-gray-500  outline-none"
 										type="password"
 										bind:value={_user.password}
 										placeholder={$i18n.t('Enter Your Password')}

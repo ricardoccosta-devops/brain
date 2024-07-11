@@ -560,7 +560,7 @@
 						<div class="flex gap-2">
 							<div class="flex-1 pb-1">
 								<select
-									class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+									class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 									bind:value={selectedOllamaUrlIdx}
 									placeholder={$i18n.t('Select an Ollama instance')}
 								>
@@ -609,7 +609,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2">
 									<input
-										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+										class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 										placeholder={$i18n.t('Enter model tag (e.g. {{modelTag}})', {
 											modelTag: 'mistral:7b'
 										})}
@@ -743,7 +743,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2">
 									<select
-										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+										class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 										bind:value={deleteModelTag}
 										placeholder={$i18n.t('Select a model')}
 									>
@@ -787,7 +787,7 @@
 							<div class="flex w-full">
 								<div class="flex-1 mr-2 flex flex-col gap-2">
 									<input
-										class="w-full rounded border border-primary-med py-2 px-4 text-sm outline-none"
+										class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
 										placeholder={$i18n.t('Enter model tag (e.g. {{modelTag}})', {
 											modelTag: 'my-modelfile'
 										})}
