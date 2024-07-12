@@ -494,8 +494,8 @@
 								chat.id === chatDeleteId
 									? 'bg-gray-200 '
 									: chat.id === selectedChatId
-									? 'bg-gray-100 est'
-									: 'group-hover:bg-primary-light '}  whitespace-nowrap text-ellipsis"
+									? 'bg-support-lightblue est'
+									: 'group-hover:bg-support-lightblue '}  whitespace-nowrap text-ellipsis"
 							>
 								<input
 									use:focusEdit
@@ -510,8 +510,8 @@
 								chat.id === chatDeleteId
 									? 'bg-gray-200 '
 									: chat.id === selectedChatId
-									? 'bg-gray-100 est'
-									: ' group-hover:bg-primary-light '}  whitespace-nowrap text-ellipsis"
+									? 'bg-support-lightblue est'
+									: ' group-hover:bg-support-lightblue '}  whitespace-nowrap text-ellipsis"
 								href="/c/{chat.id}"
 								on:click={() => {
 									selectedChatId = chat.id;
@@ -539,9 +539,9 @@
 							{chat.id === $chatId || chat.id === chatTitleEditId || chat.id === chatDeleteId
 								? 'from-gray-200 '
 								: chat.id === selectedChatId
-								? 'from-gray-100 '
+								? 'g-support-lightblue '
 								: 'invisible group-hover:visible from-gray-100 '}
-								absolute right-[10px] top-[10px] pr-2 pl-5 bg-gradient-to-l from-80%
+								absolute right-[10px] top-[10px] pr-2 pl-5 bg-support-lightblue from-80%
 
 								  to-transparent"
 						>

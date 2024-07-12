@@ -580,7 +580,7 @@
 									{#if siblings.length > 1}
 										<div class="flex self-center min-w-fit" dir="ltr">
 											<button
-												class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
+												class="self-center p-1 hover:bg-support-lightblue   hover:text-black rounded-md transition"
 												on:click={() => {
 													showPreviousMessage(message);
 												}}
@@ -608,7 +608,7 @@
 											</div>
 
 											<button
-												class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
+												class="self-center p-1 hover:bg-support-lightblue   hover:text-black rounded-md transition"
 												on:click={() => {
 													showNextMessage(message);
 												}}
@@ -637,7 +637,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition"
 													on:click={() => {
 														editMessageHandler();
 													}}
@@ -664,7 +664,7 @@
 											<button
 												class="{isLastMessage
 													? 'visible'
-													: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition copy-response-button"
+													: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition copy-response-button"
 												on:click={() => {
 													copyToClipboard(message.content);
 												}}
@@ -691,7 +691,7 @@
 												id="speak-button-{message.id}"
 												class="{isLastMessage
 													? 'visible'
-													: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition"
+													: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition"
 												on:click={() => {
 													if (!loadingSpeech) {
 														toggleSpeakMessage(message);
@@ -772,7 +772,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'}  p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition"
+														: 'invisible group-hover:visible'}  p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition"
 													on:click={() => {
 														if (!generatingImage) {
 															generateImage(message);
@@ -839,7 +839,7 @@
 												<button
 													class=" {isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition whitespace-pre-wrap"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition whitespace-pre-wrap"
 													on:click={() => {
 														console.log(message);
 													}}
@@ -868,7 +868,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded {message
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded {message
 														?.annotation?.rating === 1
 														? 'bg-gray-100 '
 														: ''}  hover:text-black transition"
@@ -903,7 +903,7 @@
 												<button
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded {message
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded {message
 														?.annotation?.rating === -1
 														? 'bg-gray-100 '
 														: ''}  hover:text-black transition"
@@ -940,7 +940,7 @@
 													type="button"
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition regenerate-response-button"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition regenerate-response-button"
 													on:click={() => {
 														continueGeneration();
 													}}
@@ -972,7 +972,7 @@
 													type="button"
 													class="{isLastMessage
 														? 'visible'
-														: 'invisible group-hover:visible'} p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition regenerate-response-button"
+														: 'invisible group-hover:visible'} p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition regenerate-response-button"
 													on:click={() => {
 														regenerateResponse(message);
 													}}

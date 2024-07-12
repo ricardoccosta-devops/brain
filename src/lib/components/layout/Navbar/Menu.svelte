@@ -118,7 +118,7 @@
 			</DropdownMenu.Item> -->
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 				id="chat-share-button"
 				on:click={() => {
 					shareHandler();
@@ -146,7 +146,7 @@
 				/> -->
 			<DropdownMenu.Sub>
 				<DropdownMenu.SubTrigger
-					class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+					class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@
 					sideOffset={8}
 				>
 					<DropdownMenu.Item
-						class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+						class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 						on:click={() => {
 							downloadJSONExport();
 						}}
@@ -179,7 +179,7 @@
 						<div class="flex items-center line-clamp-1">{$i18n.t('Export chat (.json)')}</div>
 					</DropdownMenu.Item>
 					<DropdownMenu.Item
-						class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+						class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 						on:click={() => {
 							downloadTxt();
 						}}
@@ -188,7 +188,7 @@
 					</DropdownMenu.Item>
 
 					<DropdownMenu.Item
-						class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+						class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 						on:click={() => {
 							downloadPdf();
 						}}

@@ -238,7 +238,7 @@
 							{#if siblings.length > 1}
 								<div class="flex self-center" dir="ltr">
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-support-lightblue   hover:text-black rounded-md transition"
 										on:click={() => {
 											showPreviousMessage(message);
 										}}
@@ -264,7 +264,7 @@
 									</div>
 
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-support-lightblue   hover:text-black rounded-md transition"
 										on:click={() => {
 											showNextMessage(message);
 										}}
@@ -290,7 +290,7 @@
 						{#if !readOnly}
 							<Tooltip content={$i18n.t('Edit')} placement="bottom">
 								<button
-									class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition edit-user-message-button"
+									class="invisible group-hover:visible p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition edit-user-message-button"
 									on:click={() => {
 										editMessageHandler();
 									}}
@@ -315,7 +315,7 @@
 
 						<Tooltip content={$i18n.t('Copy')} placement="bottom">
 							<button
-								class="invisible group-hover:visible p-1.5 hover:bg-primary-dark/5  rounded  hover:text-black transition"
+								class="invisible group-hover:visible p-1.5 hover:bg-support-lightblue  rounded  hover:text-black transition"
 								on:click={() => {
 									copyToClipboard(message.content);
 								}}
@@ -367,7 +367,7 @@
 							{#if siblings.length > 1}
 								<div class="flex self-center" dir="ltr">
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-support-lightblue   hover:text-black rounded-md transition"
 										on:click={() => {
 											showPreviousMessage(message);
 										}}
@@ -393,7 +393,7 @@
 									</div>
 
 									<button
-										class="self-center p-1 hover:bg-primary-dark/5   hover:text-black rounded-md transition"
+										class="self-center p-1 hover:bg-support-lightblue   hover:text-black rounded-md transition"
 										on:click={() => {
 											showNextMessage(message);
 										}}

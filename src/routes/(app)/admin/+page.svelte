@@ -217,7 +217,7 @@
 								{#if user.role !== 'admin'}
 									<Tooltip content={$i18n.t('Chats')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 											on:click={async () => {
 												showUserChatsModal = !showUserChatsModal;
 												selectedUser = user;
@@ -229,7 +229,7 @@
 
 									<Tooltip content={$i18n.t('Edit User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 											on:click={async () => {
 												showEditUserModal = !showEditUserModal;
 												selectedUser = user;
@@ -254,7 +254,7 @@
 
 									<Tooltip content={$i18n.t('Delete User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 											on:click={async () => {
 												deleteUserHandler(user.id);
 											}}
@@ -278,7 +278,7 @@
 								{:else}
 									<Tooltip content={$i18n.t('Edit User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 											on:click={async () => {
 												showEditUserModal = !showEditUserModal;
 												selectedUser = user;

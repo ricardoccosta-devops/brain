@@ -148,7 +148,7 @@
 													<div class="flex justify-end w-full">
 														<Tooltip content="Unarchive Chat">
 															<button
-																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+																class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 																on:click={async () => {
 																	unarchiveChatHandler(chat.id);
 																}}
@@ -172,7 +172,7 @@
 
 														<Tooltip content="Delete Chat">
 															<button
-																class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+																class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 																on:click={async () => {
 																	deleteChatHandler(chat.id);
 																}}

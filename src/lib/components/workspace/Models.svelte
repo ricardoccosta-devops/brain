@@ -272,7 +272,7 @@
 				.toLowerCase()
 				.includes(searchValue.toLowerCase())) as model}
 		<div
-			class=" flex space-x-4 cursor-pointer w-full px-3 py-2  hover:bg-primary-dark/5 rounded"
+			class=" flex space-x-4 cursor-pointer w-full px-3 py-2  hover:bg-support-lightblue rounded"
 			id="model-item-{model.id}"
 		>
 			<a
@@ -304,7 +304,7 @@
 			</a>
 			<div class="flex flex-row gap-0.5 self-center">
 				<a
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					href={`/workspace/models/edit?id=${encodeURIComponent(model.id)}`}
 				>
@@ -344,7 +344,7 @@
 					onClose={() => {}}
 				>
 					<button
-						class="self-center w-fit text-sm p-1.5   hover:bg-primary-dark/5  rounded"
+						class="self-center w-fit text-sm p-1.5   hover:bg-support-lightblue  rounded"
 						type="button"
 					>
 						<EllipsisHorizontal className="size-5" />

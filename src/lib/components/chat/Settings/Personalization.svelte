@@ -77,7 +77,7 @@
 		<div class="mt-3 mb-1 ml-1">
 			<button
 				type="button"
-				class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5  outline outline-1 outline-gray-300  rounded"
+				class=" px-3.5 py-1.5 font-medium hover:bg-support-lightblue  outline outline-1 outline-gray-300  rounded"
 				on:click={() => {
 					showManageModal = true;
 				}}

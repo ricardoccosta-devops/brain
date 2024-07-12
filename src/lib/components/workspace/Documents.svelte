@@ -336,7 +336,7 @@
 <div class="my-3 mb-5">
 	{#each filteredDocs as doc}
 		<button
-			class=" flex space-x-4 cursor-pointer text-left w-full px-3 py-2  hover:bg-primary-dark/5 rounded"
+			class=" flex space-x-4 cursor-pointer text-left w-full px-3 py-2  hover:bg-support-lightblue rounded"
 			on:click={() => {
 				if (doc?.selected === 'checked') {
 					doc.selected = 'unchecked';
@@ -416,7 +416,7 @@
 			</div>
 			<div class="flex flex-row space-x-1 self-center">
 				<button
-					class="self-center w-fit text-sm z-20 px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm z-20 px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					on:click={async (e) => {
 						e.stopPropagation();
@@ -463,7 +463,7 @@
         </button> -->
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					on:click={(e) => {
 						e.stopPropagation();

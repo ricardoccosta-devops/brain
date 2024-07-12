@@ -39,7 +39,7 @@
 					<!-- <div class=" self-center text-xs font-medium">{$i18n.t('Allow Chat Deletion')}</div> -->
 
 					<button
-						class=" flex rounded-md py-1.5 px-3 w-full hover:bg-gray-200  transition"
+						class=" flex rounded-md py-1.5 px-3 w-full hover:bg-support-lightblue  text-primary-med  transition"
 						type="button"
 						on:click={() => {
 							// exportAllUserChats();
@@ -69,7 +69,7 @@
 				</div>
 
 				<button
-					class=" flex rounded-md py-2 px-3 w-full hover:bg-gray-200  transition"
+					class=" flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue  text-primary-med  transition"
 					on:click={() => {
 						exportAllUserChats();
 					}}
@@ -101,7 +101,7 @@
 				<!-- <div class=" self-center text-xs font-medium">{$i18n.t('Allow Chat Deletion')}</div> -->
 
 				<button
-					class=" flex rounded-md py-1.5 px-3 w-full hover:bg-gray-200  transition"
+					class=" flex rounded-md py-1.5 px-3 w-full hover:bg-support-lightblue  text-primary-med  transition"
 					type="button"
 					on:click={() => {
 						downloadLiteLLMConfig(localStorage.token).catch((error) => {

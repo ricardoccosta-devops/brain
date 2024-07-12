@@ -35,7 +35,7 @@
 			transition={flyAndScale}
 		>
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 				id="chat-share-button"
 				on:click={() => {
 					window.open('https://docs.brAIn.com', '_blank');
@@ -46,7 +46,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-support-lightblue  rounded-md"
 				id="chat-share-button"
 				on:click={() => {
 					showShortcutsHandler();

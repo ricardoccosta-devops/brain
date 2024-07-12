@@ -83,7 +83,7 @@
 												<div class="flex justify-end w-full">
 													<Tooltip content="Delete">
 														<button
-															class="self-center w-fit text-sm px-2 py-2 hover:bg-primary-dark/5  rounded"
+															class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 															on:click={async () => {
 																const res = await deleteMemoryById(
 																	localStorage.token,
@@ -133,13 +133,13 @@
 			</div>
 			<div class="flex text-sm font-medium gap-1.5">
 				<button
-					class=" px-3.5 py-1.5 font-medium hover:bg-primary-dark/5  outline outline-1 outline-gray-300  rounded"
+					class=" px-3.5 py-1.5 font-medium hover:bg-support-lightblue  outline outline-1 outline-gray-300  rounded"
 					on:click={() => {
 						showAddMemoryModal = true;
 					}}>{$i18n.t('Add Memory')}</button
 				>
 				<button
-					class=" px-3.5 py-1.5 font-medium text-red-500 hover:bg-primary-dark/5  outline outline-1 outline-red-300  rounded"
+					class=" px-3.5 py-1.5 font-medium text-red-500 hover:bg-support-lightblue  outline outline-1 outline-red-300  rounded"
 					on:click={async () => {
 						const res = await deleteMemoriesByUserId(localStorage.token).catch((error) => {
 							toast.error(error);

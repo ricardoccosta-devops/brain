@@ -94,7 +94,7 @@
 <div class="my-3 mb-5">
 	{#each $prompts.filter((p) => query === '' || p.command.includes(query)) as prompt}
 		<div
-			class=" flex space-x-4 cursor-pointer w-full px-3 py-2  hover:bg-primary-dark/5 rounded"
+			class=" flex space-x-4 cursor-pointer w-full px-3 py-2  hover:bg-support-lightblue rounded"
 		>
 			<div class=" flex flex-1 space-x-4 cursor-pointer w-full">
 				<a href={`/workspace/prompts/edit?command=${encodeURIComponent(prompt.command)}`}>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="flex flex-row space-x-1 self-center">
 				<a
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					href={`/workspace/prompts/edit?command=${encodeURIComponent(prompt.command)}`}
 				>
@@ -129,7 +129,7 @@
 				</a>
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					on:click={() => {
 						// console.log(modelfile);
@@ -154,7 +154,7 @@
 				</button>
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					on:click={() => {
 						sharePrompt(prompt);
@@ -177,7 +177,7 @@
 				</button>
 
 				<button
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-primary-dark/5  rounded"
+					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
 					type="button"
 					on:click={() => {
 						deletePrompt(prompt.command);
