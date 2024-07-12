@@ -157,7 +157,7 @@
 				<div class="flex w-full">
 					<div class="flex-1">
 						<select
-							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 							bind:value={voice}
 						>
 							<option value="" selected={voice !== ''}>{$i18n.t('Default')}</option>
@@ -188,7 +188,7 @@
 					<div class="flex-1">
 						<input
 							list="voice-list"
-							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 							bind:value={voice}
 							placeholder="Select a voice"
 						/>

@@ -128,7 +128,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+									class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 									type="text"
 									bind:value={doc.title}
 									autocomplete="off"

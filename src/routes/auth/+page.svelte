@@ -152,7 +152,7 @@
 									<input
 										bind:value={name}
 										type="text"
-										class=" px-5 py-3 rounded w-full text-sm outline-none border  "
+										class="px-5 py-3 rounded w-full border-gray-250 text-sm outline-none border"
 										autocomplete="name"
 										placeholder={$i18n.t('Enter Your Full Name')}
 										required
@@ -167,7 +167,7 @@
 								<input
 									bind:value={email}
 									type="email"
-									class=" px-5 py-3 rounded w-full text-sm outline-none border  "
+									class="px-5 py-3 rounded w-full border-gray-250 text-sm outline-none border"
 									autocomplete="email"
 									placeholder={$i18n.t('Enter Your Email')}
 									required
@@ -180,7 +180,7 @@
 								<input
 									bind:value={password}
 									type="password"
-									class=" px-5 py-3 rounded w-full text-sm outline-none border  "
+									class="px-5 py-3 rounded w-full border-gray-250 text-sm outline-none border"
 									placeholder={$i18n.t('Enter Your Password')}
 									autocomplete="current-password"
 									required

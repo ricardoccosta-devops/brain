@@ -37,7 +37,7 @@
 			transition={(e) => fade(e, { duration: 100 })}
 		>
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med  transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 				on:click={async () => {
 					await showSettings.set(true);
 					show = false;
@@ -68,7 +68,7 @@
 			</button>
 
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med  transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 				on:click={() => {
 					dispatch('show', 'archived-chat');
 					show = false;
@@ -82,7 +82,7 @@
 
 			{#if role === 'admin'}
 				<button
-					class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med  transition"
+					class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 					on:click={() => {
 						goto('/admin');
 						show = false;
@@ -111,7 +111,7 @@
 			<hr class="  my-1.5 p-0" />
 
 			<button
-				class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med  transition"
+				class="flex rounded-md py-2 px-3 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 				on:click={() => {
 					localStorage.removeItem('token');
 					location.href = '/auth';

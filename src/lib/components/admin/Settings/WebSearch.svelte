@@ -90,7 +90,7 @@
 								<div class="flex w-full">
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 											type="text"
 											placeholder={$i18n.t('Enter Searxng Query URL')}
 											bind:value={webConfig.search.searxng_query_url}
@@ -108,7 +108,7 @@
 								<div class="flex w-full">
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 											type="text"
 											placeholder={$i18n.t('Enter Google PSE API Key')}
 											bind:value={webConfig.search.google_pse_api_key}
@@ -125,7 +125,7 @@
 								<div class="flex w-full">
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 											type="text"
 											placeholder={$i18n.t('Enter Google PSE Engine Id')}
 											bind:value={webConfig.search.google_pse_engine_id}
@@ -143,7 +143,7 @@
 								<div class="flex w-full">
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 											type="text"
 											placeholder={$i18n.t('Enter Brave Search API Key')}
 											bind:value={webConfig.search.brave_search_api_key}
@@ -161,7 +161,7 @@
 								<div class="flex w-full">
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 											type="text"
 											placeholder={$i18n.t('Enter Serpstack API Key')}
 											bind:value={webConfig.search.serpstack_api_key}
@@ -179,7 +179,7 @@
 								<div class="flex w-full">
 									<div class="flex-1">
 										<input
-											class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+											class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 											type="text"
 											placeholder={$i18n.t('Enter Serper API Key')}
 											bind:value={webConfig.search.serper_api_key}
@@ -200,7 +200,7 @@
 							</div>
 
 							<input
-								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 								placeholder={$i18n.t('Search Result Count')}
 								bind:value={webConfig.search.result_count}
 								required
@@ -213,7 +213,7 @@
 							</div>
 
 							<input
-								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 								placeholder={$i18n.t('Concurrent Requests')}
 								bind:value={webConfig.search.concurrent_requests}
 								required
@@ -262,7 +262,7 @@
 						<div class=" w-20 text-xs font-medium self-center">{$i18n.t('Language')}</div>
 						<div class=" flex-1 self-center">
 							<input
-								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 								type="text"
 								placeholder={$i18n.t('Enter language codes')}
 								bind:value={youtubeLanguage}

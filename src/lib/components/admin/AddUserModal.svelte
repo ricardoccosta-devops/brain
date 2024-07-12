@@ -118,7 +118,7 @@
 
 <Modal size="sm" bind:show>
 	<div>
-		<div class=" flex justify-between  px-5 pt-4 pb-2">
+		<div class=" flex justify-between px-5 pt-4 pb-2">
 			<div class=" text-lg font-medium self-center">{$i18n.t('Add User')}</div>
 			<button
 				class="self-center"
@@ -129,7 +129,7 @@
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 20 20"
-					fill="currentColor"
+					fill="#00001e"
 					class="w-5 h-5"
 				>
 					<path
@@ -147,9 +147,9 @@
 						submitHandler();
 					}}
 				>
-					<div class="flex text-center text-sm font-medium rounded bg-transparent/10 p-1 mb-2">
+					<div class="flex text-center text-sm font-medium rounded bg-gray-100 p-1 mb-2">
 						<button
-							class="w-full rounded p-1.5 {tab === '' ? 'bg-gray-50 ' : ''}"
+							class="w-full rounded p-1.5 {tab === '' ? 'bg-primary-med text-white ' : ''}"
 							type="button"
 							on:click={() => {
 								tab = '';
@@ -157,7 +157,7 @@
 						>
 
 						<button
-							class="w-full rounded p-1 {tab === 'import' ? 'bg-gray-50 ' : ''}"
+							class="w-full rounded p-1 {tab === 'import' ? 'bg-primary-med text-white ' : ''}"
 							type="button"
 							on:click={() => {
 								tab = 'import';
@@ -171,7 +171,7 @@
 
 								<div class="flex-1">
 									<select
-										class="w-full capitalize rounded py-2 px-4 text-sm   disabled:text-gray-500  outline-none"
+										class="w-full capitalize rounded py-2 px-4 text-sm disabled:text-gray-500  outline-none"
 										bind:value={_user.role}
 										placeholder={$i18n.t('Enter Your Role')}
 										required
@@ -188,7 +188,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded border border-gray-50 py-2 px-4 text-sm disabled:text-gray-500 outline-none"
+										class="w-full rounded border border-gray-250 py-2 px-4 text-sm disabled:text-gray-500 outline-none"
 										type="text"
 										bind:value={_user.name}
 										placeholder={$i18n.t('Enter Your Full Name')}
@@ -205,7 +205,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded py-2 px-4 text-sm border border-gray-50 disabled:text-gray-500 outline-none"
+										class="w-full rounded py-2 px-4 text-sm border border-gray-250 disabled:text-gray-500 outline-none"
 										type="email"
 										bind:value={_user.email}
 										placeholder={$i18n.t('Enter Your Email')}
@@ -220,7 +220,7 @@
 
 								<div class="flex-1">
 									<input
-										class="w-full rounded py-2 px-4 text-sm rounded border border-gray-50  disabled:text-gray-500  outline-none"
+										class="w-full rounded py-2 px-4 text-sm rounded border border-gray-250  disabled:text-gray-500  outline-none"
 										type="password"
 										bind:value={_user.password}
 										placeholder={$i18n.t('Enter Your Password')}

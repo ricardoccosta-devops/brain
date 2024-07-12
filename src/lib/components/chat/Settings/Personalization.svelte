@@ -77,7 +77,7 @@
 		<div class="mt-3 mb-1 ml-1">
 			<button
 				type="button"
-				class=" px-3.5 py-1.5 font-medium border-primary-med text-white hover:bg-primary-med hover:text-white outline outline-1 outline-gray-300  rounded"
+				class=" px-3.5 py-1.5 font-medium border border-primary-med text-primary-med hover:bg-primary-med hover:text-white  rounded"
 				on:click={() => {
 					showManageModal = true;
 				}}
@@ -89,7 +89,7 @@
 
 	<div class="flex justify-end text-sm font-medium">
 		<button
-			class=" px-4 py-2 bg-primary-med hover:bg-primary-light   text-gray-100 transition rounded"
+			class=" px-4 py-2 bg-primary-med hover:bg-primary-light text-white transition rounded"
 			type="submit"
 		>
 			{$i18n.t('Save')}

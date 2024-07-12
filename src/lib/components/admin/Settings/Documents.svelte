@@ -297,14 +297,14 @@
 			{#if embeddingEngine === 'openai'}
 				<div class="my-0.5 flex gap-2">
 					<input
-						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('API Base URL')}
 						bind:value={OpenAIUrl}
 						required
 					/>
 
 					<input
-						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('API Key')}
 						bind:value={OpenAIKey}
 						required
@@ -365,7 +365,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<select
-							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 							bind:value={embeddingModel}
 							placeholder={$i18n.t('Select a model')}
 							required
@@ -383,7 +383,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<input
-							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 							placeholder={$i18n.t('Set embedding model (e.g. {{model}})', {
 								model: embeddingModel.slice(-40)
 							})}
@@ -393,7 +393,7 @@
 
 					{#if embeddingEngine === ''}
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+							class="px-2.5 hover:bg-support-lightblue text-primary-dark rounded transition"
 							on:click={() => {
 								embeddingModelUpdateHandler();
 							}}
@@ -458,7 +458,7 @@
 					<div class="flex w-full">
 						<div class="flex-1 mr-2">
 							<input
-								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 								placeholder={$i18n.t('Set reranking model (e.g. {{model}})', {
 									model: 'BAAI/bge-reranker-v2-m3'
 								})}
@@ -466,7 +466,7 @@
 							/>
 						</div>
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+							class="px-2.5 hover:bg-support-lightblue text-primary-dark rounded transition"
 							on:click={() => {
 								rerankingModelUpdateHandler();
 							}}
@@ -711,7 +711,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded py-2 px-3.5 w-full hover:bg-gray-200  transition"
+					class=" flex rounded py-2 px-3.5 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 					on:click={() => {
 						showResetUploadDirConfirm = true;
 					}}
@@ -808,7 +808,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded py-2 px-3.5 w-full hover:bg-gray-200  transition"
+					class=" flex rounded py-2 px-3.5 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 					on:click={() => {
 						showResetConfirm = true;
 					}}

@@ -59,7 +59,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					cloneHandler();
 				}}
@@ -70,7 +70,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					exportHandler();
 				}}
@@ -81,7 +81,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex  gap-2  items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex  gap-2  items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					hideHandler();
 				}}
@@ -131,7 +131,7 @@
 			<hr class="border-gray-100  my-1" />
 
 			<DropdownMenu.Item
-				class="flex  gap-2  items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex  gap-2  items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					deleteHandler();
 				}}

@@ -233,7 +233,7 @@
 			<div class="flex w-full">
 				<div class="flex-1 mr-2">
 					<input
-						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('Enter URL (e.g. http://127.0.0.1:7860/)')}
 						bind:value={AUTOMATIC1111_BASE_URL}
 					/>
@@ -275,7 +275,7 @@
 			<div class="flex w-full">
 				<div class="flex-1 mr-2">
 					<input
-						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('Enter URL (e.g. http://127.0.0.1:7860/)')}
 						bind:value={COMFYUI_BASE_URL}
 					/>
@@ -307,14 +307,14 @@
 
 				<div class="flex gap-2 mb-1">
 					<input
-						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('API Base URL')}
 						bind:value={OPENAI_API_BASE_URL}
 						required
 					/>
 
 					<input
-						class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+						class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 						placeholder={$i18n.t('API Key')}
 						bind:value={OPENAI_API_KEY}
 						required
@@ -335,7 +335,7 @@
 								<div class="flex-1">
 									<input
 										list="model-list"
-										class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+										class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 										bind:value={selectedModel}
 										placeholder="Select a model"
 									/>
@@ -349,7 +349,7 @@
 							</div>
 						{:else}
 							<select
-								class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+								class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 								bind:value={selectedModel}
 								placeholder={$i18n.t('Select a model')}
 								required
@@ -372,7 +372,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<input
-							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 							placeholder={$i18n.t('Enter Image Size (e.g. 512x512)')}
 							bind:value={imageSize}
 						/>
@@ -385,7 +385,7 @@
 				<div class="flex w-full">
 					<div class="flex-1 mr-2">
 						<input
-							class="w-full rounded border border-gray-50 py-2 px-4 text-sm outline-none"
+							class="w-full rounded border border-gray-250 py-2 px-4 text-sm outline-none"
 							placeholder={$i18n.t('Enter Number of Steps (e.g. 50)')}
 							bind:value={steps}
 						/>

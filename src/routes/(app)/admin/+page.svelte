@@ -114,7 +114,7 @@
 			<div class="flex gap-0.5">
 				<Tooltip content={$i18n.t('Add User')}>
 					<button
-						class=" px-2 py-2 rounded border border-gray-200   hover:bg-primary-light   transition font-medium text-sm flex items-center space-x-1"
+						class=" px-2 py-2 rounded bg-primary-med hover:bg-primary-light text-white transition font-medium text-sm flex items-center space-x-1"
 						on:click={() => {
 							showAddUserModal = !showAddUserModal;
 						}}
@@ -161,7 +161,7 @@
 						}
 					})
 					.slice((page - 1) * 20, page * 20) as user}
-					<tr class="bg-white border-b   text-xs">
+					<tr class="bg-white border-b text-xs">
 						<td class="px-3 py-2 min-w-[7rem] w-28">
 							<button
 								class=" flex items-center gap-2 text-xs px-3 py-0.5 rounded {user.role ===
@@ -217,7 +217,7 @@
 								{#if user.role !== 'admin'}
 									<Tooltip content={$i18n.t('Chats')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue text-primary-med rounded"
 											on:click={async () => {
 												showUserChatsModal = !showUserChatsModal;
 												selectedUser = user;
@@ -229,7 +229,7 @@
 
 									<Tooltip content={$i18n.t('Edit User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue text-primary-med rounded"
 											on:click={async () => {
 												showEditUserModal = !showEditUserModal;
 												selectedUser = user;
@@ -254,7 +254,7 @@
 
 									<Tooltip content={$i18n.t('Delete User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue text-primary-med rounded"
 											on:click={async () => {
 												deleteUserHandler(user.id);
 											}}
@@ -278,7 +278,7 @@
 								{:else}
 									<Tooltip content={$i18n.t('Edit User')}>
 										<button
-											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
+											class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue text-primary-med rounded"
 											on:click={async () => {
 												showEditUserModal = !showEditUserModal;
 												selectedUser = user;

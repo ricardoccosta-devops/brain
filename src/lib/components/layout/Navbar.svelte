@@ -140,7 +140,7 @@
 						}}
 					>
 						<button
-							class="select-none flex rounded p-1.5 w-full hover:bg-primary-light  transition"
+							class="select-none flex rounded p-1.5 w-full transition"
 							aria-label="User Menu"
 						>
 							<div class=" self-center">

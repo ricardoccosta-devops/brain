@@ -173,7 +173,7 @@
 				hidden
 			/>
 			<button
-				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
+				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 				on:click={() => {
 					chatImportInputElement.click();
 				}}
@@ -195,7 +195,7 @@
 				<div class=" self-center text-sm font-medium">{$i18n.t('Import Chats')}</div>
 			</button>
 			<button
-				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
+				class=" flex rounded-md py-2 px-3.5 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 				on:click={() => {
 					exportChats();
 				}}
@@ -282,7 +282,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
+					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 					on:click={() => {
 						showArchiveConfirm = true;
 					}}
@@ -369,7 +369,7 @@
 				</div>
 			{:else}
 				<button
-					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-gray-200  transition"
+					class=" flex rounded-md py-2 px-3.5 w-full hover:bg-support-lightblue text-primary-med text-left transition"
 					on:click={() => {
 						showDeleteConfirm = true;
 					}}

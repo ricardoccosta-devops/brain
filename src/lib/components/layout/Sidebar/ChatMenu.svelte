@@ -47,7 +47,7 @@
 			transition={flyAndScale}
 		>
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					renameHandler();
 				}}
@@ -57,7 +57,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					cloneChatHandler();
 				}}
@@ -67,7 +67,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex gap-2 items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					archiveChatHandler();
 				}}
@@ -87,7 +87,7 @@
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
-				class="flex  gap-2  items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue  rounded-md"
+				class="flex  gap-2  items-center px-3 py-2 text-sm  font-medium cursor-pointer hover:bg-support-lightblue text-primary-med rounded-md"
 				on:click={() => {
 					deleteHandler();
 				}}
