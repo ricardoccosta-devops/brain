@@ -272,7 +272,7 @@
 									<div class="flex">
 										<Tooltip content="Verify connection" className="self-start mt-0.5">
 											<button
-												class="self-center p-2 bg-gray-200 hover:bg-gray-300   rounded transition"
+												class="self-center p-2 bg-primary-med hover:bg-bg-primary-light rounded transition"
 												on:click={() => {
 													verifyOpenAIHandler(idx);
 												}}
@@ -379,7 +379,7 @@
 									<div class="flex">
 										<Tooltip content="Verify connection" className="self-start mt-0.5">
 											<button
-												class="self-center p-2 bg-gray-200 hover:bg-gray-300   rounded transition"
+												class="self-center p-2 bg-primary-med hover:bg-bg-primary-light rounded transition"
 												on:click={() => {
 													verifyOllamaHandler(idx);
 												}}

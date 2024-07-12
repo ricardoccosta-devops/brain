@@ -264,7 +264,7 @@
 							</button>
 						</div>
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+							class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 							on:click={() => {
 								uploadPipelineHandler();
 							}}
@@ -333,7 +333,7 @@
 							/>
 						</div>
 						<button
-							class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+							class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 							on:click={() => {
 								addPipelineHandler();
 							}}
@@ -428,7 +428,7 @@
 									</div>
 
 									<button
-										class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+										class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 										on:click={() => {
 											deletePipelineHandler();
 										}}

@@ -136,7 +136,7 @@
 						<div class="flex gap-1">
 							{#if $config?.features.enable_community_sharing}
 								<button
-									class=" self-center px-3.5 py-2 rounded text-sm font-medium bg-gray-100 hover:bg-gray-200 text-primary-dark   "
+									class=" self-center px-3.5 py-2 rounded text-sm font-medium bg-primary-med hover:bg-primary-light text-white   "
 									type="button"
 									on:click={() => {
 										shareChat();

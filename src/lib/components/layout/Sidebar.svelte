@@ -372,7 +372,7 @@
 
 						<div class="mt-3">
 							<button
-								class="flex justify-center items-center space-x-1.5 px-3 py-2.5 rounded text-xs bg-gray-100 hover:bg-gray-200 transition text-primary-dark font-medium w-full"
+								class="flex justify-center items-center space-x-1.5 px-3 py-2.5 rounded text-xs bg-primary-med hover:bg-primary-light text-white transition font-medium w-full"
 								type="button"
 								on:click={() => {
 									saveSettings({
@@ -492,7 +492,7 @@
 								class=" w-full flex justify-between rounded px-3 py-2 {chat.id === $chatId ||
 								chat.id === chatTitleEditId ||
 								chat.id === chatDeleteId
-									? 'bg-gray-200 '
+									? 'bg-support-lightblue '
 									: chat.id === selectedChatId
 									? 'bg-support-lightblue est'
 									: 'group-hover:bg-support-lightblue '}  whitespace-nowrap text-ellipsis"
@@ -508,7 +508,7 @@
 								class=" w-full flex justify-between rounded px-3 py-2 {chat.id === $chatId ||
 								chat.id === chatTitleEditId ||
 								chat.id === chatDeleteId
-									? 'bg-gray-200 '
+									? 'bg-support-lightblue '
 									: chat.id === selectedChatId
 									? 'bg-support-lightblue est'
 									: ' group-hover:bg-support-lightblue '}  whitespace-nowrap text-ellipsis"

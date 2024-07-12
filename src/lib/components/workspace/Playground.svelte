@@ -374,7 +374,7 @@
 					</button>
 				{:else}
 					<button
-						class="px-3 py-1.5 text-sm font-medium bg-gray-100 hover:bg-gray-200 text-primary-lightdarkest transition rounded"
+						class="px-3 py-1.5 text-sm font-medium bg-primary-med hover:bg-primary-light text-white transition rounded"
 						on:click={() => {
 							stopResponse();
 						}}

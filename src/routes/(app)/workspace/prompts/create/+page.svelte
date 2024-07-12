@@ -137,7 +137,7 @@
 
 			<div class="flex items-center mb-1">
 				<div
-					class="bg-gray-200  font-bold px-3 py-1 border border-r-0  rounded-l-lg"
+					class="bg-gray-200 font-bold px-3 py-1 border border-r-0  rounded-l-lg"
 				>
 					/
 				</div>

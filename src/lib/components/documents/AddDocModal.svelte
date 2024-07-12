@@ -135,7 +135,7 @@
 						/>
 
 						<button
-							class="w-full text-sm font-medium py-3 bg-gray-100 hover:bg-gray-200   text-center rounded"
+							class="w-full text-sm font-medium py-3 bg-primary-med hover:bg-primary-light text-whitetext-center rounded"
 							type="button"
 							on:click={() => {
 								uploadDocInputElement.click();

@@ -574,7 +574,7 @@
 								<div class="flex w-full justify-end">
 									<Tooltip content="Update All Models" placement="top">
 										<button
-											class="p-2.5 flex gap-2 items-center bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+											class="p-2.5 flex gap-2 items-center bg-primary-med hover:bg-primary-light text-white rounded transition"
 											on:click={() => {
 												updateModelsHandler();
 											}}
@@ -617,7 +617,7 @@
 									/>
 								</div>
 								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+									class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 									on:click={() => {
 										pullModelHandler();
 									}}
@@ -761,7 +761,7 @@
 									</select>
 								</div>
 								<button
-									class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition"
+									class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 									on:click={() => {
 										deleteModelHandler();
 									}}
@@ -806,7 +806,7 @@
 
 								<div class="flex self-start">
 									<button
-										class="px-2.5 py-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded transition disabled:cursor-not-allowed"
+										class="px-2.5 py-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition disabled:cursor-not-allowed"
 										on:click={() => {
 											createModelHandler();
 										}}
@@ -945,7 +945,7 @@
 
 									{#if (modelUploadMode === 'file' && modelInputFile && modelInputFile.length > 0) || (modelUploadMode === 'url' && modelFileUrl !== '')}
 										<button
-											class="px-2.5 bg-gray-100 hover:bg-gray-200 text-primary-dark    rounded disabled:cursor-not-allowed transition"
+											class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded disabled:cursor-not-allowed transition"
 											type="submit"
 											disabled={modelTransferring}
 										>

@@ -133,7 +133,7 @@
 			</div>
 			<div class="flex text-sm font-medium gap-1.5">
 				<button
-					class=" px-3.5 py-1.5 font-medium hover:bg-support-lightblue  outline outline-1 outline-gray-300  rounded"
+					class=" px-3.5 py-1.5 font-medium border-primary-med text-white hover:bg-primary-med hover:text-white outline outline-1 outline-gray-300  rounded"
 					on:click={() => {
 						showAddMemoryModal = true;
 					}}>{$i18n.t('Add Memory')}</button

@@ -939,8 +939,8 @@
 											<button
 												id="send-message-button"
 												class="{prompt !== ''
-													? 'bg-primary-med hover:bg-primary-light text-white   '
-													: 'text-white bg-gray-200   disabled'} transition rounded-full p-1.5 m-0.5 self-center"
+													? 'bg-primary-med hover:bg-primary-light text-white '
+													: 'text-white bg-gray-200 disabled'} transition rounded-full p-1.5 m-0.5 self-center"
 												type="submit"
 												disabled={prompt === ''}
 											>

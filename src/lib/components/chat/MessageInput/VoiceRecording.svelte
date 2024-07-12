@@ -279,7 +279,7 @@
 				: 'bg-indigo-400/20 text-indigo-600  '} 
 
 
-             rounded-full"
+          rounded-full"
 			on:click={async () => {
 				dispatch('cancel');
 				stopRecording();
