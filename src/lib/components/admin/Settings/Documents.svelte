@@ -228,7 +228,7 @@
 				</div>
 
 				<button
-					class=" self-center text-xs p-1 px-3 bg-gray-100   rounded flex flex-row space-x-1 items-center {scanDirLoading
+					class=" self-center text-xs p-1 px-3 bg-primary-med text-white hover:bg-primary-light rounded flex flex-row space-x-1 items-center {scanDirLoading
 						? ' cursor-not-allowed'
 						: ''}"
 					on:click={() => {
@@ -340,16 +340,18 @@
 				<div class=" self-center text-xs font-medium">{$i18n.t('Hybrid Search')}</div>
 
 				<button
-					class="p-1 px-3 text-xs flex rounded transition"
+					class="p-1 px-3 text-xs flex rounded transition {querySettings.hybrid 
+						? 'bg-green-500/20'
+						: 'bg-red-500/20'}"
 					on:click={() => {
 						toggleHybridSearch();
 					}}
 					type="button"
 				>
 					{#if querySettings.hybrid === true}
-						<span class="ml-2 self-center">{$i18n.t('On')}</span>
+						<span class="ml-2 self-center text-green-700">{$i18n.t('On')}</span>
 					{:else}
-						<span class="ml-2 self-center">{$i18n.t('Off')}</span>
+						<span class="ml-2 self-center text-red-700">{$i18n.t('Off')}</span>
 					{/if}
 				</button>
 			</div>
@@ -393,7 +395,7 @@
 
 					{#if embeddingEngine === ''}
 						<button
-							class="px-2.5 hover:bg-support-lightblue text-primary-dark rounded transition"
+							class="px-2.5 hover:bg-primary-light bg-primary-med text-white rounded transition"
 							on:click={() => {
 								embeddingModelUpdateHandler();
 							}}
@@ -466,7 +468,7 @@
 							/>
 						</div>
 						<button
-							class="px-2.5 hover:bg-support-lightblue text-primary-dark rounded transition"
+							class="px-2.5 hover:bg-primary-light bg-primary-med text-white rounded transition"
 							on:click={() => {
 								rerankingModelUpdateHandler();
 							}}
@@ -625,7 +627,9 @@
 					<div class=" text-xs font-medium">{$i18n.t('PDF Extract Images (OCR)')}</div>
 
 					<button
-						class=" text-xs font-medium text-gray-500"
+						class="p-1 px-3 text-xs flex rounded transition font-medium {querySettings.hybrid 
+						? 'bg-green-500/20 text-green-700'
+						: 'bg-red-500/20 text-red-700'}"
 						type="button"
 						on:click={() => {
 							pdfExtractImages = !pdfExtractImages;

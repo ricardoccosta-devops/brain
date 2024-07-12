@@ -99,7 +99,7 @@
 
 							<div class="flex-1">
 								<input
-									class="w-full rounded py-2 px-4 text-sm rounded border border-gray-50  disabled:text-gray-500  outline-none"
+									class="w-full rounded py-2 px-4 text-sm rounded border border-gray-250 disabled:text-gray-500 outline-none"
 									type="email"
 									bind:value={_user.email}
 									autocomplete="off"

@@ -61,7 +61,7 @@
 	{/if}
 
 	<button
-		class=" cursor-pointer self-center p-0.5 flex h-fit items-center  rounded-full transition border  border-dashed"
+		class=" cursor-pointer self-center p-0.5 flex h-fit items-center rounded-full transition border border-dashed"
 		type="button"
 		on:click={() => {
 			showTagInput = !showTagInput;

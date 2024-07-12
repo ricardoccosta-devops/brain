@@ -112,7 +112,9 @@
 				</div>
 
 				<button
-					class="p-1 px-3 text-xs flex rounded transition"
+					class="p-1 px-3 text-xs flex rounded transition {speechAutoSend 
+						? 'bg-green-500/20 text-green-700'
+						: 'bg-red-500/20 text-red-700'}"
 					on:click={() => {
 						toggleSpeechAutoSend();
 					}}
@@ -134,7 +136,9 @@
 				<div class=" self-center text-xs font-medium">{$i18n.t('Auto-playback response')}</div>
 
 				<button
-					class="p-1 px-3 text-xs flex rounded transition"
+					class="p-1 px-3 text-xs flex rounded transition {responseAutoPlayback 
+								? 'bg-green-500/20 text-green-700'
+								: 'bg-red-500/20 text-red-700'}"
 					on:click={() => {
 						toggleResponseAutoPlayback();
 					}}

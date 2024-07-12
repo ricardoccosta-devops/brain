@@ -16,6 +16,13 @@
 					"rewrite it for better readability "
 				],
 				"content": "Check the following sentence for grammar and clarity: \"[sentence]\". Rewrite it for better readability while maintaining its original meaning."
+			},
+			{
+				"title": [
+					"Insgts de mkt",
+					"Sugest\u00f5es: mkt"
+				],
+				"content": "Me de insgts de mkt para bancos privados"
 			}
 		],
 		"default_models": "llama3:latest",
@@ -29,7 +36,7 @@
 				"id": "aa15a1a1-6f6a-4bbf-bd70-18e132bdd017",
 				"type": "info",
 				"title": "",
-				"content": "Novo banner",
+				"content": "Nao sera possivel usar llama",
 				"dismissible": true,
 				"timestamp": 1720712359
 			}
@@ -43,7 +50,6 @@
 	"model_filter": {
 		"enable": true,
 		"list": [
-			"gpt-3.5-turbo-0125",
 			"llama3:latest"
 		]
 	},
@@ -70,6 +76,32 @@
 		"search": {
 			"prompt_template": "You are tasked with generating web search queries. Give me an appropriate query to answer my question for google search. Answer with only the query. Today is {{CURRENT_DATE}}.\n        \nQuestion:\n{{prompt:end:4000}}",
 			"prompt_length_threshold": 100
+		}
+	},
+	"rag": {
+		"template": "Use the following context as your learned knowledge, inside <context></context> XML tags.\n<context>\n    [context]\n</context>\n\nWhen answer to user:\n- If you don't know, just say that you don't know.\n- If you don't know when you are not sure, ask for clarification.\nAvoid mentioning that you obtained the information from the context.\nAnd answer according to the language of the user's question.\n\nGiven the context information, answer the query.\nQuery: [query]",
+		"top_k": 5,
+		"relevance_threshold": 0.0,
+		"enable_hybrid_search": false,
+		"pdf_extract_images": false,
+		"youtube_loader_language": [
+			"en"
+		],
+		"enable_web_loader_ssl_verification": null,
+		"web": {
+			"search": {
+				"enable": false,
+				"engine": "",
+				"searxng_query_url": "",
+				"google_pse_api_key": "",
+				"google_pse_engine_id": "",
+				"brave_search_api_key": "",
+				"serpstack_api_key": "",
+				"serpstack_https": true,
+				"serper_api_key": "",
+				"result_count": 3,
+				"concurrent_requests": 10
+			}
 		}
 	}
 }

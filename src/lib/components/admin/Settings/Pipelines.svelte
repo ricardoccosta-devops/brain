@@ -250,7 +250,7 @@
 							/>
 
 							<button
-								class="w-full text-sm font-medium py-2 bg-transparent hover:bg-primary-light border border-dashed   text-center rounded"
+								class="w-full text-sm font-medium py-2 bg-transparent hover:bg-support-lightblue text-primary-med border border-dashed text-center rounded"
 								type="button"
 								on:click={() => {
 									document.getElementById('pipelines-upload-input')?.click();

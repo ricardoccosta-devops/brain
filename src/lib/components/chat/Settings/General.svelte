@@ -185,7 +185,9 @@
 					<div class=" self-center text-xs font-medium">{$i18n.t('Notifications')}</div>
 
 					<button
-						class="p-1 px-3 text-xs flex rounded transition"
+						class="p-1 px-3 text-xs flex rounded transition {notificationEnabled 
+								? 'bg-green-500/20 text-green-700'
+								: 'bg-red-500/20 text-red-700'}"
 						on:click={() => {
 							toggleNotification();
 						}}

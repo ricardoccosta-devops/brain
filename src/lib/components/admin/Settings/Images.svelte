@@ -198,7 +198,9 @@
 					</div>
 
 					<button
-						class="p-1 px-3 text-xs flex rounded transition"
+						class="p-1 px-3 text-xs flex rounded transition {enableImageGeneration 
+						? 'bg-green-500/20 text-green-700'
+						: 'bg-red-500/20 text-red-700'}"
 						on:click={() => {
 							if (imageGenerationEngine === '' && AUTOMATIC1111_BASE_URL === '') {
 								toast.error($i18n.t('AUTOMATIC1111 Base URL is required.'));

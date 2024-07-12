@@ -237,7 +237,9 @@
 						</div>
 
 						<button
-							class="p-1 px-3 text-xs flex rounded transition"
+							class="p-1 px-3 text-xs flex rounded transition {webConfig.ssl_verification 
+								? 'bg-green-500/20 text-green-700'
+								: 'bg-red-500/20 text-red-700'}"
 							on:click={() => {
 								webConfig.ssl_verification = !webConfig.ssl_verification;
 								submitHandler();
