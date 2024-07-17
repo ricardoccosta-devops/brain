@@ -272,8 +272,8 @@
 				</div>
 				<div class="grid lg:grid-cols-2 flex-col gap-1.5">
 					{#each promptSuggestions as prompt, promptIdx}
-						<div class=" flex  rounded py-1.5">
-							<div class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-36 p-5 px-6 rounded">
+						<div class=" flex rounded py-1.5">
+							<div class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-42 p-5 px-6 rounded">
 								<div class="flex items-center">
 									<span class="text-xs w-1/6 text-primary-mediun font-medium">{$i18n.t('Title')}: </span>
 									<input
@@ -284,7 +284,7 @@
 
 								</div>
 
-								<div class="flex items-center">
+								<div class="flex items-center my-2">
 									<span class="text-xs w-1/6 text-primary-mediun font-medium">{$i18n.t('Subtitle')}: </span>
 									<input
 										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-b"
@@ -294,13 +294,14 @@
 
 								</div>
 
-								<div class="flex items-center">
+								<div class="flex items-start">
 									<span class="text-xs w-1/6 text-primary-mediun font-medium">{$i18n.t('Prompt')}: </span>
-									<input
-										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-b"
+									<textarea
+										rows="3"
+										class="px-3 resize-none py-1.5 text-xs w-full bg-transparent outline-none border-b"
 										placeholder={$i18n.t('Prompt (e.g. Tell me a fun fact about the Roman Empire)')}
 										bind:value={prompt.content}
-									/>
+									></textarea>
 
 								</div>
 							</div>
