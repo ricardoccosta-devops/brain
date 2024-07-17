@@ -54,31 +54,23 @@
 				>
 					<div class="flex flex-col text-left">
 						{#if prompt.title && prompt.title[0] !== ''}
-							<div
-								class="  font-medium   transition"
-							>
+							<div class="font-medium transition">
 								{prompt.title[0]}
 							</div>
 							<div class="text-sm text-gray-600 font-normal line-clamp-2">{prompt.title[1]}</div>
 						{:else}
-							<div
-								class=" self-center text-sm font-medium   transition line-clamp-2"
-							>
+							<div class=" self-center text-sm font-medium transition line-clamp-2">
 								{prompt.content}
 							</div>
 						{/if}
 					</div>
 
 					<div class="w-full flex justify-between">
-						<div
-							class="text-xs text-primary-lightmedium group-hover:text-primary-med   transition self-center"
-						>
+						<div class="text-xs text-primary-lightmedium group-hover:text-primary-med transition self-center">
 							{$i18n.t('Prompt')}
 						</div>
 
-						<div
-							class="self-end p-1 rounded text-primary-med group-hover:text-primary-lightdark   transition"
-						>
+						<div class="self-end p-1 rounded text-primary-med group-hover:text-primary-lightdark transition">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 16 16"

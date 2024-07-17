@@ -192,13 +192,12 @@
 					<div class=" flex justify-between">
 						<div class="flex flex-row flex-1 border rounded ">
 							<select
-								class="w-fit capitalize rounded py-2 px-4 text-xs bg-transparent outline-none"
+								class="w-fit capitalize rounded py-2 pl-4 pr-6 text-xs bg-transparent outline-none"
 								bind:value={banner.type}
 								required
 							>
 								{#if banner.type == ''}
-									<option value="" selected disabled class="text-primary-lightdarkest">{$i18n.t('Type')}</option
-									>
+									<option value="" selected disabled class="text-primary-lightdarkest">{$i18n.t('Type')}</option>
 								{/if}
 								<option value="info" class="text-primary-lightdarkest">{$i18n.t('Info')}</option>
 								<option value="warning" class="text-primary-lightdarkest">{$i18n.t('Warning')}</option>
@@ -275,27 +274,39 @@
 					{#each promptSuggestions as prompt, promptIdx}
 						<div class=" flex  rounded py-1.5">
 							<div class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-36 p-5 px-6 rounded">
-								<input
-									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
-									placeholder={$i18n.t('Title (e.g. Tell me a fun fact)')}
-									bind:value={prompt.title[0]}
-								/>
+								<div class="flex items-center">
+									<span class="text-xs w-1/6 text-primary-mediun font-medium">{$i18n.t('Title')}: </span>
+									<input
+										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-b"
+										placeholder={$i18n.t('Title (e.g. Tell me a fun fact)')}
+										bind:value={prompt.title[0]}
+									/>
 
-								<input
-									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
-									placeholder={$i18n.t('Subtitle (e.g. about the Roman Empire)')}
-									bind:value={prompt.title[1]}
-								/>
+								</div>
 
-								<input
-									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
-									placeholder={$i18n.t('Prompt (e.g. Tell me a fun fact about the Roman Empire)')}
-									bind:value={prompt.content}
-								/>
+								<div class="flex items-center">
+									<span class="text-xs w-1/6 text-primary-mediun font-medium">{$i18n.t('Subtitle')}: </span>
+									<input
+										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-b"
+										placeholder={$i18n.t('Subtitle (e.g. about the Roman Empire)')}
+										bind:value={prompt.title[1]}
+									/>
+
+								</div>
+
+								<div class="flex items-center">
+									<span class="text-xs w-1/6 text-primary-mediun font-medium">{$i18n.t('Prompt')}: </span>
+									<input
+										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-b"
+										placeholder={$i18n.t('Prompt (e.g. Tell me a fun fact about the Roman Empire)')}
+										bind:value={prompt.content}
+									/>
+
+								</div>
 							</div>
 
 							<button
-								class="px-3 hover:bg-red-500/20 hover-text-white rounded "
+								class="px-3 ml-1 hover:bg-red-500/20 hover:text-red-500 rounded transition"
 								type="button"
 								on:click={() => {
 									promptSuggestions.splice(promptIdx, 1);
