@@ -194,9 +194,9 @@
 						type="button"
 					>
 						{#if notificationEnabled === true}
-							<span class="ml-2 self-center">{$i18n.t('On')}</span>
+							<span class="self-center">{$i18n.t('On')}</span>
 						{:else}
-							<span class="ml-2 self-center">{$i18n.t('Off')}</span>
+							<span class="self-center">{$i18n.t('Off')}</span>
 						{/if}
 					</button>
 				</div>

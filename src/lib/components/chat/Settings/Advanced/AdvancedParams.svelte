@@ -623,7 +623,7 @@
 				{#if (params?.use_mmap ?? null) === null}
 					<span class="ml-2 self-center">{$i18n.t('Default')}</span>
 				{:else}
-					<span class="ml-2 self-center">{$i18n.t('On')}</span>
+					<span class="self-center">{$i18n.t('On')}</span>
 				{/if}
 			</button>
 		</div>
@@ -643,7 +643,7 @@
 				{#if (params?.use_mlock ?? null) === null}
 					<span class="ml-2 self-center">{$i18n.t('Default')}</span>
 				{:else}
-					<span class="ml-2 self-center">{$i18n.t('On')}</span>
+					<span class="self-center">{$i18n.t('On')}</span>
 				{/if}
 			</button>
 		</div>

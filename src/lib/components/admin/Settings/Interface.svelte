@@ -274,20 +274,18 @@
 				<div class="grid lg:grid-cols-2 flex-col gap-1.5">
 					{#each promptSuggestions as prompt, promptIdx}
 						<div class=" flex  rounded py-1.5">
-							<div class="flex flex-col flex-1 pl-1">
-								<div class="flex border-b  w-full">
-									<input
-										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
-										placeholder={$i18n.t('Title (e.g. Tell me a fun fact)')}
-										bind:value={prompt.title[0]}
-									/>
+							<div class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-36 p-5 px-6 rounded">
+								<input
+									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
+									placeholder={$i18n.t('Title (e.g. Tell me a fun fact)')}
+									bind:value={prompt.title[0]}
+								/>
 
-									<input
-										class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
-										placeholder={$i18n.t('Subtitle (e.g. about the Roman Empire)')}
-										bind:value={prompt.title[1]}
-									/>
-								</div>
+								<input
+									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
+									placeholder={$i18n.t('Subtitle (e.g. about the Roman Empire)')}
+									bind:value={prompt.title[1]}
+								/>
 
 								<input
 									class="px-3 py-1.5 text-xs w-full bg-transparent outline-none border-r "
@@ -297,7 +295,7 @@
 							</div>
 
 							<button
-								class="px-3"
+								class="px-3 hover:bg-red-500/20 hover-text-white rounded "
 								type="button"
 								on:click={() => {
 									promptSuggestions.splice(promptIdx, 1);

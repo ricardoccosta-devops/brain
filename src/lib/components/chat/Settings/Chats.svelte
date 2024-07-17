@@ -133,7 +133,7 @@
 							/>
 						</svg>
 
-						<span class="ml-2 self-center"> {$i18n.t('On')} </span>
+						<span class="self-center"> {$i18n.t('On')} </span>
 					{:else}
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +151,7 @@
 							/>
 						</svg>
 
-						<span class="ml-2 self-center">{$i18n.t('Off')}</span>
+						<span class="self-center">{$i18n.t('Off')}</span>
 					{/if}
 				</button>
 			</div>

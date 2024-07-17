@@ -47,7 +47,7 @@
 		{#each prompts as prompt, promptIdx}
 			<div class="snap-center shrink-0">
 				<button
-					class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-36 p-5 px-6 bg-white hover:bg-support-lightblue   rounded transition group"
+					class="flex flex-col flex-1 border border-solid border-gray-250 shrink-0 w-64 justify-between h-36 p-5 px-6 bg-white hover:bg-support-lightblue rounded transition group"
 					on:click={() => {
 						submitPrompt(prompt.content);
 					}}
