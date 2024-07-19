@@ -22,7 +22,7 @@
 
 	export let saveHandler: Function;
 
-	let adminConfig = null;
+	let adminConfig : any = null;
 	let webhookUrl = '';
 
 	const updateHandler = async () => {
@@ -36,12 +36,14 @@
 		}
 	};
 
+	
 	onMount(async () => {
 		await Promise.all([
 			(async () => {
 				adminConfig = await getAdminConfig(localStorage.token);
+				adminConfig.ENABLE_COMMUNITY_SHARING = false;
 			})(),
-
+			
 			(async () => {
 				webhookUrl = await getWebhookUrl(localStorage.token);
 			})()
@@ -92,11 +94,11 @@
 					<Switch bind:state={adminConfig.SHOW_ADMIN_DETAILS} />
 				</div>
 
-				<div class="my-3 flex w-full items-center justify-between pr-2">
+				<!-- <div class="my-3 flex w-full items-center justify-between pr-2">
 					<div class=" self-center text-xs font-medium">{$i18n.t('Enable Community Sharing')}</div>
 
 					<Switch bind:state={adminConfig.ENABLE_COMMUNITY_SHARING} />
-				</div>
+				</div> -->
 
 				<hr class="  my-2" />
 

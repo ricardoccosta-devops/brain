@@ -19,7 +19,7 @@
 			},
 			{
 				"title": [
-					"Insgts de mkt",
+					"Insights de mkt",
 					"Sugest\u00f5es: mkt"
 				],
 				"content": "Me de insgts de mkt para bancos privados"
@@ -55,10 +55,12 @@
 	},
 	"openai": {
 		"api_base_urls": [
-			"https://api.openai.com/v1"
+			"https://openai-hml.openai.azeure.com/",
+			"https://openai-hml.openai.azeure.com/"
 		],
 		"api_keys": [
-			"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"
+			"3fa004bc77944da58806e4717699fb67",
+			"d40506367735413284985ed06f1bd07c"
 		]
 	},
 	"image_generation": {
