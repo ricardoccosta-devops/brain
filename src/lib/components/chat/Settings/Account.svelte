@@ -257,7 +257,7 @@
 					<div class="flex mt-2">
 						<div class="flex w-full">
 							<input
-								class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white   outline-none"
+								class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white outline-none"
 								type={showJWTToken ? 'text' : 'password'}
 								value={localStorage.token}
 								disabled
@@ -357,7 +357,7 @@
 						{#if APIKey}
 							<div class="flex w-full">
 								<input
-									class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white   outline-none"
+									class="w-full rounded-l-lg py-1.5 pl-4 text-sm bg-white outline-none"
 									type={showAPIKey ? 'text' : 'password'}
 									value={APIKey}
 									disabled

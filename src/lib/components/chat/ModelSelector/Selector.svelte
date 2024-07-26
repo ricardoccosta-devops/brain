@@ -245,7 +245,7 @@
 				{#each filteredItems as item}
 					<button
 						aria-label="model-item"
-						class="flex w-full text-left font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 hover:bg-primary-light  rounded cursor-pointer data-[highlighted]:bg-muted"
+						class="flex w-full text-left font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 hover:bg-support-lightblue hover:text-primary-med rounded cursor-pointer data-[highlighted]:bg-muted"
 						on:click={() => {
 							value = item.value;
 
@@ -373,7 +373,7 @@
 
 				{#if !(searchValue.trim() in $MODEL_DOWNLOAD_POOL) && searchValue && ollamaVersion && $user.role === 'admin'}
 					<button
-						class="flex w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 hover:bg-primary-light  rounded cursor-pointer data-[highlighted]:bg-muted"
+						class="flex w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700  outline-none transition-all duration-75 hover:bg-support-lightblue hover:text-primary-med  rounded cursor-pointer data-[highlighted]:bg-muted"
 						on:click={() => {
 							pullModelHandler();
 						}}

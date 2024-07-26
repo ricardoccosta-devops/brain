@@ -48,7 +48,7 @@
 			>
 				<button
 					id="sidebar-toggle-button"
-					class="cursor-pointer px-2 py-2 flex rounded hover:bg-primary-light  transition"
+					class="cursor-pointer px-2 py-2 flex rounded hover:bg-support-lightblue text-primary-med transition"
 					on:click={() => {
 						showSidebar.set(!$showSidebar);
 					}}
@@ -79,7 +79,7 @@
 						}}
 					>
 						<button
-							class="hidden md:flex cursor-pointer px-2 py-2 rounded hover:bg-primary-light  transition"
+							class="hidden md:flex cursor-pointer px-2 py-2 rounded hover:bg-support-lightblue text-primary-med transition"
 							id="chat-context-menu-button"
 						>
 							<div class=" m-auto self-center">
@@ -106,7 +106,7 @@
 						id="new-chat-button"
 						class=" flex {$showSidebar
 							? 'md:hidden'
-							: ''} cursor-pointer px-2 py-2 rounded hover:bg-primary-light  transition"
+							: ''} cursor-pointer px-2 py-2 hover:bg-support-lightblue text-primary-med rounded transition"
 						on:click={() => {
 							initNewChat();
 						}}

@@ -106,7 +106,7 @@
 
 		<div class="flex gap-1">
 			<input
-				class="w-full md:w-60 rounded py-1.5 px-4 text-sm   outline-none"
+				class="w-full md:w-60 rounded py-1.5 px-4 text-sm outline-none"
 				placeholder={$i18n.t('Search')}
 				bind:value={search}
 			/>

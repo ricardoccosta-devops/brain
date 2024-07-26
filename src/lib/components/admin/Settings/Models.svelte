@@ -797,7 +797,7 @@
 
 									<textarea
 										bind:value={createModelContent}
-										class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250   outline-none resize-none scrollbar-hidden"
+										class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250 outline-none resize-none scrollbar-hidden"
 										rows="6"
 										placeholder={`TEMPLATE """{{ .System }}\nUSER: {{ .Prompt }}\nASSISTANT: """\nPARAMETER num_ctx 4096\nPARAMETER stop "</s>"\nPARAMETER stop "USER:"\nPARAMETER stop "ASSISTANT:"`}
 										disabled={createModelLoading}
@@ -930,7 +930,7 @@
 										{:else}
 											<div class="flex-1 {modelFileUrl !== '' ? 'mr-2' : ''}">
 												<input
-													class="w-full rounded text-left py-2 px-4 bg-white   outline-none {modelFileUrl !==
+													class="w-full rounded text-left py-2 px-4 bg-white outline-none {modelFileUrl !==
 													''
 														? 'mr-2'
 														: ''}"
@@ -1004,7 +1004,7 @@
 											<div class=" my-2.5 text-sm font-medium">{$i18n.t('Modelfile Content')}</div>
 											<textarea
 												bind:value={modelFileContent}
-												class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250   outline-none resize-none"
+												class="w-full rounded py-2 px-4 text-sm bg-white border border-solid border-gray-250 outline-none resize-none"
 												rows="6"
 											/>
 										</div>

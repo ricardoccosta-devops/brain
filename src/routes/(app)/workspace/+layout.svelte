@@ -20,7 +20,7 @@
 			<div class="{$showSidebar ? 'md:hidden' : ''} mr-1 self-start flex flex-none items-center">
 				<button
 					id="sidebar-toggle-button"
-					class="cursor-pointer p-1 flex rounded hover:bg-primary-light  transition"
+					class="cursor-pointer p-1 flex rounded hover:bg-support-lightblue text-primary-med transition"
 					on:click={() => {
 						showSidebar.set(!$showSidebar);
 					}}

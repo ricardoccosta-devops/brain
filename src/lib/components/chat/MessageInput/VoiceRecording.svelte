@@ -279,7 +279,7 @@
 				: 'bg-indigo-400/20 text-indigo-600  '} 
 
 
-          rounded-full"
+        rounded-full"
 			on:click={async () => {
 				dispatch('cancel');
 				stopRecording();
@@ -425,7 +425,7 @@
 		{:else}
 			<button
 				type="button"
-				class="p-1.5 bg-indigo-500 text-white   rounded-full"
+				class="p-1.5 bg-indigo-500 text-white rounded-full"
 				on:click={async () => {
 					await confirmRecording();
 				}}

@@ -70,7 +70,7 @@
 			<div class="px-3 my-2 max-h-80 overflow-y-auto">
 				{#each filteredItems as item}
 					<Select.Item
-						class="flex w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm  text-gray-700   outline-none transition-all duration-75 hover:bg-primary-light  rounded cursor-pointer data-[highlighted]:bg-muted"
+						class="flex w-full font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm  text-gray-700 outline-none transition-all duration-75 hover:bg-support-lightblue hover:text-primary-med  rounded cursor-pointer data-[highlighted]:bg-muted"
 						value={item.value}
 						label={item.label}
 					>

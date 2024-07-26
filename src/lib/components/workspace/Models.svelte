@@ -226,7 +226,7 @@
 
 	<div>
 		<a
-			class=" px-2 py-2 rounded border border-gray-200   hover:bg-primary-light   transition font-medium text-sm flex items-center space-x-1"
+			class=" px-2 py-2 rounded border border-gray-200 hover:bg-support-lightblue hover:text-primary-med transition font-medium text-sm flex items-center space-x-1"
 			href="/workspace/models/create"
 		>
 			<svg
@@ -247,7 +247,7 @@
 <a class=" flex space-x-4 cursor-pointer w-full mb-2 px-3 py-2" href="/workspace/models/create">
 	<div class=" self-center w-10">
 		<div
-			class="w-full h-10 flex justify-center rounded-full bg-transparent  border border-dashed border-gray-200"
+			class="w-full h-10 flex justify-center rounded-full bg-transparent border border-dashed border-gray-200"
 		>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6">
 				<path
@@ -272,7 +272,7 @@
 				.toLowerCase()
 				.includes(searchValue.toLowerCase())) as model}
 		<div
-			class=" flex space-x-4 cursor-pointer w-full px-3 py-2  hover:bg-support-lightblue rounded"
+			class=" flex space-x-4 cursor-pointer w-full px-3 py-2 hover:bg-support-lightblue rounded"
 			id="model-item-{model.id}"
 		>
 			<a
@@ -304,7 +304,7 @@
 			</a>
 			<div class="flex flex-row gap-0.5 self-center">
 				<a
-					class="self-center w-fit text-sm px-2 py-2   hover:bg-support-lightblue  rounded"
+					class="self-center w-fit text-sm px-2 py-2 hover:bg-support-lightblue  rounded"
 					type="button"
 					href={`/workspace/models/edit?id=${encodeURIComponent(model.id)}`}
 				>
@@ -395,7 +395,7 @@
 		/>
 
 		<button
-			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-primary-med text-white hover:text-white hover:bg-primary-light    transition"
+			class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded bg-primary-med text-white hover:text-white hover:bg-primary-light transition"
 			on:click={() => {
 				modelsImportInputElement.click();
 			}}

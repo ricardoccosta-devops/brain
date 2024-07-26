@@ -122,7 +122,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Title Generation Prompt')}</div>
 				<textarea
 					bind:value={taskConfig.TITLE_GENERATION_PROMPT_TEMPLATE}
-					class="w-full rounded bg-white border border-solid border-gray-250 py-3 px-4 text-sm   outline-none resize-none"
+					class="w-full rounded bg-white border border-solid border-gray-250 py-3 px-4 text-sm outline-none resize-none"
 					rows="6"
 				/>
 			</div>
@@ -131,7 +131,7 @@
 				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Search Query Generation Prompt')}</div>
 				<textarea
 					bind:value={taskConfig.SEARCH_QUERY_GENERATION_PROMPT_TEMPLATE}
-					class="w-full rounded py-3 px-4 text-sm bg-white border border-solid border-gray-250   outline-none resize-none"
+					class="w-full rounded py-3 px-4 text-sm bg-white border border-solid border-gray-250 outline-none resize-none"
 					rows="6"
 				/>
 			</div>

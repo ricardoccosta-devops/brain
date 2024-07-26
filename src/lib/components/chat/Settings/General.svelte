@@ -209,7 +209,7 @@
 			<div class=" my-2.5 text-sm font-medium">{$i18n.t('System Prompt')}</div>
 			<textarea
 				bind:value={system}
-				class="w-full rounded p-4 text-sm   outline-none bg-white border border-solid border-gray-250 resize-none"
+				class="w-full rounded p-4 text-sm outline-none bg-white border border-solid border-gray-250 resize-none"
 				rows="4"
 			/>
 		</div>

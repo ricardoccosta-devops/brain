@@ -99,7 +99,7 @@
 								<img src={file.url} alt="input" class=" max-h-96 rounded" draggable="false" />
 							{:else if file.type === 'doc'}
 								<button
-									class="h-16 w-72 flex items-center space-x-3 px-2.5  rounded border border-gray-200  text-left"
+									class="h-16 w-72 flex items-center space-x-3 px-2.5 rounded border border-gray-200 text-left"
 									type="button"
 									on:click={() => {
 										if (file?.url) {
@@ -135,7 +135,7 @@
 								</button>
 							{:else if file.type === 'collection'}
 								<button
-									class="h-16 w-72 flex items-center space-x-3 px-2.5  rounded border bg-white border-gray-200  text-left"
+									class="h-16 w-72 flex items-center space-x-3 px-2.5 rounded border bg-white border-gray-200 text-left"
 									type="button"
 								>
 									<div class="p-2.5 bg-red-400 text-white rounded">
@@ -196,7 +196,7 @@
 					<div class=" mt-2 mb-1 flex justify-end space-x-1.5 text-sm font-medium">
 						<button
 							id="close-edit-message-button"
-							class="px-4 py-2 bg-white  hover:bg-primary-light text-primary-dark  transition rounded"
+							class="px-4 py-2 bg-white hover:bg-primary-light text-primary-dark transition rounded"
 							on:click={() => {
 								cancelEditMessage();
 							}}
@@ -206,7 +206,7 @@
 
 						<button
 							id="save-edit-message-button"
-							class=" px-4 py-2 bg-primary-lightdarkest hover:bg-gray-850 text-gray-100  transition rounded"
+							class=" px-4 py-2 bg-primary-lightdarkest hover:bg-gray-850 text-gray-100 transition rounded"
 							on:click={() => {
 								editMessageConfirmHandler();
 							}}

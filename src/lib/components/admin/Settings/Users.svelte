@@ -155,7 +155,7 @@
 
 										{#if modelIdx === 0}
 											<button
-												class="px-2.5 bg-primary-med hover:bg-primary-light text-white   rounded transition"
+												class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 												type="button"
 												on:click={() => {
 													if (whitelistModels.at(-1) !== '') {
@@ -176,7 +176,7 @@
 											</button>
 										{:else}
 											<button
-												class="px-2.5 bg-primary-med hover:bg-primary-light text-white   rounded transition"
+												class="px-2.5 bg-primary-med hover:bg-primary-light text-white rounded transition"
 												type="button"
 												on:click={() => {
 													whitelistModels.splice(modelIdx, 1);

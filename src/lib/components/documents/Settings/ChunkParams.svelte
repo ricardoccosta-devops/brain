@@ -72,7 +72,7 @@
 
 					<div class="self-center p-3">
 						<input
-							class=" w-full rounded py-1.5 px-4 text-sm   outline-none"
+							class=" w-full rounded py-1.5 px-4 text-sm outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Chunk Size')}
 							bind:value={chunkSize}
@@ -89,7 +89,7 @@
 
 					<div class="self-center p-3">
 						<input
-							class="w-full rounded py-1.5 px-4 text-sm   outline-none"
+							class="w-full rounded py-1.5 px-4 text-sm outline-none"
 							type="number"
 							placeholder={$i18n.t('Enter Chunk Overlap')}
 							bind:value={chunkOverlap}

@@ -681,7 +681,7 @@
 								<textarea
 									id="chat-textarea"
 									bind:this={chatTextAreaElement}
-									class="scrollbar-hidden   outline-none bg-white w-full py-3 px-1 rounded resize-none h-[48px]"
+									class="scrollbar-hidden outline-none bg-white w-full py-3 px-1 rounded resize-none h-[48px]"
 									placeholder={chatInputPlaceholder !== ''
 										? chatInputPlaceholder
 										: $i18n.t('Send a Message')}
@@ -852,7 +852,7 @@
 										<Tooltip content={$i18n.t('Record voice')}>
 											<button
 												id="voice-input-button"
-												class=" text-gray-600  hover:bg-support-lightblue  transition rounded-full p-1.5 mr-0.5 self-center"
+												class="hover:bg-support-lightblue text-primary-med transition rounded-full p-1.5 mr-0.5 self-center"
 												type="button"
 												on:click={async () => {
 													try {
@@ -901,7 +901,7 @@
 									<div class=" flex items-center mb-1">
 										<Tooltip content={$i18n.t('Call')}>
 											<button
-												class=" text-gray-600  hover:bg-support-lightblue  transition rounded-full p-2 self-center"
+												class="hover:bg-support-lightblue text-primary-med transition rounded-full p-2 self-center"
 												type="button"
 												on:click={async () => {
 													if (selectedModels.length > 1) {
@@ -963,7 +963,7 @@
 							{:else}
 								<div class=" flex items-center mb-1.5">
 									<button
-										class="bg-white hover:bg-primary-light text-primary-dark    transition rounded-full p-1.5"
+										class="bg-white hover:bg-support-lightblue text-primary-med transition rounded-full p-1.5"
 										on:click={() => {
 											stopResponse();
 										}}
