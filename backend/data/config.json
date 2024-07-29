@@ -16,16 +16,9 @@
 					"rewrite it for better readability "
 				],
 				"content": "Check the following sentence for grammar and clarity: \"[sentence]\". Rewrite it for better readability while maintaining its original meaning."
-			},
-			{
-				"title": [
-					"Insights de mkt",
-					"Sugest\u00f5es: mkt"
-				],
-				"content": "Me de insgts de mkt para bancos privados"
 			}
 		],
-		"default_models": "llama3:latest",
+		"default_models": "gemma2:latest",
 		"user_permissions": {
 			"chat": {
 				"deletion": true
@@ -45,23 +38,24 @@
 	"ollama": {
 		"base_urls": [
 			"http://localhost:11434"
-		]
+		],
+		"enable": true
 	},
 	"model_filter": {
 		"enable": true,
 		"list": [
-			"llama3:latest"
+			"gemma2:latest",
+			"llama2:latest"
 		]
 	},
 	"openai": {
 		"api_base_urls": [
-			"https://openai-hml.openai.azeure.com/",
 			"https://openai-hml.openai.azeure.com/"
 		],
 		"api_keys": [
-			"3fa004bc77944da58806e4717699fb67",
-			"d40506367735413284985ed06f1bd07c"
-		]
+			""
+		],
+		"enable": true
 	},
 	"image_generation": {
 		"engine": "",
