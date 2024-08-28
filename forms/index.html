@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal WebUI Safra Formulário de Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border: 8px solid #ccc;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de Feedback</h2>
+    <form action="/submit_feedback" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="experience">Experiência geral:</label>
+        <select id="experience" name="experience">
+            <option value="excellent">Excelente</option>
+            <option value="good">Bom</option>
+            <option value="neutral">Neutro</option>
+            <option value="bad">Ruim</option>
+            <option value="very_bad">Muito Ruim</option>
+        </select>
+        
+        <label for="improvements">Melhorias necessárias:</label>
+        <textarea id="improvements" name="improvements"></textarea>
+        
+        <label for="features">Recursos desejados:</label>
+        <textarea id="features" name="features"></textarea>
+        
+        <label for="usability">Facilidade de uso:</label>
+        <select id="usability" name="usability">
+            <option value="very_easy">Muito Fácil</option>
+            <option value="easy">Fácil</option>
+            <option value="neutral">Neutro</option>
+            <option value="difficult">Difícil</option>
+            <option value="very_difficult">Muito Difícil</option>
+        </select>
+        
+        <label for="comments">Comentários adicionais:</label>
+        <textarea id="comments" name="comments"></textarea>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+  
